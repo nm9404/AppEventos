@@ -1,0 +1,11 @@
+﻿<resources>
+  <style name="MyTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">#601b95</item>
+    <item name="drawerArrowStyle">@style/MyDrawerArrowStyle</item>
+  </style>
+
+  <style name="MyDrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+    <item name ="color">#F5F5F5</item>
+    <item name ="spinBars">true</item>
+  </style>
+</resources>

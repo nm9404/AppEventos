@@ -1,0 +1,21 @@
+C:\Users\nicol\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Eventos.core.dll
+C:\Users\nicol\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Eventos.core.pdb
+C:\Users\nicol\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\nicol\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\nicol\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\obj\Debug\Eventos.core.dll
+C:\Users\nicol\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\obj\Debug\Eventos.core.pdb
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Eventos.core.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Eventos.core.pdb
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\obj\Debug\Eventos.core.csprojResolveAssemblyReference.cache
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\obj\Debug\Eventos.core.dll
+C:\Users\Administrador\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\obj\Debug\Eventos.core.pdb
+C:\Users\nicol\Documents\Visual Studio 2015\Projects\Eventos\Eventos.core\obj\Debug\Eventos.core.csprojResolveAssemblyReference.cache
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\bin\Debug\Eventos.core.dll
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\bin\Debug\Eventos.core.pdb
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.dll
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.xml
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Debug\Eventos.core.csprojResolveAssemblyReference.cache
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Debug\Eventos.core.dll
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Debug\Eventos.core.pdb
