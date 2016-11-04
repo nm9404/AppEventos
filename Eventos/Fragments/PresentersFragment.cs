@@ -50,12 +50,22 @@ namespace Eventos.Fragments
         public void SetPresentersList(List<Presenter> presenterList)
         {
             presentersList = presenterList;
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.presenterDetailFragment.instanceDataService(presenterList);
         }
 
         public void PopulateMenu()
         {
             PresentersAdapter presentersAdapter = new PresentersAdapter(presentersList, this.Activity);
             presentersView.Adapter = presentersAdapter;
+            presentersView.ItemClick += PresenterItemClick;
+        }
+
+        public void PresenterItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.presenterDetailFragment.PopulateData(e.Position);
+            activity.ShowFragment(activity.presenterDetailFragment);
         }
 
         private void FindViews()

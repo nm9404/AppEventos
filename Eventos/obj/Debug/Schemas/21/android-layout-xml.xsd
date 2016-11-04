@@ -3,7 +3,7 @@
   <xs:import schemaLocation="schemas.android.com.apk.res.android.xsd" namespace="http://schemas.android.com/apk/res/android" />
   <xs:annotation>
     <xs:documentation>v21</xs:documentation>
-    <xs:documentation>11/4/2016 11:01:58 AM</xs:documentation>
+    <xs:documentation>11/4/2016 5:03:07 PM</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -83,6 +83,12 @@
       <xs:element ref="FFImageLoading.Views.ImageViewAsync" />
       <xs:element ref="FFImageLoading.Views.ManagedImageView" />
       <xs:element ref="FFImageLoading.Cross.MvxImageLoadingView" />
+      <xs:element ref="com.makeramen.roundedimageview.RoundedImageView" />
+      <xs:element ref="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" />
+      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner" />
+      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup" />
+      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView" />
+      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxTableLayout" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxFrameLayout" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxRelativeLayout" />
@@ -99,15 +105,16 @@
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxFrameControl" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxExpandableListView" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxBaseListItemView" />
-      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner" />
-      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup" />
-      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView" />
-      <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView" />
-      <xs:element ref="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" />
-      <xs:element ref="com.makeramen.roundedimageview.RoundedImageView" />
-      <xs:element ref="com.google.android.gms.maps.StreetViewPanoramaView" />
-      <xs:element ref="com.google.android.gms.maps.MapView" />
-      <xs:element ref="com.google.android.gms.common.SignInButton" />
+      <xs:element ref="android.support.v4.widget.Space" />
+      <xs:element ref="android.support.v4.widget.SlidingPaneLayout" />
+      <xs:element ref="android.support.v4.widget.DrawerLayout" />
+      <xs:element ref="android.support.v4.widget.ContentLoadingProgressBar" />
+      <xs:element ref="android.support.v4.widget.SwipeRefreshLayout" />
+      <xs:element ref="android.support.v4.widget.NestedScrollView" />
+      <xs:element ref="android.support.v4.view.PagerTitleStrip" />
+      <xs:element ref="android.support.v4.view.PagerTabStrip" />
+      <xs:element ref="android.support.v4.view.ViewPager" />
+      <xs:element ref="android.support.v4.app.FragmentTabHost" />
       <xs:element ref="android.support.v7.widget.ViewStubCompat" />
       <xs:element ref="android.support.v7.widget.SwitchCompat" />
       <xs:element ref="android.support.v7.widget.SearchView" />
@@ -130,16 +137,9 @@
       <xs:element ref="android.support.v7.widget.Toolbar" />
       <xs:element ref="android.support.v7.view.menu.ExpandedMenuView" />
       <xs:element ref="android.support.v7.view.menu.ListMenuItemView" />
-      <xs:element ref="android.support.v4.widget.Space" />
-      <xs:element ref="android.support.v4.widget.SlidingPaneLayout" />
-      <xs:element ref="android.support.v4.widget.DrawerLayout" />
-      <xs:element ref="android.support.v4.widget.ContentLoadingProgressBar" />
-      <xs:element ref="android.support.v4.widget.SwipeRefreshLayout" />
-      <xs:element ref="android.support.v4.widget.NestedScrollView" />
-      <xs:element ref="android.support.v4.view.PagerTitleStrip" />
-      <xs:element ref="android.support.v4.view.PagerTabStrip" />
-      <xs:element ref="android.support.v4.view.ViewPager" />
-      <xs:element ref="android.support.v4.app.FragmentTabHost" />
+      <xs:element ref="com.google.android.gms.common.SignInButton" />
+      <xs:element ref="com.google.android.gms.maps.StreetViewPanoramaView" />
+      <xs:element ref="com.google.android.gms.maps.MapView" />
     </xs:choice>
   </xs:group>
   <xs:element name="TimePicker" type="TimePicker">
@@ -1437,6 +1437,66 @@
       <xs:extension base="ImageView" />
     </xs:complexContent>
   </xs:complexType>
+  <xs:element name="com.makeramen.roundedimageview.RoundedImageView" type="com.makeramen.roundedimageview.RoundedImageView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: ImageViews.Rounded.RoundedImageView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.makeramen.roundedimageview.RoundedImageView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" type="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Spinner" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="RadioGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AutoCompleteTextView" />
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element name="MvvmCross.Binding.Droid.Views.MvxTableLayout" type="MvvmCross.Binding.Droid.Views.MvxTableLayout">
     <xs:annotation>
       <xs:documentation>Runtime Type: MvvmCross.Binding.Droid.Views.MvxTableLayout</xs:documentation>
@@ -1597,94 +1657,104 @@
       <xs:extension base="FrameLayout" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner">
+  <xs:element name="android.support.v4.widget.Space" type="android.support.v4.widget.Space">
     <xs:annotation>
-      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.Space</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner">
+  <xs:complexType name="android.support.v4.widget.Space">
     <xs:complexContent mixed="false">
-      <xs:extension base="Spinner" />
+      <xs:extension base="View" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup">
+  <xs:element name="android.support.v4.widget.SlidingPaneLayout" type="android.support.v4.widget.SlidingPaneLayout">
     <xs:annotation>
-      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.SlidingPaneLayout</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup">
-    <xs:complexContent mixed="false">
-      <xs:extension base="RadioGroup" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ImageView" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView">
-    <xs:complexContent mixed="false">
-      <xs:extension base="AutoCompleteTextView" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" type="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
+  <xs:complexType name="android.support.v4.widget.SlidingPaneLayout">
     <xs:complexContent mixed="false">
       <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="com.makeramen.roundedimageview.RoundedImageView" type="com.makeramen.roundedimageview.RoundedImageView">
+  <xs:element name="android.support.v4.widget.DrawerLayout" type="android.support.v4.widget.DrawerLayout">
     <xs:annotation>
-      <xs:documentation>Runtime Type: ImageViews.Rounded.RoundedImageView</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.DrawerLayout</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="com.makeramen.roundedimageview.RoundedImageView">
+  <xs:complexType name="android.support.v4.widget.DrawerLayout">
     <xs:complexContent mixed="false">
-      <xs:extension base="ImageView" />
+      <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="com.google.android.gms.maps.StreetViewPanoramaView" type="com.google.android.gms.maps.StreetViewPanoramaView">
+  <xs:element name="android.support.v4.widget.ContentLoadingProgressBar" type="android.support.v4.widget.ContentLoadingProgressBar">
     <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Gms.Maps.StreetViewPanoramaView</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.ContentLoadingProgressBar</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="com.google.android.gms.maps.StreetViewPanoramaView">
+  <xs:complexType name="android.support.v4.widget.ContentLoadingProgressBar">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ProgressBar" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.widget.SwipeRefreshLayout" type="android.support.v4.widget.SwipeRefreshLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.SwipeRefreshLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.widget.SwipeRefreshLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.widget.NestedScrollView" type="android.support.v4.widget.NestedScrollView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.Widget.NestedScrollView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.widget.NestedScrollView">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="com.google.android.gms.maps.MapView" type="com.google.android.gms.maps.MapView">
+  <xs:element name="android.support.v4.view.PagerTitleStrip" type="android.support.v4.view.PagerTitleStrip">
     <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Gms.Maps.MapView</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Support.V4.View.PagerTitleStrip</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="com.google.android.gms.maps.MapView">
+  <xs:complexType name="android.support.v4.view.PagerTitleStrip">
     <xs:complexContent mixed="false">
-      <xs:extension base="FrameLayout" />
+      <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="com.google.android.gms.common.SignInButton" type="com.google.android.gms.common.SignInButton">
+  <xs:element name="android.support.v4.view.PagerTabStrip" type="android.support.v4.view.PagerTabStrip">
     <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Gms.Common.SignInButton</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Support.V4.View.PagerTabStrip</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="com.google.android.gms.common.SignInButton">
+  <xs:complexType name="android.support.v4.view.PagerTabStrip">
     <xs:complexContent mixed="false">
-      <xs:extension base="FrameLayout" />
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.view.ViewPager" type="android.support.v4.view.ViewPager">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.View.ViewPager</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.view.ViewPager">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="android.support.v4.app.FragmentTabHost" type="android.support.v4.app.FragmentTabHost">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V4.App.FragmentTabHost</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v4.app.FragmentTabHost">
+    <xs:complexContent mixed="false">
+      <xs:extension base="TabHost" />
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="android.support.v7.widget.ViewStubCompat" type="android.support.v7.widget.ViewStubCompat">
@@ -1963,104 +2033,34 @@
       <xs:extension base="LinearLayout" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="android.support.v4.widget.Space" type="android.support.v4.widget.Space">
+  <xs:element name="com.google.android.gms.common.SignInButton" type="com.google.android.gms.common.SignInButton">
     <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.Widget.Space</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Gms.Common.SignInButton</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="android.support.v4.widget.Space">
-    <xs:complexContent mixed="false">
-      <xs:extension base="View" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v4.widget.SlidingPaneLayout" type="android.support.v4.widget.SlidingPaneLayout">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.Widget.SlidingPaneLayout</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v4.widget.SlidingPaneLayout">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v4.widget.DrawerLayout" type="android.support.v4.widget.DrawerLayout">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.Widget.DrawerLayout</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v4.widget.DrawerLayout">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v4.widget.ContentLoadingProgressBar" type="android.support.v4.widget.ContentLoadingProgressBar">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.Widget.ContentLoadingProgressBar</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v4.widget.ContentLoadingProgressBar">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ProgressBar" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v4.widget.SwipeRefreshLayout" type="android.support.v4.widget.SwipeRefreshLayout">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.Widget.SwipeRefreshLayout</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v4.widget.SwipeRefreshLayout">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v4.widget.NestedScrollView" type="android.support.v4.widget.NestedScrollView">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.Widget.NestedScrollView</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v4.widget.NestedScrollView">
+  <xs:complexType name="com.google.android.gms.common.SignInButton">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="android.support.v4.view.PagerTitleStrip" type="android.support.v4.view.PagerTitleStrip">
+  <xs:element name="com.google.android.gms.maps.StreetViewPanoramaView" type="com.google.android.gms.maps.StreetViewPanoramaView">
     <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.View.PagerTitleStrip</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Gms.Maps.StreetViewPanoramaView</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="android.support.v4.view.PagerTitleStrip">
+  <xs:complexType name="com.google.android.gms.maps.StreetViewPanoramaView">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
+      <xs:extension base="FrameLayout" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="android.support.v4.view.PagerTabStrip" type="android.support.v4.view.PagerTabStrip">
+  <xs:element name="com.google.android.gms.maps.MapView" type="com.google.android.gms.maps.MapView">
     <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.View.PagerTabStrip</xs:documentation>
+      <xs:documentation>Runtime Type: Android.Gms.Maps.MapView</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="android.support.v4.view.PagerTabStrip">
+  <xs:complexType name="com.google.android.gms.maps.MapView">
     <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v4.view.ViewPager" type="android.support.v4.view.ViewPager">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.View.ViewPager</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v4.view.ViewPager">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="android.support.v4.app.FragmentTabHost" type="android.support.v4.app.FragmentTabHost">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Support.V4.App.FragmentTabHost</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="android.support.v4.app.FragmentTabHost">
-    <xs:complexContent mixed="false">
-      <xs:extension base="TabHost" />
+      <xs:extension base="FrameLayout" />
     </xs:complexContent>
   </xs:complexType>
 </xs:schema>

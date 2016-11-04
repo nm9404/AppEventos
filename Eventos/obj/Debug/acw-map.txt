@@ -26,6 +26,10 @@ Eventos.Fragments.MapFragment, Eventos;md57d48028210a74cfc400f128edb466453.MapFr
 Eventos.Fragments.MapFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.MapFragment
 Eventos.Fragments.MapFragment;md57d48028210a74cfc400f128edb466453.MapFragment
 eventos.fragments.MapFragment;md57d48028210a74cfc400f128edb466453.MapFragment
+Eventos.Fragments.PresenterDetailFragment, Eventos;md57d48028210a74cfc400f128edb466453.PresenterDetailFragment
+Eventos.Fragments.PresenterDetailFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.PresenterDetailFragment
+Eventos.Fragments.PresenterDetailFragment;md57d48028210a74cfc400f128edb466453.PresenterDetailFragment
+eventos.fragments.PresenterDetailFragment;md57d48028210a74cfc400f128edb466453.PresenterDetailFragment
 Eventos.Fragments.PresentersFragment, Eventos;md57d48028210a74cfc400f128edb466453.PresentersFragment
 Eventos.Fragments.PresentersFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.PresentersFragment
 Eventos.Fragments.PresentersFragment;md57d48028210a74cfc400f128edb466453.PresentersFragment
