@@ -1909,8 +1909,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0093
 			public const int PresenterDetailListView = 2131427475;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int PresentersGridView = 2131427478;
+			// aapt resource value: 0x7f0b0097
+			public const int PresentersGridView = 2131427479;
 			
 			// aapt resource value: 0x7f0b0073
 			public const int TextButtonContainerA = 2131427443;
@@ -2198,13 +2198,16 @@ namespace Eventos
 			public const int place_autocomplete_separator = 2131427467;
 			
 			// aapt resource value: 0x7f0b0092
-			public const int presenterImageView1 = 2131427474;
+			public const int presenterImageDetailView1 = 2131427474;
 			
 			// aapt resource value: 0x7f0b0094
-			public const int presenterTextA1 = 2131427476;
+			public const int presenterImageView1 = 2131427476;
 			
 			// aapt resource value: 0x7f0b0095
-			public const int presenterTextB1 = 2131427477;
+			public const int presenterTextA1 = 2131427477;
+			
+			// aapt resource value: 0x7f0b0096
+			public const int presenterTextB1 = 2131427478;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;

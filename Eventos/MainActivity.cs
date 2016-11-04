@@ -27,6 +27,7 @@ namespace Eventos
     public class MainActivity : ActionBarActivity
     {
         int count = 1;
+        bool fragmentInstantiated = false;
         MainEvent mainEvent = new MainEvent();
         DataService dataServiceInstance;
 
@@ -46,6 +47,7 @@ namespace Eventos
         public PresentersFragment presentersFragment;
         public GalleryFragment galleryFragment;
         public MapFragment mapFragment;
+        public PresenterDetailFragment presenterDetailFragment;
 
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
@@ -82,12 +84,16 @@ namespace Eventos
             presentersFragment = new PresentersFragment();
             galleryFragment = new GalleryFragment();
             mapFragment = new MapFragment();
+            presenterDetailFragment = new PresenterDetailFragment();
 
             //frequentQuestionsFragment.PopulateMenu();
 
             mLeftDrawer.ItemClick += OnSelectedItemDrawer;
 
             var transaction = SupportFragmentManager.BeginTransaction();
+
+            transaction.Add(Resource.Id.fragmentContainer, presenterDetailFragment, "Presenter Detail");
+            transaction.Hide(presenterDetailFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, mapFragment, "Map");
             transaction.Hide(mapFragment);
@@ -206,7 +212,12 @@ namespace Eventos
 
         private void OnSelectedItemDrawer(object sender, ItemClickEventArgs e)
         {
-            InstanceDataOnFragments();
+            if (!fragmentInstantiated)
+            {
+                InstanceDataOnFragments();
+                fragmentInstantiated = true;
+            }
+            
             mDrawerLayout.CloseDrawer(mLeftDrawer);
             switch (e.Id)
             {

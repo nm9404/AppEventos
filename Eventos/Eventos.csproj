@@ -164,6 +164,7 @@
     <Compile Include="Fragments\GalleryFragment.cs" />
     <Compile Include="Fragments\MainMenuFragment.cs" />
     <Compile Include="Fragments\MapFragment.cs" />
+    <Compile Include="Fragments\PresenterDetailFragment.cs" />
     <Compile Include="Fragments\PresentersFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MenuData\MenuElements.cs" />

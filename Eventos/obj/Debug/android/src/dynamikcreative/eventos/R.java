@@ -2106,7 +2106,7 @@ containing a value of this type.
         public static final int MvvmCrossTagId=0x7f0b0009;
         public static final int MvxBindingTagUnique=0x7f0b000a;
         public static final int PresenterDetailListView=0x7f0b0093;
-        public static final int PresentersGridView=0x7f0b0096;
+        public static final int PresentersGridView=0x7f0b0097;
         public static final int TextButtonContainerA=0x7f0b0073;
         public static final int TextButtonContainerB=0x7f0b0078;
         public static final int action0=0x7f0b007b;
@@ -2202,9 +2202,10 @@ containing a value of this type.
         public static final int place_autocomplete_search_button=0x7f0b0088;
         public static final int place_autocomplete_search_input=0x7f0b0089;
         public static final int place_autocomplete_separator=0x7f0b008b;
-        public static final int presenterImageView1=0x7f0b0092;
-        public static final int presenterTextA1=0x7f0b0094;
-        public static final int presenterTextB1=0x7f0b0095;
+        public static final int presenterImageDetailView1=0x7f0b0092;
+        public static final int presenterImageView1=0x7f0b0094;
+        public static final int presenterTextA1=0x7f0b0095;
+        public static final int presenterTextB1=0x7f0b0096;
         public static final int progress_circular=0x7f0b0005;
         public static final int progress_horizontal=0x7f0b0006;
         public static final int radio=0x7f0b004b;
