@@ -51,6 +51,8 @@ namespace Eventos.Fragments
         public void SetImageList(List<MImage> imagesList)
         {
             this.imagesList = imagesList;
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.galleryDetailFragment.instanceDataService(imagesList);
         }
 
         public void PopulateMenu()
@@ -58,11 +60,21 @@ namespace Eventos.Fragments
 
             GalleryMenuAdapter galleryMenuAdapter = new GalleryMenuAdapter(imagesList, this.Activity);
             imageGridView.Adapter = galleryMenuAdapter;
+            imageGridView.ItemClick += GalleryItemClick;
         }
 
         private void FindViews()
         {
             imageGridView = this.View.FindViewById<GridView>(Resource.Id.GalleryGridView);
         }
+
+        public void GalleryItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        {
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.galleryDetailFragment.PopulateData(e.Position);
+            activity.ShowFragment(activity.galleryDetailFragment);
+        }
+
+
     }
 }
