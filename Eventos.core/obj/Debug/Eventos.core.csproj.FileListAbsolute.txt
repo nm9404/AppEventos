@@ -19,3 +19,10 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Debug\Eventos.core.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Debug\Eventos.core.dll
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Debug\Eventos.core.pdb
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Debug\Eventos.core.dll
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Debug\Eventos.core.pdb
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.dll
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Debug\Newtonsoft.Json.xml
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\obj\Debug\Eventos.core.csprojResolveAssemblyReference.cache
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\obj\Debug\Eventos.core.dll
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\obj\Debug\Eventos.core.pdb
