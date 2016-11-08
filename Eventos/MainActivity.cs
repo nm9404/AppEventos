@@ -48,6 +48,7 @@ namespace Eventos
         public GalleryFragment galleryFragment;
         public MapFragment mapFragment;
         public PresenterDetailFragment presenterDetailFragment;
+        public GalleryDetailFragment galleryDetailFragment; 
 
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
@@ -85,12 +86,16 @@ namespace Eventos
             galleryFragment = new GalleryFragment();
             mapFragment = new MapFragment();
             presenterDetailFragment = new PresenterDetailFragment();
+            galleryDetailFragment = new GalleryDetailFragment();
 
             //frequentQuestionsFragment.PopulateMenu();
 
             mLeftDrawer.ItemClick += OnSelectedItemDrawer;
 
             var transaction = SupportFragmentManager.BeginTransaction();
+
+            transaction.Add(Resource.Id.fragmentContainer, galleryDetailFragment, "Gallery Detail");
+            transaction.Hide(galleryDetailFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, presenterDetailFragment, "Presenter Detail");
             transaction.Hide(presenterDetailFragment);
