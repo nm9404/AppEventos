@@ -12,10 +12,9 @@
         android:background="?attr/colorPrimary">
         <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/presenterImageDetailView1"
-            android:layout_height="150dp"
+            android:layout_height="135dp"
             android:src="@drawable/leisa_christmas_false_color"
-            android:layout_width="150dp"
-            android:layout_marginTop="30dp"
+            android:layout_width="135dp"
             android:scaleType="centerCrop"
             app:riv_corner_radius="60dp"
             app:riv_border_width="2dip"
@@ -26,14 +25,21 @@
             android:gravity="center"
             android:layout_centerInParent="true"
             android:layout_gravity="center" />
-      <TextView
-        android:layout_height="40dp"
-        android:layout_width="150dp"
-        android:textColor="#FFF"/>
         <TextView
-          android:layout_height="40dp"
-          android:layout_width="150dp"
-          android:textColor="#FFF"/>  
+            android:layout_height="20dp"
+            android:layout_width="200dp"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/presenterDetailNameText" />
+        <TextView
+            android:layout_height="45dp"
+            android:layout_width="250dp"
+            android:textColor="#FFF"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/presenterDetailProfileText" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,3 +52,4 @@
             android:layout_width="match_parent" />
     </LinearLayout>
 </LinearLayout>
+

@@ -1906,11 +1906,11 @@ namespace Eventos
 			// aapt resource value: 0x7f0b000a
 			public const int MvxBindingTagUnique = 2131427338;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int PresenterDetailListView = 2131427478;
+			// aapt resource value: 0x7f0b0098
+			public const int PresenterDetailListView = 2131427480;
 			
-			// aapt resource value: 0x7f0b009a
-			public const int PresentersGridView = 2131427482;
+			// aapt resource value: 0x7f0b009c
+			public const int PresentersGridView = 2131427484;
 			
 			// aapt resource value: 0x7f0b0076
 			public const int TextButtonContainerA = 2131427446;
@@ -2203,17 +2203,35 @@ namespace Eventos
 			// aapt resource value: 0x7f0b008e
 			public const int place_autocomplete_separator = 2131427470;
 			
+			// aapt resource value: 0x7f0b0096
+			public const int presenterDetailNameText = 2131427478;
+			
+			// aapt resource value: 0x7f0b0097
+			public const int presenterDetailProfileText = 2131427479;
+			
+			// aapt resource value: 0x7f0b009e
+			public const int presenterDetailWorkDescription = 2131427486;
+			
+			// aapt resource value: 0x7f0b009d
+			public const int presenterDetailWorkName = 2131427485;
+			
 			// aapt resource value: 0x7f0b0095
 			public const int presenterImageDetailView1 = 2131427477;
 			
-			// aapt resource value: 0x7f0b0097
-			public const int presenterImageView1 = 2131427479;
-			
-			// aapt resource value: 0x7f0b0098
-			public const int presenterTextA1 = 2131427480;
-			
 			// aapt resource value: 0x7f0b0099
-			public const int presenterTextB1 = 2131427481;
+			public const int presenterImageView1 = 2131427481;
+			
+			// aapt resource value: 0x7f0b009f
+			public const int presenterImageWorkDetail = 2131427487;
+			
+			// aapt resource value: 0x7f0b009a
+			public const int presenterTextA1 = 2131427482;
+			
+			// aapt resource value: 0x7f0b009b
+			public const int presenterTextB1 = 2131427483;
+			
+			// aapt resource value: 0x7f0b00a0
+			public const int presenterWorkDetailImageDescription = 2131427488;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;
@@ -2557,16 +2575,19 @@ namespace Eventos
 			public const int PresentersFragmentView = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int select_dialog_item_material = 2130903090;
+			public const int PresenterWorkRow = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int select_dialog_multichoice_material = 2130903091;
+			public const int select_dialog_item_material = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int select_dialog_singlechoice_material = 2130903092;
+			public const int select_dialog_multichoice_material = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int support_simple_spinner_dropdown_item = 2130903093;
+			public const int select_dialog_singlechoice_material = 2130903093;
+			
+			// aapt resource value: 0x7f030036
+			public const int support_simple_spinner_dropdown_item = 2130903094;
 			
 			static Layout()
 			{
