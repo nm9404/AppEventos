@@ -14,12 +14,16 @@ using SupportFragment = Android.Support.V4.App.Fragment;
 using Eventos.core.DataService;
 using Square.Picasso;
 using Eventos.core.Model;
+using Eventos.Adapters;
 
 namespace Eventos.Fragments
 {
     public class PresenterDetailFragment : SupportFragment
     {
         private List<Presenter> presentersList = new List<Presenter>();
+        private TextView presenterNameText;
+        private TextView presenterDescriptionText;
+        private ListView workListView;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,6 +44,8 @@ namespace Eventos.Fragments
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
+
+            FindViews();
         }
 
         public void instanceDataService(List<Presenter> presentersList)
@@ -47,12 +53,25 @@ namespace Eventos.Fragments
             this.presentersList = presentersList;
         }
 
+        public void FindViews()
+        {
+            presenterNameText = this.View.FindViewById<TextView>(Resource.Id.presenterDetailNameText);
+            presenterDescriptionText = this.View.FindViewById<TextView>(Resource.Id.presenterDetailProfileText);
+            workListView = this.View.FindViewById<ListView>(Resource.Id.PresenterDetailListView);
+        }
+
         public void PopulateData(int position)
         {
             var imageView = this.View.FindViewById<ImageView>(Resource.Id.presenterImageDetailView1);
             string imageUrl = "http://testappeventos.webcindario.com/Imagenes/" + presentersList[position].Photo.ImagePath + ".jpg";
 
-            Picasso.With(Context).Load(imageUrl).CenterCrop().Resize(600, 600).Into(imageView);
+            Picasso.With(Context).Load(imageUrl).CenterCrop().Resize(450, 450).Into(imageView);
+
+            presenterNameText.Text = presentersList[position].Name;
+            presenterDescriptionText.Text = presentersList[position].Profile;
+
+            PresenterWorkDetailAdapter presenterWorkDetailAdapter = new PresenterWorkDetailAdapter(this.Activity, presentersList[position].PreviousWorks);
+            workListView.Adapter = presenterWorkDetailAdapter;
         }
 
     }

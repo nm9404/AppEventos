@@ -159,6 +159,7 @@
     <Compile Include="Adapters\GalleryMenuAdapter.cs" />
     <Compile Include="Adapters\MenuAdapter.cs" />
     <Compile Include="Adapters\PresentersAdapter.cs" />
+    <Compile Include="Adapters\PresenterWorkDetailAdapter.cs" />
     <Compile Include="AsyncTasks\InstantiateDataServiceTask.cs" />
     <Compile Include="Fragments\FrequentQuestionsFragment.cs" />
     <Compile Include="Fragments\GalleryDetailFragment.cs" />
@@ -219,6 +220,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ImageDetailView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PresenterWorkRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
