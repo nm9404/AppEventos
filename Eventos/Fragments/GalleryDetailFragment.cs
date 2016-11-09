@@ -19,6 +19,7 @@ namespace Eventos.Fragments
     public class GalleryDetailFragment : SupportFragment
     {
         private List<MImage> imageList = new List<MImage>();
+        private TextView imageDetailText;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -40,6 +41,8 @@ namespace Eventos.Fragments
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
+
+            FindViews();
         }
 
         public void instanceDataService(List<MImage> imageList)
@@ -47,12 +50,19 @@ namespace Eventos.Fragments
             this.imageList = imageList;
         }
 
+        public void FindViews()
+        {
+            imageDetailText = this.View.FindViewById<TextView>(Resource.Id.imageDetailText);
+        }
+
         public void PopulateData(int position)
         {
             var imageView = this.View.FindViewById<ImageView>(Resource.Id.imageDetailedView);
             string imageUrl = "http://testappeventos.webcindario.com/Imagenes/" + imageList[position].ImagePath + ".jpg";
 
-            Picasso.With(Context).Load(imageUrl).Into(imageView);
+            Picasso.With(Context).Load(imageUrl).CenterCrop().Resize(720, 1025).Into(imageView);
+
+            imageDetailText.Text = imageList[position].Description;
         }
     }
 }
