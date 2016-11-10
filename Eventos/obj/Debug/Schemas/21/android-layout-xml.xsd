@@ -3,7 +3,7 @@
   <xs:import schemaLocation="schemas.android.com.apk.res.android.xsd" namespace="http://schemas.android.com/apk/res/android" />
   <xs:annotation>
     <xs:documentation>v21</xs:documentation>
-    <xs:documentation>11/9/2016 4:52:38 PM</xs:documentation>
+    <xs:documentation>10/11/2016 4:32:30 p. m.</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -80,15 +80,15 @@
       <xs:element ref="AdapterViewFlipper" />
       <xs:element ref="ViewFlipper" />
       <xs:element ref="fragment" />
+      <xs:element ref="com.makeramen.roundedimageview.RoundedImageView" />
       <xs:element ref="FFImageLoading.Views.ImageViewAsync" />
       <xs:element ref="FFImageLoading.Views.ManagedImageView" />
       <xs:element ref="FFImageLoading.Cross.MvxImageLoadingView" />
-      <xs:element ref="com.makeramen.roundedimageview.RoundedImageView" />
-      <xs:element ref="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" />
       <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner" />
       <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatRadioGroup" />
       <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatImageView" />
       <xs:element ref="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView" />
+      <xs:element ref="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxTableLayout" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxFrameLayout" />
       <xs:element ref="MvvmCross.Binding.Droid.Views.MvxRelativeLayout" />
@@ -137,9 +137,9 @@
       <xs:element ref="android.support.v7.widget.Toolbar" />
       <xs:element ref="android.support.v7.view.menu.ExpandedMenuView" />
       <xs:element ref="android.support.v7.view.menu.ListMenuItemView" />
-      <xs:element ref="com.google.android.gms.common.SignInButton" />
       <xs:element ref="com.google.android.gms.maps.StreetViewPanoramaView" />
       <xs:element ref="com.google.android.gms.maps.MapView" />
+      <xs:element ref="com.google.android.gms.common.SignInButton" />
     </xs:choice>
   </xs:group>
   <xs:element name="TimePicker" type="TimePicker">
@@ -292,10 +292,31 @@
     <xs:attribute ref="android:backgroundTint" />
     <xs:attribute ref="android:backgroundTintMode" />
     <xs:attribute ref="android:outlineProvider" />
+    <xs:attribute ref="android:layout_toLeftOf" />
+    <xs:attribute ref="android:layout_toRightOf" />
+    <xs:attribute ref="android:layout_above" />
+    <xs:attribute ref="android:layout_below" />
+    <xs:attribute ref="android:layout_alignBaseline" />
+    <xs:attribute ref="android:layout_alignLeft" />
+    <xs:attribute ref="android:layout_alignTop" />
+    <xs:attribute ref="android:layout_alignRight" />
+    <xs:attribute ref="android:layout_alignBottom" />
+    <xs:attribute ref="android:layout_alignParentLeft" />
+    <xs:attribute ref="android:layout_alignParentTop" />
+    <xs:attribute ref="android:layout_alignParentRight" />
+    <xs:attribute ref="android:layout_alignParentBottom" />
+    <xs:attribute ref="android:layout_centerInParent" />
+    <xs:attribute ref="android:layout_centerHorizontal" />
+    <xs:attribute ref="android:layout_centerVertical" />
+    <xs:attribute ref="android:layout_alignWithParentIfMissing" />
+    <xs:attribute ref="android:layout_toStartOf" />
+    <xs:attribute ref="android:layout_toEndOf" />
+    <xs:attribute ref="android:layout_alignStart" />
+    <xs:attribute ref="android:layout_alignEnd" />
+    <xs:attribute ref="android:layout_alignParentStart" />
+    <xs:attribute ref="android:layout_alignParentEnd" />
     <xs:attribute ref="android:layout_width" />
     <xs:attribute ref="android:layout_height" />
-    <xs:attribute ref="android:layout_weight" />
-    <xs:attribute ref="android:layout_gravity" />
     <xs:attribute ref="android:layout_margin" />
     <xs:attribute ref="android:layout_marginLeft" />
     <xs:attribute ref="android:layout_marginTop" />
@@ -1394,10 +1415,31 @@
     <xs:attribute ref="android:fragmentReenterTransition" />
     <xs:attribute ref="android:fragmentAllowEnterTransitionOverlap" />
     <xs:attribute ref="android:fragmentAllowReturnTransitionOverlap" />
+    <xs:attribute ref="android:layout_toLeftOf" />
+    <xs:attribute ref="android:layout_toRightOf" />
+    <xs:attribute ref="android:layout_above" />
+    <xs:attribute ref="android:layout_below" />
+    <xs:attribute ref="android:layout_alignBaseline" />
+    <xs:attribute ref="android:layout_alignLeft" />
+    <xs:attribute ref="android:layout_alignTop" />
+    <xs:attribute ref="android:layout_alignRight" />
+    <xs:attribute ref="android:layout_alignBottom" />
+    <xs:attribute ref="android:layout_alignParentLeft" />
+    <xs:attribute ref="android:layout_alignParentTop" />
+    <xs:attribute ref="android:layout_alignParentRight" />
+    <xs:attribute ref="android:layout_alignParentBottom" />
+    <xs:attribute ref="android:layout_centerInParent" />
+    <xs:attribute ref="android:layout_centerHorizontal" />
+    <xs:attribute ref="android:layout_centerVertical" />
+    <xs:attribute ref="android:layout_alignWithParentIfMissing" />
+    <xs:attribute ref="android:layout_toStartOf" />
+    <xs:attribute ref="android:layout_toEndOf" />
+    <xs:attribute ref="android:layout_alignStart" />
+    <xs:attribute ref="android:layout_alignEnd" />
+    <xs:attribute ref="android:layout_alignParentStart" />
+    <xs:attribute ref="android:layout_alignParentEnd" />
     <xs:attribute ref="android:layout_width" />
     <xs:attribute ref="android:layout_height" />
-    <xs:attribute ref="android:layout_weight" />
-    <xs:attribute ref="android:layout_gravity" />
     <xs:attribute ref="android:layout_margin" />
     <xs:attribute ref="android:layout_marginLeft" />
     <xs:attribute ref="android:layout_marginTop" />
@@ -1406,6 +1448,16 @@
     <xs:attribute ref="android:layout_marginStart" />
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
+  </xs:complexType>
+  <xs:element name="com.makeramen.roundedimageview.RoundedImageView" type="com.makeramen.roundedimageview.RoundedImageView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: ImageViews.Rounded.RoundedImageView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.makeramen.roundedimageview.RoundedImageView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ImageView" />
+    </xs:complexContent>
   </xs:complexType>
   <xs:element name="FFImageLoading.Views.ImageViewAsync" type="FFImageLoading.Views.ImageViewAsync">
     <xs:annotation>
@@ -1435,26 +1487,6 @@
   <xs:complexType name="FFImageLoading.Cross.MvxImageLoadingView">
     <xs:complexContent mixed="false">
       <xs:extension base="ImageView" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="com.makeramen.roundedimageview.RoundedImageView" type="com.makeramen.roundedimageview.RoundedImageView">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: ImageViews.Rounded.RoundedImageView</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="com.makeramen.roundedimageview.RoundedImageView">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ImageView" />
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" type="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
-    <xs:complexContent mixed="false">
-      <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner" type="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatSpinner">
@@ -1495,6 +1527,16 @@
   <xs:complexType name="MvvmCross.Droid.Support.V7.AppCompat.Widget.MvxAppCompatAutoCompleteTextView">
     <xs:complexContent mixed="false">
       <xs:extension base="AutoCompleteTextView" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout" type="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ViewGroup" />
     </xs:complexContent>
   </xs:complexType>
   <xs:element name="MvvmCross.Binding.Droid.Views.MvxTableLayout" type="MvvmCross.Binding.Droid.Views.MvxTableLayout">
@@ -2033,16 +2075,6 @@
       <xs:extension base="LinearLayout" />
     </xs:complexContent>
   </xs:complexType>
-  <xs:element name="com.google.android.gms.common.SignInButton" type="com.google.android.gms.common.SignInButton">
-    <xs:annotation>
-      <xs:documentation>Runtime Type: Android.Gms.Common.SignInButton</xs:documentation>
-    </xs:annotation>
-  </xs:element>
-  <xs:complexType name="com.google.android.gms.common.SignInButton">
-    <xs:complexContent mixed="false">
-      <xs:extension base="FrameLayout" />
-    </xs:complexContent>
-  </xs:complexType>
   <xs:element name="com.google.android.gms.maps.StreetViewPanoramaView" type="com.google.android.gms.maps.StreetViewPanoramaView">
     <xs:annotation>
       <xs:documentation>Runtime Type: Android.Gms.Maps.StreetViewPanoramaView</xs:documentation>
@@ -2059,6 +2091,16 @@
     </xs:annotation>
   </xs:element>
   <xs:complexType name="com.google.android.gms.maps.MapView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="com.google.android.gms.common.SignInButton" type="com.google.android.gms.common.SignInButton">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Gms.Common.SignInButton</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="com.google.android.gms.common.SignInButton">
     <xs:complexContent mixed="false">
       <xs:extension base="FrameLayout" />
     </xs:complexContent>

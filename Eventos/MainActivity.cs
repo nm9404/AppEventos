@@ -174,7 +174,7 @@ namespace Eventos
         public void InstanceDataOnFragments()
         {
             frequentQuestionsFragment.SetFrequentQuestionList(dataServiceInstance.GetEvent().FrequentQuestions);
-            presentersFragment.SetPresentersList(dataServiceInstance.GetEvent().Presenters);
+            presentersFragment.SetPresentersList(dataServiceInstance);
             galleryFragment.SetImageList(dataServiceInstance.GetEvent().ImageGallery);
             mapFragment.InstantiateDataAndInitializeMap(dataServiceInstance);
         }

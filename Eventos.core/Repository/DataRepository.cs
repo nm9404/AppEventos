@@ -97,6 +97,23 @@ namespace Eventos.core.Repository
             return selectedPresenter.FirstOrDefault<Presenter>().PreviousWorks;
         }
 
+        public List<Work> GetAllWorksByPresenterId(int presenterId)
+        {
+            List<Work> allWorks = new List<Work>();
+            allWorks = GetAllPreviousWorkByPresenterId(presenterId);
+
+            List<Work> allConferencesWorkType = new List<Work>();
+            List<Conference> allConferences = new List<Conference>();
+
+            allConferences = GetConferenceByPresenterId(presenterId);
+            foreach (Conference conference in allConferences)
+            {
+                allConferencesWorkType.Add((Work)conference);
+            }
+
+            return allWorks.Concat<Work>(allConferencesWorkType).ToList<Work>();
+        }
+
         public List<Conference> GetAllConferences()
         {
             IEnumerable<Conference> allConferences =
@@ -149,6 +166,18 @@ namespace Eventos.core.Repository
 
             return allPreviousWorks.Concat(allConferenceWorks).ToList<Work>();
         }
+
+        public Conference GetConferenceByWorkId(int workId)
+        {
+            IEnumerable<Conference> selectedConference =
+                from presenter in mainEvent.Presenters
+                from conference in presenter.Conferences
+                where conference.ConferenceId == workId
+                select conference;
+
+            return selectedConference.FirstOrDefault<Conference>();
+        }
+
 
         public Work GetWorkById(int workId)
         {

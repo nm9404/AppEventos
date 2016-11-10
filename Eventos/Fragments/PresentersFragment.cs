@@ -13,6 +13,7 @@ using Android.Widget;
 using Eventos.core.Model;
 using Eventos.Adapters;
 using SupportFragment = Android.Support.V4.App.Fragment;
+using Eventos.core.DataService;
 
 namespace Eventos.Fragments
 {
@@ -47,11 +48,11 @@ namespace Eventos.Fragments
             FindViews();
         }
 
-        public void SetPresentersList(List<Presenter> presenterList)
+        public void SetPresentersList(DataService dataServiceInstance)
         {
-            presentersList = presenterList;
+            presentersList = dataServiceInstance.GetEvent().Presenters;
             MainActivity activity = (MainActivity)this.Activity;
-            activity.presenterDetailFragment.instanceDataService(presenterList);
+            activity.presenterDetailFragment.instanceDataService(presentersList, dataServiceInstance);
         }
 
         public void PopulateMenu()
