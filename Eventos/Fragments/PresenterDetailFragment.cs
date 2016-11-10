@@ -24,6 +24,7 @@ namespace Eventos.Fragments
         private TextView presenterNameText;
         private TextView presenterDescriptionText;
         private ListView workListView;
+        private DataService dataServiceInstance = new DataService();
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -48,9 +49,10 @@ namespace Eventos.Fragments
             FindViews();
         }
 
-        public void instanceDataService(List<Presenter> presentersList)
+        public void instanceDataService(List<Presenter> presentersList, DataService dataServiceInstance)
         {
             this.presentersList = presentersList;
+            this.dataServiceInstance = dataServiceInstance;
         }
 
         public void FindViews()
@@ -70,8 +72,11 @@ namespace Eventos.Fragments
             presenterNameText.Text = presentersList[position].Name;
             presenterDescriptionText.Text = presentersList[position].Profile;
 
+            List<Work> allPresenterWorks = dataServiceInstance.GetAllPreviousWorkByPresenterId presentersList[position].PresenterId;
+
             PresenterWorkDetailAdapter presenterWorkDetailAdapter = new PresenterWorkDetailAdapter(this.Activity, presentersList[position].PreviousWorks);
             workListView.Adapter = presenterWorkDetailAdapter;
+
         }
 
     }

@@ -71,5 +71,10 @@ namespace Eventos.core.DataService
         {
             return dataRepository.GetPresenterByConferenceId(conferenceId);
         }
+
+        public Conference GetConferenceByWorkId(int workId)
+        {
+            return dataRepository.GetConferenceByWorkId(workId);
+        }
     }
 }
