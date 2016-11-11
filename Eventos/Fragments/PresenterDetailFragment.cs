@@ -72,9 +72,9 @@ namespace Eventos.Fragments
             presenterNameText.Text = presentersList[position].Name;
             presenterDescriptionText.Text = presentersList[position].Profile;
 
-            List<Work> allPresenterWorks = dataServiceInstance.GetAllPreviousWorkByPresenterId presentersList[position].PresenterId;
+            List<Work> allPresenterWorks = dataServiceInstance.GetAllWorksByPresenterId(presentersList[position].PresenterId);
 
-            PresenterWorkDetailAdapter presenterWorkDetailAdapter = new PresenterWorkDetailAdapter(this.Activity, presentersList[position].PreviousWorks);
+            PresenterWorkDetailAdapter presenterWorkDetailAdapter = new PresenterWorkDetailAdapter(this.Activity, allPresenterWorks);
             workListView.Adapter = presenterWorkDetailAdapter;
 
         }

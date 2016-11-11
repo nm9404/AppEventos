@@ -27,6 +27,11 @@ namespace Eventos.core.DataService
             return dataRepository.GetAllPlaces();
         }
 
+        public List<Work> GetAllWorksByPresenterId(int presenterId)
+        {
+            return dataRepository.GetAllWorksByPresenterId(presenterId);
+        }
+
         public List<Work> GetAllPreviousWorkByPresenterId(int presenterId)
         {
             return dataRepository.GetAllPreviousWorkByPresenterId(presenterId);
