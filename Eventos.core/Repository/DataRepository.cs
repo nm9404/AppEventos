@@ -111,7 +111,7 @@ namespace Eventos.core.Repository
                 allConferencesWorkType.Add((Work)conference);
             }
 
-            return allWorks.Concat<Work>(allConferencesWorkType).ToList<Work>();
+            return allConferencesWorkType.Concat<Work>(allWorks).ToList<Work>();
         }
 
         public List<Conference> GetAllConferences()
@@ -172,7 +172,7 @@ namespace Eventos.core.Repository
             IEnumerable<Conference> selectedConference =
                 from presenter in mainEvent.Presenters
                 from conference in presenter.Conferences
-                where conference.ConferenceId == workId
+                where conference.WorkId == workId
                 select conference;
 
             return selectedConference.FirstOrDefault<Conference>();

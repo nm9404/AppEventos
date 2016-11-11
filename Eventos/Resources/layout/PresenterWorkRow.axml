@@ -30,10 +30,10 @@
             android:textColor="#878787"
             android:id="@+id/presenterDetailWorkYear" />
         <TextView
-            android:layout_height="120dp"
+            android:layout_height="wrap_content"
             android:layout_width="200dp"
             android:gravity="center"
-            android:textSize="11dp"
+            android:textSize="12dp"
             android:textColor="#878787"
             android:id="@+id/presenterDetailWorkDescription" />
     </LinearLayout>
@@ -59,6 +59,7 @@
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="150dp"
+            android:textSize="12dp"
             android:textColor="#878787"
             android:gravity="center"
             android:id="@+id/presenterWorkDetailImageDescription" />
