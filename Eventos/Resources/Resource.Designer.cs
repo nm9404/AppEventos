@@ -2209,11 +2209,14 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0097
 			public const int presenterDetailProfileText = 2131427479;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int presenterDetailWorkDescription = 2131427486;
+			// aapt resource value: 0x7f0b009f
+			public const int presenterDetailWorkDescription = 2131427487;
 			
 			// aapt resource value: 0x7f0b009d
 			public const int presenterDetailWorkName = 2131427485;
+			
+			// aapt resource value: 0x7f0b009e
+			public const int presenterDetailWorkYear = 2131427486;
 			
 			// aapt resource value: 0x7f0b0095
 			public const int presenterImageDetailView1 = 2131427477;
@@ -2221,8 +2224,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0099
 			public const int presenterImageView1 = 2131427481;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int presenterImageWorkDetail = 2131427487;
+			// aapt resource value: 0x7f0b00a0
+			public const int presenterImageWorkDetail = 2131427488;
 			
 			// aapt resource value: 0x7f0b009a
 			public const int presenterTextA1 = 2131427482;
@@ -2230,8 +2233,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b009b
 			public const int presenterTextB1 = 2131427483;
 			
-			// aapt resource value: 0x7f0b00a0
-			public const int presenterWorkDetailImageDescription = 2131427488;
+			// aapt resource value: 0x7f0b00a1
+			public const int presenterWorkDetailImageDescription = 2131427489;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;

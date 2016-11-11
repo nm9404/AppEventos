@@ -52,10 +52,11 @@ namespace Eventos.Adapters
 
             string url = "http://testappeventos.webcindario.com/Imagenes/" + items[position].Picture.ImagePath + ".jpg";
             ImageView imageView = convertView.FindViewById<ImageView>(Resource.Id.presenterImageWorkDetail);
-            Picasso.With(context).Load(url).Into(imageView);
+            Picasso.With(context).Load(url).Resize(300,300).CenterCrop().Into(imageView);
 
             convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkName).Text = items[position].Title;
-            convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkDescription).Text = items[position].ShortDescription;
+            convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkDescription).Text = items[position].Abstract;
+            convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkYear).Text = items[position].Year.ToString();
             convertView.FindViewById<TextView>(Resource.Id.presenterWorkDetailImageDescription).Text = items[position].Picture.Description;
 
             return convertView;

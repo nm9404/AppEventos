@@ -52,7 +52,7 @@ namespace Eventos.Adapters
 
         public override 
             
-            View GetView(int position, View convertView, ViewGroup parent)
+        View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];
             convertView = context.LayoutInflater.Inflate(Resource.Layout.GalleryElement, parent, false);
