@@ -697,5 +697,6 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\presenterconferencerow.xml
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb

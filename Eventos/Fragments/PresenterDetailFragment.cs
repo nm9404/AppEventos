@@ -74,7 +74,7 @@ namespace Eventos.Fragments
 
             List<Work> allPresenterWorks = dataServiceInstance.GetAllWorksByPresenterId(presentersList[position].PresenterId);
 
-            PresenterWorkDetailAdapter presenterWorkDetailAdapter = new PresenterWorkDetailAdapter(this.Activity, allPresenterWorks);
+            PresenterWorkDetailAdapter presenterWorkDetailAdapter = new PresenterWorkDetailAdapter(this.Activity, allPresenterWorks, dataServiceInstance);
             workListView.Adapter = presenterWorkDetailAdapter;
 
         }
