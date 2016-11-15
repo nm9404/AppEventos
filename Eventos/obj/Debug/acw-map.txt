@@ -10,6 +10,10 @@ Eventos.RoundedImageTest, Eventos;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedIma
 Eventos.RoundedImageTest, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedImageTest
 Eventos.RoundedImageTest;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedImageTest
 eventos.RoundedImageTest;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedImageTest
+Eventos.Utility.ImageTarget, Eventos;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
+Eventos.Utility.ImageTarget, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
+Eventos.Utility.ImageTarget;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
+eventos.utility.ImageTarget;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
 Eventos.MyActionBarToggle.MyActionBarToggle, Eventos;md57d760e5d62e6f5d15efe4e70b5f40748.MyActionBarToggle
 Eventos.MyActionBarToggle.MyActionBarToggle, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d760e5d62e6f5d15efe4e70b5f40748.MyActionBarToggle
 Eventos.MyActionBarToggle.MyActionBarToggle;md57d760e5d62e6f5d15efe4e70b5f40748.MyActionBarToggle

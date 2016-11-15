@@ -11,6 +11,9 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using SupportFragment = Android.Support.V4.App.Fragment;
+using Square.Picasso;
+using FFImageLoading.Work;
+using Eventos.Utility;
 
 namespace Eventos
 {
@@ -22,6 +25,7 @@ namespace Eventos
         public Button presentersButton;
         public Button callendarButton;
         public Button contactButton;
+        public View mainLayout;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -45,6 +49,14 @@ namespace Eventos
             base.OnActivityCreated(savedInstanceState);
             FindViews();
             HandleEvents();
+            SetBackgrounds();
+        }
+
+        public void SetBackgrounds()
+        {
+            ImageTarget target = new ImageTarget(mainLayout);
+            string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
+            Picasso.With(this.Activity).Load(url).CenterCrop().Resize(720, 1025).Into(target);
         }
 
         public void FindViews()
@@ -55,6 +67,7 @@ namespace Eventos
             callendarButton = this.View.FindViewById<Button>(Resource.Id.calendarButton);
             contactButton = this.View.FindViewById<Button>(Resource.Id.contactButton);
             galleryButton = this.View.FindViewById<Button>(Resource.Id.galeryButton);
+            mainLayout = this.View.FindViewById<View>(Resource.Id.mainMenuLayout);
         }
 
         public void HandleEvents()

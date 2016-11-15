@@ -61,10 +61,23 @@ namespace Eventos.Adapters
                 ImageView imageView = convertView.FindViewById<ImageView>(Resource.Id.presenterImageWorkDetail);
                 Picasso.With(context).Load(url).Resize(300, 300).CenterCrop().Into(imageView);
 
-                string message = conference.Hour.Hours.ToString() + " : " + conference.Hour.Minutes.ToString() + "   " + conference.Date.Day.ToString() + "/" + conference.Date.Month.ToString() + "/" + conference.Date.Year.ToString();
+                List<String> hourData = new List<String>();
+                hourData.Add(conference.Hour.Hours.ToString());
+                hourData.Add(conference.Hour.Minutes.ToString());
+                if (conference.Hour.Hours<10)
+                {
+                    hourData[0] = "0" + hourData[0];
+                }
+                if(conference.Hour.Minutes<10)
+                {
+                    hourData[1] = "0"+ hourData[1];
+                }
 
-                convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkName).Text = "Conferencia: " + items[position].Title;
+                string message = hourData[0] + " : " + hourData[1] + "\n"+ conference.Date.Day.ToString() + "/" + conference.Date.Month.ToString() + "/" + conference.Date.Year.ToString();
+
+                convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkTitle).Text = "Conferencia: " + items[position].Title;
                 convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkYear).Text = message;
+                convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkDescription).Text = conference.ShortDescription;
             }
             else
             {
@@ -76,11 +89,9 @@ namespace Eventos.Adapters
 
                 convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkName).Text = items[position].Title;
                 convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkYear).Text = items[position].Year.ToString();
-                
+                convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkDescription).Text = items[position].Abstract;
             }
 
-            
-            convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkDescription).Text = items[position].Abstract;
             convertView.FindViewById<TextView>(Resource.Id.presenterWorkDetailImageDescription).Text = items[position].Picture.Description;
 
             return convertView;
