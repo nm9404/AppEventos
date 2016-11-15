@@ -178,7 +178,9 @@
     <Compile Include="Utility\Conversions.cs" />
     <Compile Include="Utility\ImageHelper.cs" />
     <Compile Include="Utility\ImageLoader.cs" />
+    <Compile Include="Utility\ImageTarget.cs" />
     <Compile Include="Utility\MathOperations.cs" />
+    <Compile Include="Utility\YearListOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -226,6 +228,12 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\PresenterConferenceRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CalendarFragmentView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CalendarDayRowView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

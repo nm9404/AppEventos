@@ -47,8 +47,6 @@ namespace Eventos.core.Repository
             }
         }
 
-
-
         public Presenter GetPresenterById(int personId)
         {
             IEnumerable<Presenter> persons =
@@ -177,7 +175,6 @@ namespace Eventos.core.Repository
 
             return selectedConference.FirstOrDefault<Conference>();
         }
-
 
         public Work GetWorkById(int workId)
         {
