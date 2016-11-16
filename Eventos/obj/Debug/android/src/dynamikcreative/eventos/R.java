@@ -2102,9 +2102,7 @@ containing a value of this type.
         public static final int powered_by_google_light=0x7f020089;
     }
     public static final class id {
-        public static final int DayCalendar=0x7f0b0060;
         public static final int GalleryGridView=0x7f0b006a;
-        public static final int MonthCalendar=0x7f0b0061;
         public static final int MvvmCrossTagId=0x7f0b0009;
         public static final int MvxBindingTagUnique=0x7f0b000a;
         public static final int PresenterDetailListView=0x7f0b00a4;
@@ -2153,6 +2151,7 @@ containing a value of this type.
         public static final int custom=0x7f0b0047;
         public static final int customPanel=0x7f0b0046;
         public static final int dark=0x7f0b0016;
+        public static final int dayCalendar=0x7f0b0060;
         public static final int decor_content_parent=0x7f0b004f;
         public static final int default_activity_button=0x7f0b0037;
         public static final int disableHome=0x7f0b001a;
@@ -2196,6 +2195,7 @@ containing a value of this type.
         public static final int menuIcon=0x7f0b0083;
         public static final int middle=0x7f0b0028;
         public static final int mirror=0x7f0b002f;
+        public static final int monthCalendar=0x7f0b0061;
         public static final int multiply=0x7f0b0021;
         public static final int never=0x7f0b002c;
         public static final int none=0x7f0b000c;

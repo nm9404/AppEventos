@@ -48,7 +48,8 @@ namespace Eventos
         public GalleryFragment galleryFragment;
         public MapFragment mapFragment;
         public PresenterDetailFragment presenterDetailFragment;
-        public GalleryDetailFragment galleryDetailFragment; 
+        public GalleryDetailFragment galleryDetailFragment;
+        public CalendarFragment calendarFragment;
 
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
@@ -87,12 +88,16 @@ namespace Eventos
             mapFragment = new MapFragment();
             presenterDetailFragment = new PresenterDetailFragment();
             galleryDetailFragment = new GalleryDetailFragment();
+            calendarFragment = new CalendarFragment();
 
             //frequentQuestionsFragment.PopulateMenu();
 
             mLeftDrawer.ItemClick += OnSelectedItemDrawer;
 
             var transaction = SupportFragmentManager.BeginTransaction();
+
+            transaction.Add(Resource.Id.fragmentContainer, calendarFragment, "Calendar");
+            transaction.Hide(calendarFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, galleryDetailFragment, "Gallery Detail");
             transaction.Hide(galleryDetailFragment);
@@ -177,6 +182,7 @@ namespace Eventos
             presentersFragment.SetPresentersList(dataServiceInstance);
             galleryFragment.SetImageList(dataServiceInstance.GetEvent().ImageGallery);
             mapFragment.InstantiateDataAndInitializeMap(dataServiceInstance);
+            calendarFragment.InstantiateDataService(dataServiceInstance);
         }
 
         protected override void OnPostCreate(Bundle savedInstanceState)
@@ -228,6 +234,10 @@ namespace Eventos
             {
                 case 0:
                     ShowFragment(mapFragment);
+                    break;
+                case 1:
+                    ShowFragment(calendarFragment);
+                    calendarFragment.PopulateData();
                     break;
                 case 2:
                     ShowFragment(presentersFragment);

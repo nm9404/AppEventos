@@ -50,15 +50,15 @@ namespace Eventos.Utility
                 }
             }
 
-            return concatedDates;
+            return concatedDates.OrderBy(i=>i).ToList<int>();
         }
 
-        public static DateF convetNumberToDateObject(int concatedDate)
+        public static DateF ConvetNumberToDateObject(int concatedDate)
         {
             DateF date = new DateF();
             date.Year = (int)(concatedDate / 10000);
             date.Month = (int)(concatedDate / 100 - date.Year * 100);
-            date.Day = (int)concatedDate - (date.Year * 1000) - (date.Month * 100);
+            date.Day = (int)concatedDate - (date.Year * 10000) - (date.Month * 100);
             return date;
         }
     }
