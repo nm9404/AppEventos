@@ -23,6 +23,7 @@ namespace Eventos.Fragments
         //private SearchView searchQuery;
         public List<FrequentQuestion> frequentQuestionList = new List<FrequentQuestion>();
 
+
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

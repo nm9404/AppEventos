@@ -1897,14 +1897,8 @@ namespace Eventos
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b0060
-			public const int DayCalendar = 2131427424;
-			
 			// aapt resource value: 0x7f0b006a
 			public const int GalleryGridView = 2131427434;
-			
-			// aapt resource value: 0x7f0b0061
-			public const int MonthCalendar = 2131427425;
 			
 			// aapt resource value: 0x7f0b0009
 			public const int MvvmCrossTagId = 2131427337;
@@ -2050,6 +2044,9 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0016
 			public const int dark = 2131427350;
 			
+			// aapt resource value: 0x7f0b0060
+			public const int dayCalendar = 2131427424;
+			
 			// aapt resource value: 0x7f0b004f
 			public const int decor_content_parent = 2131427407;
 			
@@ -2178,6 +2175,9 @@ namespace Eventos
 			
 			// aapt resource value: 0x7f0b002f
 			public const int mirror = 2131427375;
+			
+			// aapt resource value: 0x7f0b0061
+			public const int monthCalendar = 2131427425;
 			
 			// aapt resource value: 0x7f0b0021
 			public const int multiply = 2131427361;

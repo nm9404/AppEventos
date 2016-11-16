@@ -52,7 +52,7 @@ namespace Eventos.core.DataService
             return dataRepository.GetPlaceByConferenceId(conferenceId);
         }
 
-        public List<Conference> GetConferencesByDay(int day)
+        public List<Conference> GetConferencesByDay(DateF day)
         {
             return dataRepository.GetConferencesByDay(day);
         }

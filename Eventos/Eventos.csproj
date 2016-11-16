@@ -155,12 +155,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\CalendarAdapterA.cs" />
+    <Compile Include="Adapters\ConferenceDescriptionAdapter.cs" />
     <Compile Include="Adapters\FrequentQuestionAdapter.cs" />
     <Compile Include="Adapters\GalleryMenuAdapter.cs" />
     <Compile Include="Adapters\MenuAdapter.cs" />
     <Compile Include="Adapters\PresentersAdapter.cs" />
     <Compile Include="Adapters\PresenterWorkDetailAdapter.cs" />
     <Compile Include="AsyncTasks\InstantiateDataServiceTask.cs" />
+    <Compile Include="Fragments\CalendarFragment.cs" />
     <Compile Include="Fragments\FrequentQuestionsFragment.cs" />
     <Compile Include="Fragments\GalleryDetailFragment.cs" />
     <Compile Include="Fragments\GalleryFragment.cs" />

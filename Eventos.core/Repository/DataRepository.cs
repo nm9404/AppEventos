@@ -137,12 +137,12 @@ namespace Eventos.core.Repository
             return GetAllConferences().Where(i => i.ConferenceId == conferenceId).FirstOrDefault<Conference>().ConferencePlace;
         }
 
-        public List<Conference> GetConferencesByDay(int day)
+        public List<Conference> GetConferencesByDay(DateF day)
         {
             IEnumerable<Conference> conferencesByDay =
                 from person in mainEvent.Presenters
                 from conference in person.Conferences
-                where conference.Date.Day == day
+                where conference.Date.Day == day.Day && conference.Date.Year == day.Year && conference.Date.Month == day.Month
                 select conference;
 
             return conferencesByDay.ToList<Conference>();
