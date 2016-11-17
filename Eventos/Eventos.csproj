@@ -164,6 +164,7 @@
     <Compile Include="Adapters\PresenterWorkDetailAdapter.cs" />
     <Compile Include="AsyncTasks\InstantiateDataServiceTask.cs" />
     <Compile Include="Fragments\CalendarFragment.cs" />
+    <Compile Include="Fragments\ContactFragment.cs" />
     <Compile Include="Fragments\FrequentQuestionsFragment.cs" />
     <Compile Include="Fragments\GalleryDetailFragment.cs" />
     <Compile Include="Fragments\GalleryFragment.cs" />
@@ -240,6 +241,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\ConferenceDescriptionRow.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ContactView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
