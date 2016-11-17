@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Eventos.core.Model;
+using Eventos.core.DataService;
 
 namespace Eventos.Adapters
 {
@@ -17,6 +18,7 @@ namespace Eventos.Adapters
     {
         List<Conference> items;
         Activity context;
+        DataService dataServiceInstance;
 
         public override int Count
         {
@@ -34,10 +36,11 @@ namespace Eventos.Adapters
             }
         }
 
-        public ConferenceDescriptionAdapter (List<Conference> items, Activity context)
+        public ConferenceDescriptionAdapter (List<Conference> items, Activity context, DataService dataServiceInstance)
         {
             this.items = items;
             this.context = context;
+            this.dataServiceInstance = dataServiceInstance;
         }
 
         public override long GetItemId(int position)
@@ -50,6 +53,14 @@ namespace Eventos.Adapters
             convertView = context.LayoutInflater.Inflate(Resource.Layout.ConferenceDescriptionRow, parent, false);
             convertView.FindViewById<TextView>(Resource.Id.conferenceTitleDescription).Text = items[position].Title;
             convertView.FindViewById<TextView>(Resource.Id.conferenceAbstractDescription).Text = items[position].Abstract;
+            if (items[position].Abstract == null || items[position].Abstract == String.Empty)
+            {
+                convertView.FindViewById<TextView>(Resource.Id.conferenceAbstractDescription).Text = items[position].ShortDescription;
+                if (items[position].ShortDescription == null || items[position].ShortDescription == String.Empty)
+                {
+                    convertView.FindViewById<TextView>(Resource.Id.conferenceAbstractDescription).Text = "Conferencia dictada por: " + dataServiceInstance.GetPresenterByConferenceId(items[position].ConferenceId).Name;
+                }
+            }
             return convertView;
         }
     }

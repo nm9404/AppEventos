@@ -15,7 +15,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="13dp"
-        android:layout_marginBottom="13dp" />
+        android:layout_marginBottom="3dp" />
     <TextView
         android:id="@+id/conferenceAbstractDescription"
         android:layout_width="match_parent"
@@ -25,6 +25,6 @@
         android:text="Lorem ipsum dolor sit amet conseqetur elos mansjeid aqpawicn awpeiwen appel pen ik heb een appel ik heb een pen appelpen"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="2dp"
         android:layout_marginBottom="13dp" />
 </LinearLayout>

@@ -59,17 +59,27 @@ namespace Eventos.Adapters
             convertView.FindViewById<TextView>(Resource.Id.monthCalendar).Text = Conversions.ConvertNumberToMonth(date.Month);
 
             List<Conference> allConferencesInDate = dataServiceInstance.GetConferencesByDay(date);
-            ConferenceDescriptionAdapter conferenceDescriptionAdapter = new ConferenceDescriptionAdapter(allConferencesInDate, context);
+            ConferenceDescriptionAdapter conferenceDescriptionAdapter = new ConferenceDescriptionAdapter(allConferencesInDate, context, dataServiceInstance);
 
             LinearLayout layout = convertView.FindViewById<LinearLayout>(Resource.Id.calendarCardView);
 
             for (int i = 0; i < allConferencesInDate.Count(); i++)
             {
-               layout.AddView(conferenceDescriptionAdapter.GetView(i, null, null));
+                View view = conferenceDescriptionAdapter.GetView(i, null, null);
+                view.Tag = allConferencesInDate[i].ConferenceId.ToString();
+                view.Click += DateItemClick;
+                layout.AddView(view);
             }
             
-
             return convertView;
+        }
+
+        public void DateItemClick(object sender, EventArgs e)
+        {
+            View castedSender = (View)sender;
+            MainActivity mainActivity = (MainActivity)context;
+            mainActivity.presenterDetailFragment.PopulateData(mainActivity.presenterDetailFragment.GetPresenterPositionFromId(dataServiceInstance.GetPresenterByConferenceId(Int32.Parse(castedSender.Tag.ToString())).PresenterId));
+            mainActivity.ShowFragment(mainActivity.presenterDetailFragment);
         }
     }
 }
