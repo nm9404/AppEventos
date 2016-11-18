@@ -22,6 +22,10 @@ Eventos.Fragments.CalendarFragment, Eventos;md57d48028210a74cfc400f128edb466453.
 Eventos.Fragments.CalendarFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.CalendarFragment
 Eventos.Fragments.CalendarFragment;md57d48028210a74cfc400f128edb466453.CalendarFragment
 eventos.fragments.CalendarFragment;md57d48028210a74cfc400f128edb466453.CalendarFragment
+Eventos.Fragments.ContactFragment, Eventos;md57d48028210a74cfc400f128edb466453.ContactFragment
+Eventos.Fragments.ContactFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.ContactFragment
+Eventos.Fragments.ContactFragment;md57d48028210a74cfc400f128edb466453.ContactFragment
+eventos.fragments.ContactFragment;md57d48028210a74cfc400f128edb466453.ContactFragment
 Eventos.Fragments.FrequentQuestionsFragment, Eventos;md57d48028210a74cfc400f128edb466453.FrequentQuestionsFragment
 Eventos.Fragments.FrequentQuestionsFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.FrequentQuestionsFragment
 Eventos.Fragments.FrequentQuestionsFragment;md57d48028210a74cfc400f128edb466453.FrequentQuestionsFragment

@@ -50,6 +50,7 @@ namespace Eventos
         public PresenterDetailFragment presenterDetailFragment;
         public GalleryDetailFragment galleryDetailFragment;
         public CalendarFragment calendarFragment;
+        public ContactFragment contactFragment;
 
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
@@ -89,12 +90,16 @@ namespace Eventos
             presenterDetailFragment = new PresenterDetailFragment();
             galleryDetailFragment = new GalleryDetailFragment();
             calendarFragment = new CalendarFragment();
+            contactFragment = new ContactFragment();
 
             //frequentQuestionsFragment.PopulateMenu();
 
             mLeftDrawer.ItemClick += OnSelectedItemDrawer;
 
             var transaction = SupportFragmentManager.BeginTransaction();
+
+            transaction.Add(Resource.Id.fragmentContainer, contactFragment, "GalleryContact");
+            transaction.Hide(contactFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, calendarFragment, "Calendar");
             transaction.Hide(calendarFragment);
@@ -183,6 +188,7 @@ namespace Eventos
             galleryFragment.SetImageList(dataServiceInstance.GetEvent().ImageGallery);
             mapFragment.InstantiateDataAndInitializeMap(dataServiceInstance);
             calendarFragment.InstantiateDataService(dataServiceInstance);
+            contactFragment.InstantiateDataService(dataServiceInstance);
         }
 
         protected override void OnPostCreate(Bundle savedInstanceState)
@@ -250,6 +256,10 @@ namespace Eventos
                 case 4:
                     ShowFragment(frequentQuestionsFragment);
                     frequentQuestionsFragment.PopulateMenu();
+                    break;
+                case 5:
+                    ShowFragment(contactFragment);
+                    contactFragment.PopulateData();
                     break;
                 default:
                     break;

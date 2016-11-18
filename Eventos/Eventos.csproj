@@ -243,7 +243,7 @@
     <AndroidResource Include="Resources\layout\ConferenceDescriptionRow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\ContactView.axml">
+    <AndroidResource Include="Resources\layout\ContactFragmentView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

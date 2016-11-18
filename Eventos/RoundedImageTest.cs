@@ -19,7 +19,7 @@ namespace Eventos
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            SetContentView(Resource.Layout.ContactFragmentView);
             // Create your application here
         }
     }
