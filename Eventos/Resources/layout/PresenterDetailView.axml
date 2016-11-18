@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginBottom="15dp">
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:background="?attr/colorPrimary">
+        android:background="?attr/colorPrimary"
+        android:id="@+id/layoutPresenterDetail">
         <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/presenterImageDetailView1"
             android:layout_height="135dp"
@@ -40,6 +42,18 @@
             android:layout_gravity="center"
             android:gravity="center"
             android:id="@+id/presenterDetailProfileText" />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle"
+            android:drawableTop="@drawable/ic_share_white_36dp"
+            android:gravity="center"
+            android:paddingTop="11dp"
+            android:paddingRight="5dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-130dp"
+            android:id="@+id/shareButtonPresenterDetail"
+            android:layout_marginLeft="210dp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,4 +66,3 @@
             android:layout_width="match_parent" />
     </LinearLayout>
 </LinearLayout>
-

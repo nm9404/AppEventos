@@ -57,6 +57,8 @@ namespace Eventos.Fragments
             calendarListView.Adapter = calendarAdapterA;
         }
 
+
+
         public void InstantiateDataService(DataService dataServiceInstance)
         {
             this.dataServiceInstance = dataServiceInstance;

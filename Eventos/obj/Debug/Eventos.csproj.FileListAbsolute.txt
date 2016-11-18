@@ -632,7 +632,6 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-hdpi\ic_
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\R.cs.flag
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\uploadflags.txt
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\presenterconferencerow.xml
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\calendarfragmentview.xml
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\calendardayrowview.xml
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\conferencedescriptionrow.xml
@@ -674,8 +673,10 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\Eventos.dll.mdb
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\contactfragmentview.xml
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\splashview.xml
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Java.Interop.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Mono.Android.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Mono.Android.Export.dll.mdb

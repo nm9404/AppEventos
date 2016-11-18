@@ -2105,8 +2105,8 @@ containing a value of this type.
         public static final int GalleryGridView=0x7f0b0076;
         public static final int MvvmCrossTagId=0x7f0b0009;
         public static final int MvxBindingTagUnique=0x7f0b000a;
-        public static final int PresenterDetailListView=0x7f0b00b0;
-        public static final int PresentersGridView=0x7f0b00b4;
+        public static final int PresenterDetailListView=0x7f0b00b2;
+        public static final int PresentersGridView=0x7f0b00b6;
         public static final int TextButtonContainerA=0x7f0b0089;
         public static final int TextButtonContainerB=0x7f0b008e;
         public static final int action0=0x7f0b0091;
@@ -2195,6 +2195,7 @@ containing a value of this type.
         public static final int imageDetailText=0x7f0b0078;
         public static final int imageDetailedView=0x7f0b0077;
         public static final int info=0x7f0b009c;
+        public static final int layoutPresenterDetail=0x7f0b00ad;
         public static final int left_drawer=0x7f0b007d;
         public static final int light=0x7f0b0017;
         public static final int line1=0x7f0b0096;
@@ -2223,17 +2224,17 @@ containing a value of this type.
         public static final int place_autocomplete_search_button=0x7f0b009e;
         public static final int place_autocomplete_search_input=0x7f0b009f;
         public static final int place_autocomplete_separator=0x7f0b00a1;
-        public static final int presenterDetailNameText=0x7f0b00ae;
-        public static final int presenterDetailProfileText=0x7f0b00af;
+        public static final int presenterDetailNameText=0x7f0b00af;
+        public static final int presenterDetailProfileText=0x7f0b00b0;
         public static final int presenterDetailWorkDescription=0x7f0b00ac;
-        public static final int presenterDetailWorkName=0x7f0b00b5;
+        public static final int presenterDetailWorkName=0x7f0b00b7;
         public static final int presenterDetailWorkTitle=0x7f0b00a8;
         public static final int presenterDetailWorkYear=0x7f0b00ab;
-        public static final int presenterImageDetailView1=0x7f0b00ad;
-        public static final int presenterImageView1=0x7f0b00b1;
+        public static final int presenterImageDetailView1=0x7f0b00ae;
+        public static final int presenterImageView1=0x7f0b00b3;
         public static final int presenterImageWorkDetail=0x7f0b00a9;
-        public static final int presenterTextA1=0x7f0b00b2;
-        public static final int presenterTextB1=0x7f0b00b3;
+        public static final int presenterTextA1=0x7f0b00b4;
+        public static final int presenterTextB1=0x7f0b00b5;
         public static final int presenterWorkDetailImageDescription=0x7f0b00aa;
         public static final int progress_circular=0x7f0b0005;
         public static final int progress_horizontal=0x7f0b0006;
@@ -2257,6 +2258,7 @@ containing a value of this type.
         public static final int select_dialog_listview=0x7f0b005f;
         public static final int shareButtonImageDetail=0x7f0b0079;
         public static final int shareButtonPlace=0x7f0b00a7;
+        public static final int shareButtonPresenterDetail=0x7f0b00b1;
         public static final int shortcut=0x7f0b004a;
         public static final int showCustom=0x7f0b001c;
         public static final int showHome=0x7f0b001d;
@@ -2353,7 +2355,8 @@ containing a value of this type.
         public static final int select_dialog_item_material=0x7f030038;
         public static final int select_dialog_multichoice_material=0x7f030039;
         public static final int select_dialog_singlechoice_material=0x7f03003a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03003b;
+        public static final int splashview=0x7f03003b;
+        public static final int support_simple_spinner_dropdown_item=0x7f03003c;
     }
     public static final class string {
         public static final int ApplicationName=0x7f070040;

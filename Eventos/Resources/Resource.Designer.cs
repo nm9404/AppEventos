@@ -1906,11 +1906,11 @@ namespace Eventos
 			// aapt resource value: 0x7f0b000a
 			public const int MvxBindingTagUnique = 2131427338;
 			
-			// aapt resource value: 0x7f0b00b0
-			public const int PresenterDetailListView = 2131427504;
+			// aapt resource value: 0x7f0b00b2
+			public const int PresenterDetailListView = 2131427506;
 			
-			// aapt resource value: 0x7f0b00b4
-			public const int PresentersGridView = 2131427508;
+			// aapt resource value: 0x7f0b00b6
+			public const int PresentersGridView = 2131427510;
 			
 			// aapt resource value: 0x7f0b0089
 			public const int TextButtonContainerA = 2131427465;
@@ -2176,6 +2176,9 @@ namespace Eventos
 			// aapt resource value: 0x7f0b009c
 			public const int info = 2131427484;
 			
+			// aapt resource value: 0x7f0b00ad
+			public const int layoutPresenterDetail = 2131427501;
+			
 			// aapt resource value: 0x7f0b007d
 			public const int left_drawer = 2131427453;
 			
@@ -2260,17 +2263,17 @@ namespace Eventos
 			// aapt resource value: 0x7f0b00a1
 			public const int place_autocomplete_separator = 2131427489;
 			
-			// aapt resource value: 0x7f0b00ae
-			public const int presenterDetailNameText = 2131427502;
-			
 			// aapt resource value: 0x7f0b00af
-			public const int presenterDetailProfileText = 2131427503;
+			public const int presenterDetailNameText = 2131427503;
+			
+			// aapt resource value: 0x7f0b00b0
+			public const int presenterDetailProfileText = 2131427504;
 			
 			// aapt resource value: 0x7f0b00ac
 			public const int presenterDetailWorkDescription = 2131427500;
 			
-			// aapt resource value: 0x7f0b00b5
-			public const int presenterDetailWorkName = 2131427509;
+			// aapt resource value: 0x7f0b00b7
+			public const int presenterDetailWorkName = 2131427511;
 			
 			// aapt resource value: 0x7f0b00a8
 			public const int presenterDetailWorkTitle = 2131427496;
@@ -2278,20 +2281,20 @@ namespace Eventos
 			// aapt resource value: 0x7f0b00ab
 			public const int presenterDetailWorkYear = 2131427499;
 			
-			// aapt resource value: 0x7f0b00ad
-			public const int presenterImageDetailView1 = 2131427501;
+			// aapt resource value: 0x7f0b00ae
+			public const int presenterImageDetailView1 = 2131427502;
 			
-			// aapt resource value: 0x7f0b00b1
-			public const int presenterImageView1 = 2131427505;
+			// aapt resource value: 0x7f0b00b3
+			public const int presenterImageView1 = 2131427507;
 			
 			// aapt resource value: 0x7f0b00a9
 			public const int presenterImageWorkDetail = 2131427497;
 			
-			// aapt resource value: 0x7f0b00b2
-			public const int presenterTextA1 = 2131427506;
+			// aapt resource value: 0x7f0b00b4
+			public const int presenterTextA1 = 2131427508;
 			
-			// aapt resource value: 0x7f0b00b3
-			public const int presenterTextB1 = 2131427507;
+			// aapt resource value: 0x7f0b00b5
+			public const int presenterTextB1 = 2131427509;
 			
 			// aapt resource value: 0x7f0b00aa
 			public const int presenterWorkDetailImageDescription = 2131427498;
@@ -2361,6 +2364,9 @@ namespace Eventos
 			
 			// aapt resource value: 0x7f0b00a7
 			public const int shareButtonPlace = 2131427495;
+			
+			// aapt resource value: 0x7f0b00b1
+			public const int shareButtonPresenterDetail = 2131427505;
 			
 			// aapt resource value: 0x7f0b004a
 			public const int shortcut = 2131427402;
@@ -2665,7 +2671,10 @@ namespace Eventos
 			public const int select_dialog_singlechoice_material = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int support_simple_spinner_dropdown_item = 2130903099;
+			public const int SplashView = 2130903099;
+			
+			// aapt resource value: 0x7f03003c
+			public const int support_simple_spinner_dropdown_item = 2130903100;
 			
 			static Layout()
 			{

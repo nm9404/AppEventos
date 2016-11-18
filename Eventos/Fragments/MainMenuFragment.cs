@@ -73,6 +73,11 @@ namespace Eventos
         public void HandleEvents()
         {
             placeButton.Click += PlaceButtonEventClick;
+            faqButton.Click += FaqButtonEventClick;
+            presentersButton.Click += PresentersButtonEventClick;
+            callendarButton.Click += AgendaButtonEventClick;
+            contactButton.Click += ContactButtonEventClick;
+            galleryButton.Click += GalleryButtonEventClick;
         }
 
         public void PlaceButtonEventClick(object sender, EventArgs e)
@@ -80,6 +85,46 @@ namespace Eventos
             MainActivity activity = (MainActivity)this.Activity;
             activity.InstanceDataOnFragments();
             activity.ShowFragment(activity.mapFragment);
+        }
+
+        public void FaqButtonEventClick(object sender, EventArgs e)
+        {
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.InstanceDataOnFragments();
+            activity.frequentQuestionsFragment.PopulateMenu();
+            activity.ShowFragment(activity.frequentQuestionsFragment);
+        }
+
+        public void PresentersButtonEventClick(object sender, EventArgs e)
+        {
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.InstanceDataOnFragments();
+            activity.presentersFragment.PopulateMenu();
+            activity.ShowFragment(activity.presentersFragment);
+        }
+
+        public void AgendaButtonEventClick(object sender, EventArgs e)
+        {
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.InstanceDataOnFragments();
+            activity.calendarFragment.PopulateData();
+            activity.ShowFragment(activity.calendarFragment);
+        }
+
+        public void ContactButtonEventClick(object sender, EventArgs e)
+        {
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.InstanceDataOnFragments();
+            activity.contactFragment.PopulateData();
+            activity.ShowFragment(activity.contactFragment);
+        }
+
+        public void GalleryButtonEventClick(object sender, EventArgs e)
+        {
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.InstanceDataOnFragments();
+            activity.galleryFragment.PopulateMenu();
+            activity.ShowFragment(activity.galleryFragment);
         }
     }
 }
