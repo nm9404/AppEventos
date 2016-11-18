@@ -12,6 +12,8 @@ using Android.Views;
 using Android.Widget;
 using SupportFragment = Android.Support.V4.App.Fragment;
 using Eventos.core.DataService;
+using Eventos.Utility;
+using Square.Picasso;
 
 namespace Eventos.Fragments
 {
@@ -25,6 +27,7 @@ namespace Eventos.Fragments
         TextView eventHashTagText;
         TextView eventEmailText;
         TextView eventNumberText;
+        LinearLayout mainLayout;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -57,6 +60,7 @@ namespace Eventos.Fragments
             eventEmailText = this.View.FindViewById<TextView>(Resource.Id.eventMailTextContact);
             eventNumberText = this.View.FindViewById<TextView>(Resource.Id.eventPhoneNumbersContact);
             eventAddressText = this.View.FindViewById<TextView>(Resource.Id.eventPlaceTextContact);
+            mainLayout = this.View.FindViewById<LinearLayout>(Resource.Id.contactLayout);
         }
 
         public void InstantiateDataService(DataService dataServiceInstance)
@@ -64,13 +68,21 @@ namespace Eventos.Fragments
             this.dataServiceInstance = dataServiceInstance;
         }
 
+        public void SetBackgrounds()
+        {
+            ImageTarget target = new ImageTarget(mainLayout);
+            string url = "http://testappeventos.webcindario.com/Imagenes/" + dataServiceInstance.GetEvent().Place.Picture.ImagePath + ".jpg";
+            Picasso.With(this.Activity).Load(url).CenterCrop().Resize(720, 1025).Into(target);
+        }
+
         public void PopulateData()
         {
-            eventNameText.Text = dataServiceInstance.GetEvent().EventInformation.EventName;
-            eventAddressText.Text = dataServiceInstance.GetEvent().Place.Address;
-            eventDescriptionText.Text = dataServiceInstance.GetEvent().EventInformation.EventDescription;
-            eventHashTagText.Text = "#" + dataServiceInstance.GetEvent().EventInformation.EventName;
-            eventEmailText.Text = dataServiceInstance.GetEvent().EventInformation.EventName + "@gmail.com";
+            SetBackgrounds();
+            eventNameText.Text = dataServiceInstance.GetEvent().EventInformation.EventName.ToString();
+            eventAddressText.Text = dataServiceInstance.GetEvent().Place.Address.ToString();
+            eventDescriptionText.Text = dataServiceInstance.GetEvent().EventInformation.EventDescription.ToString();
+            eventHashTagText.Text = "#" + dataServiceInstance.GetEvent().EventInformation.EventName.ToString();
+            eventEmailText.Text = dataServiceInstance.GetEvent().EventInformation.EventName.ToString() + "@gmail.com";
             eventNumberText.Text = "+57 355 6879";
         }
     }

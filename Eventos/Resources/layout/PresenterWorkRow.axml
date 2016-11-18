@@ -5,12 +5,14 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:layout_gravity="center"
-    android:layout_marginTop="20dp">
+    android:layout_marginTop="26dp">
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="200dp"
         android:orientation="vertical"
-        android:layout_marginRight="05dp">
+        android:layout_marginRight="05dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="7dp">
         <TextView
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
@@ -20,7 +22,7 @@
             android:layout_gravity="center"
             android:textColor="#878787"
             android:id="@+id/presenterDetailWorkName" />
-       <TextView
+        <TextView
             android:layout_marginTop="05dp"
             android:layout_height="wrap_content"
             android:layout_width="170dp"
@@ -40,7 +42,8 @@
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="150dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginBottom="8dp">
         <com.makeramen.roundedimageview.RoundedImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/presenterImageWorkDetail"
             android:layout_height="100dp"
