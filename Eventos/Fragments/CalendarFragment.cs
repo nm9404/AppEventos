@@ -19,8 +19,9 @@ namespace Eventos.Fragments
 {
     public class CalendarFragment : SupportFragment
     {
-        ListView calendarListView;
+        public ListView calendarListView;
         public DataService dataServiceInstance;
+        public Button calendarShareButton;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -42,11 +43,13 @@ namespace Eventos.Fragments
         {
             base.OnActivityCreated(savedInstanceState);
             FindViews();
+            HandleEvents();
         }
 
         public void FindViews()
         {
             calendarListView = this.View.FindViewById<ListView>(Resource.Id.calendarListView);
+            calendarShareButton = this.View.FindViewById<Button>(Resource.Id.shareButtonCalendar);
         }
 
         public void PopulateData()
@@ -57,7 +60,22 @@ namespace Eventos.Fragments
             calendarListView.Adapter = calendarAdapterA;
         }
 
+        public void HandleEvents()
+        {
+            calendarShareButton.Click += ShareContent;
+        }
 
+        public void ShareContent(object sender, EventArgs e)
+        {
+            string uri = "http://colombiamoda.inexmoda.org.co/";
+            Intent shareIntent = new Intent(Android.Content.Intent.ActionSend);
+            shareIntent.SetType("text/plain");
+            String shareSub = "Programación de ColombiaModa";
+            shareIntent.PutExtra(Android.Content.Intent.ExtraSubject, shareSub);
+            shareIntent.PutExtra(Android.Content.Intent.ExtraText, "¡ColombiaModa 2016!, no te pierdas la programación del evento, consúltala en: \n" + uri);
+
+            StartActivity(Intent.CreateChooser(shareIntent, "Compartir vía"));
+        }
 
         public void InstantiateDataService(DataService dataServiceInstance)
         {

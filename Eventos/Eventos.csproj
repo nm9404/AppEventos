@@ -172,6 +172,7 @@
     <Compile Include="Fragments\MapFragment.cs" />
     <Compile Include="Fragments\PresenterDetailFragment.cs" />
     <Compile Include="Fragments\PresentersFragment.cs" />
+    <Compile Include="Fragments\SplashFragment.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MenuData\MenuElements.cs" />
     <Compile Include="MenuData\MenuList.cs" />
@@ -555,6 +556,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_share_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\animationSplah.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
