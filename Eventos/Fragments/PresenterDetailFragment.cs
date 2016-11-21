@@ -141,10 +141,6 @@ namespace Eventos.Fragments
             sharingIntent.AddFlags(ActivityFlags.GrantReadUriPermission);
             StartActivity(Intent.CreateChooser(sharingIntent, title));
             imageView.DestroyDrawingCache();
-
         }
-
-        
-
     }
 }

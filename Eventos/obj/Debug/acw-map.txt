@@ -50,6 +50,10 @@ Eventos.Fragments.PresentersFragment, Eventos;md57d48028210a74cfc400f128edb46645
 Eventos.Fragments.PresentersFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.PresentersFragment
 Eventos.Fragments.PresentersFragment;md57d48028210a74cfc400f128edb466453.PresentersFragment
 eventos.fragments.PresentersFragment;md57d48028210a74cfc400f128edb466453.PresentersFragment
+Eventos.Fragments.SplashFragment, Eventos;md57d48028210a74cfc400f128edb466453.SplashFragment
+Eventos.Fragments.SplashFragment, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d48028210a74cfc400f128edb466453.SplashFragment
+Eventos.Fragments.SplashFragment;md57d48028210a74cfc400f128edb466453.SplashFragment
+eventos.fragments.SplashFragment;md57d48028210a74cfc400f128edb466453.SplashFragment
 Eventos.Adapters.CalendarAdapterA, Eventos;md57fe2f38945f262ff9c79fdef86e6c63d.CalendarAdapterA
 Eventos.Adapters.CalendarAdapterA, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57fe2f38945f262ff9c79fdef86e6c63d.CalendarAdapterA
 Eventos.Adapters.CalendarAdapterA;md57fe2f38945f262ff9c79fdef86e6c63d.CalendarAdapterA
