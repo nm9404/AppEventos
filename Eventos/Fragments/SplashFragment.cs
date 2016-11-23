@@ -15,6 +15,7 @@ using Eventos.Utility;
 using Square.Picasso;
 using static Android.Resource;
 using Android.Views.Animations;
+using System.Threading.Tasks;
 
 namespace Eventos.Fragments
 {
@@ -26,8 +27,7 @@ namespace Eventos.Fragments
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            FindViews();
-            SetBackgrounds();
+            
 
             // Create your fragment here
         }
@@ -41,26 +41,37 @@ namespace Eventos.Fragments
             return view;
         }
 
+
         public void SetBackgrounds()
         {
-            Picasso.With(this.Activity).Load("http://testappeventos.webcindario.com/Imagenes/EventImage/1.png").Into(splashImage);
+            Picasso.With(this.Activity).Load("http://testappeventos.webcindario.com/Imagenes/EventImage/1b.png").Into(splashImage);
             Picasso.With(this.Activity).Load("http://testappeventos.webcindario.com/Imagenes/EventImage/LogoDynamik_Horizontal.png").Into(logoImage);
 
-            Android.Views.Animations.Animation fade = AnimationUtils.LoadAnimation(this.Activity, Resource.Animation.abc_fade_in);
+            Android.Views.Animations.Animation fade = AnimationUtils.LoadAnimation(this.Activity, Resource.Animation.animationSplah);
             splashImage.StartAnimation(fade);
             logoImage.StartAnimation(fade);
+            Task.Run(() => this.sleep(5000)); 
         }
 
         public void FindViews()
         {
             splashImage = this.View.FindViewById<ImageView>(Resource.Id.eventLogoImageSplash);
             logoImage = this.View.FindViewById<ImageView>(Resource.Id.dynamikLogoImage);
-
         }
 
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
+            FindViews();
+            SetBackgrounds();
+        }
+
+        public async Task sleep(int miliSeconds)
+        {
+            await Task.Delay(miliSeconds);
+            MainActivity activity = (MainActivity)this.Activity;
+            activity.ShowFragment(activity.mainMenuFragment);
+            activity.CreateActionDrawer();
         }
     }
 }

@@ -51,6 +51,7 @@ namespace Eventos
         public GalleryDetailFragment galleryDetailFragment;
         public CalendarFragment calendarFragment;
         public ContactFragment contactFragment;
+        public SplashFragment splashFragment;
 
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
@@ -65,22 +66,7 @@ namespace Eventos
             dataServiceInstance = new DataService();
 
             FindViews();
-            SetSupportActionBar(mToolbar);
-
-            mActionBarToggle = new MActionBarToggle(this,
-                mDrawerLayout,
-                0,
-                0);
-
-            //Hacer el adapter
-            MenuAdapter menuAdapter = new Adapters.MenuAdapter(this, menuElementsInstance.menuElements);
-            mLeftDrawer.Adapter = menuAdapter;
-
-            mDrawerLayout.SetDrawerListener(mActionBarToggle);
-            SupportActionBar.SetHomeButtonEnabled(true);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            mActionBarToggle.SyncState();
-
+            CreateActionDrawer();
 
             mainMenuFragment = new MainMenuFragment();
             frequentQuestionsFragment = new FrequentQuestionsFragment();
@@ -91,6 +77,7 @@ namespace Eventos
             galleryDetailFragment = new GalleryDetailFragment();
             calendarFragment = new CalendarFragment();
             contactFragment = new ContactFragment();
+            splashFragment = new SplashFragment();
 
             //frequentQuestionsFragment.PopulateMenu();
 
@@ -123,6 +110,9 @@ namespace Eventos
             transaction.Hide(frequentQuestionsFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, mainMenuFragment, "Main Menu");
+            transaction.Hide(mainMenuFragment);
+
+            transaction.Add(Resource.Id.fragmentContainer, splashFragment, "Splash Fragment");
             transaction.Commit();
 
             //Task.Run(() => ExecuteCheckAsync());
@@ -134,7 +124,7 @@ namespace Eventos
             //backgroundTask.Start();
             //backgroundTask.Wait();
 
-            currentFragment = mainMenuFragment;
+            currentFragment = splashFragment;
         }
 
         public void ShowFragment(SupportFragment fragment)
@@ -154,6 +144,26 @@ namespace Eventos
             fragmentStack.Push(currentFragment);
             currentFragment = fragment;
         }
+
+        public void CreateActionDrawer()
+        {
+            SetSupportActionBar(mToolbar);
+
+            mActionBarToggle = new MActionBarToggle(this,
+                mDrawerLayout,
+                0,
+                0);
+
+            //Hacer el adapter
+            MenuAdapter menuAdapter = new Adapters.MenuAdapter(this, menuElementsInstance.menuElements);
+            mLeftDrawer.Adapter = menuAdapter;
+
+            mDrawerLayout.SetDrawerListener(mActionBarToggle);
+            SupportActionBar.SetHomeButtonEnabled(true);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            mActionBarToggle.SyncState();
+        }
+
 
         private void FindViews()
         {
