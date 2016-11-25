@@ -14,6 +14,8 @@ using SupportFragment = Android.Support.V4.App.Fragment;
 using Square.Picasso;
 using FFImageLoading.Work;
 using Eventos.Utility;
+using Eventos.core.DataService;
+using Eventos.core.Model;
 
 namespace Eventos
 {
@@ -26,6 +28,21 @@ namespace Eventos
         public Button callendarButton;
         public Button contactButton;
         public View mainLayout;
+        public TextView descriptionText;
+        public TextView dateText;
+        public TextView hourText;
+        public TextView addressText;
+        public DataService dataServiceInstance;
+
+        public MainMenuFragment (DataService dataServiceInstance)
+        {
+            this.dataServiceInstance = dataServiceInstance;
+        }
+
+        public MainMenuFragment()
+        {
+
+        }
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -50,6 +67,7 @@ namespace Eventos
             FindViews();
             HandleEvents();
             SetBackgrounds();
+            SetTexts();
         }
 
         public void SetBackgrounds()
@@ -57,6 +75,11 @@ namespace Eventos
             ImageTarget target = new ImageTarget(mainLayout);
             string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
             Picasso.With(this.Activity).Load(url).CenterCrop().Resize(720, 1025).Into(target);
+        }
+
+        public void InstantiateDataService(DataService dataServiceInstance)
+        {
+            this.dataServiceInstance = dataServiceInstance;
         }
 
         public void FindViews()
@@ -68,6 +91,35 @@ namespace Eventos
             contactButton = this.View.FindViewById<Button>(Resource.Id.contactButton);
             galleryButton = this.View.FindViewById<Button>(Resource.Id.galeryButton);
             mainLayout = this.View.FindViewById<View>(Resource.Id.mainMenuLayout);
+
+            descriptionText = this.View.FindViewById<TextView>(Resource.Id.eventDescriptionText);
+            hourText = this.View.FindViewById<TextView>(Resource.Id.eventHour);
+            dateText = this.View.FindViewById<TextView>(Resource.Id.eventDateText);
+            addressText = this.View.FindViewById<TextView>(Resource.Id.eventAddress);
+        }
+
+        private void SetTexts()
+        {
+            List<String> hourData = new List<String>();
+            MainEvent mainEvent = new MainEvent();
+            mainEvent = dataServiceInstance.GetEvent();
+
+            hourData.Add(mainEvent.Presenters[0].Conferences[0].Hour.Hours.ToString());
+
+            hourData.Add(mainEvent.Presenters[0].Conferences[0].Hour.Minutes.ToString());
+            if (mainEvent.Presenters[0].Conferences[0].Hour.Hours < 10)
+            {
+                hourData[0] = "0" + hourData[0];
+            }
+            if (mainEvent.Presenters[0].Conferences[0].Hour.Minutes < 10)
+            {
+                hourData[1] = "0" + hourData[1];
+            }
+
+            descriptionText.Text = mainEvent.EventInformation.EventDescription.ToString();
+            hourText.Text = hourData[0].ToString() + " : " + hourData[1].ToString();
+            dateText.Text = mainEvent.Presenters[0].Conferences[0].Date.Day.ToString() + " de " + Conversions.ConvertNumberToMonth(mainEvent.Presenters[0].Conferences[0].Date.Month) + " de " + mainEvent.Presenters[0].Conferences[0].Date.Year.ToString();
+            addressText.Text = mainEvent.Place.Address.ToString();
         }
 
         public void HandleEvents()

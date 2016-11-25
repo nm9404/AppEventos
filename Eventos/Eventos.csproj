@@ -179,7 +179,8 @@
     <Compile Include="MyActionBarToggle\MyActionBarToggle.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoundedImageTest.cs" />
+    <Compile Include="SplashActivity.cs" />
+    <Compile Include="Utility\AnimationListener.cs" />
     <Compile Include="Utility\Conversions.cs" />
     <Compile Include="Utility\ImageHelper.cs" />
     <Compile Include="Utility\ImageLoader.cs" />
