@@ -33,6 +33,7 @@ namespace Eventos
         public TextView hourText;
         public TextView addressText;
         public DataService dataServiceInstance;
+        public ImageView eventImage;
 
         public MainMenuFragment (DataService dataServiceInstance)
         {
@@ -67,7 +68,7 @@ namespace Eventos
             FindViews();
             HandleEvents();
             SetBackgrounds();
-            SetTexts();
+            SetTextsAndPicture();
         }
 
         public void SetBackgrounds()
@@ -96,9 +97,11 @@ namespace Eventos
             hourText = this.View.FindViewById<TextView>(Resource.Id.eventHour);
             dateText = this.View.FindViewById<TextView>(Resource.Id.eventDateText);
             addressText = this.View.FindViewById<TextView>(Resource.Id.eventAddress);
+
+            eventImage = this.View.FindViewById<ImageView>(Resource.Id.eventImage);
         }
 
-        private void SetTexts()
+        private void SetTextsAndPicture()
         {
             List<String> hourData = new List<String>();
             MainEvent mainEvent = new MainEvent();
@@ -120,6 +123,7 @@ namespace Eventos
             hourText.Text = hourData[0].ToString() + " : " + hourData[1].ToString();
             dateText.Text = mainEvent.Presenters[0].Conferences[0].Date.Day.ToString() + " de " + Conversions.ConvertNumberToMonth(mainEvent.Presenters[0].Conferences[0].Date.Month) + " de " + mainEvent.Presenters[0].Conferences[0].Date.Year.ToString();
             addressText.Text = mainEvent.Place.Address.ToString();
+            Picasso.With(this.Activity).Load("http://testappeventos.webcindario.com/Imagenes/"+mainEvent.EventInformation.MainImage.ImagePath+".png").Into(eventImage);
         }
 
         public void HandleEvents()

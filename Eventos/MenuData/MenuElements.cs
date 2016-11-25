@@ -20,6 +20,7 @@ namespace Eventos.MenuData
         {
             menuElements = new List<MenuList>()
             {
+                new MenuList() {iconPath="", menuText="" },
                 new MenuList() {iconPath="ic_view_module_white_48dp", menuText="Lugar" },
                 new MenuList() {iconPath="ic_trending_up_white_48dp", menuText="Calendario" },
                 new MenuList() {iconPath="ic_access_time_white_48dp", menuText="Expositores" },
