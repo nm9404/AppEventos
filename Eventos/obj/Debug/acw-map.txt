@@ -6,10 +6,14 @@ Eventos.MainActivity, Eventos;md5d9ac7cbfb591b167dae1a0b2584cce7f.MainActivity
 Eventos.MainActivity, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5d9ac7cbfb591b167dae1a0b2584cce7f.MainActivity
 Eventos.MainActivity;md5d9ac7cbfb591b167dae1a0b2584cce7f.MainActivity
 eventos.MainActivity;md5d9ac7cbfb591b167dae1a0b2584cce7f.MainActivity
-Eventos.RoundedImageTest, Eventos;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedImageTest
-Eventos.RoundedImageTest, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedImageTest
-Eventos.RoundedImageTest;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedImageTest
-eventos.RoundedImageTest;md5d9ac7cbfb591b167dae1a0b2584cce7f.RoundedImageTest
+Eventos.SplashActivity, Eventos;md5d9ac7cbfb591b167dae1a0b2584cce7f.SplashActivity
+Eventos.SplashActivity, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5d9ac7cbfb591b167dae1a0b2584cce7f.SplashActivity
+Eventos.SplashActivity;md5d9ac7cbfb591b167dae1a0b2584cce7f.SplashActivity
+eventos.SplashActivity;md5d9ac7cbfb591b167dae1a0b2584cce7f.SplashActivity
+Eventos.Utility.AnimationListener, Eventos;md5ec4caa34753a12429bcec816513a23c6.AnimationListener
+Eventos.Utility.AnimationListener, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ec4caa34753a12429bcec816513a23c6.AnimationListener
+Eventos.Utility.AnimationListener;md5ec4caa34753a12429bcec816513a23c6.AnimationListener
+eventos.utility.AnimationListener;md5ec4caa34753a12429bcec816513a23c6.AnimationListener
 Eventos.Utility.ImageTarget, Eventos;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
 Eventos.Utility.ImageTarget, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
 Eventos.Utility.ImageTarget;md5ec4caa34753a12429bcec816513a23c6.ImageTarget

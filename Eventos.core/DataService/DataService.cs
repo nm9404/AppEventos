@@ -17,6 +17,16 @@ namespace Eventos.core.DataService
             return dataRepository.GetPresenterById(personId);
         }
 
+        public void SetEventOnline()
+        {
+            dataRepository.setEventOnline();
+        }
+
+        public void SetEvent(MainEvent mainEvent)
+        {
+            dataRepository.SetEvent(mainEvent);
+        }
+
         public Place GetPlaceById(int placeId)
         {
             return dataRepository.GetPlaceById(placeId);

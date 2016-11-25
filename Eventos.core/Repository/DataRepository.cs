@@ -20,10 +20,21 @@ namespace Eventos.core.Repository
 
        public DataRepository()
         {
-            Task.Run(() => this.LoadDataAsync(url).Wait());
+            
             //JSonStrings strings = new JSonStrings();
             //string responseJsonString = strings.JSonString;
             //MainEvent = JsonConvert.DeserializeObject<MainEvent>(responseJsonString);
+        }
+
+        public void setEventOnline()
+        {
+            Task.Run(() => this.LoadDataAsync(url).Wait());
+        }
+
+
+        public void SetEvent(MainEvent mainEvent)
+        {
+            this.mainEvent = mainEvent;
         }
 
         private async Task LoadDataAsync(string uri)

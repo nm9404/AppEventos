@@ -110,7 +110,20 @@ namespace Eventos.Fragments
 
         public void shareImage(object sender, EventArgs e)
         {
-            string info = presentersList[index].Name.ToString() + " Presentará su conferencia: " + presentersList[index].Conferences[0].Title.ToString() + "\n" + "Acompáñanos a las " + presentersList[index].Conferences[0].Hour.Hours.ToString() + " : " + presentersList[index].Conferences[0].Hour.Minutes.ToString();
+            Conference conference = presentersList[index].Conferences[0];
+            List<String> hourData = new List<String>();
+            hourData.Add(conference.Hour.Hours.ToString());
+            hourData.Add(conference.Hour.Minutes.ToString());
+            if (conference.Hour.Hours < 10)
+            {
+                hourData[0] = "0" + hourData[0];
+            }
+            if (conference.Hour.Minutes < 10)
+            {
+                hourData[1] = "0" + hourData[1];
+            }
+
+            string info = presentersList[index].Name.ToString() + " Presentará su conferencia: " + presentersList[index].Conferences[0].Title.ToString() + "\n" + "Acompáñanos a las " + hourData[0].ToString() + " : " + hourData[1].ToString();
             Share("Información", info);
         }
 

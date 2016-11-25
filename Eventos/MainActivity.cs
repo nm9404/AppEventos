@@ -20,16 +20,17 @@ using Eventos.Fragments;
 using static Android.Widget.AdapterView;
 using System.Threading.Tasks;
 using Eventos.Utility;
+using Newtonsoft.Json;
 
 namespace Eventos
 {
-    [Activity(Label = "Eventos", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
+    [Activity(Label = "Eventos", MainLauncher = false, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
     public class MainActivity : ActionBarActivity
     {
         int count = 1;
         bool fragmentInstantiated = false;
         MainEvent mainEvent = new MainEvent();
-        DataService dataServiceInstance;
+        DataService dataServiceInstance = new DataService();
 
         private SupportToolbar mToolbar;
         private MActionBarToggle mActionBarToggle;
@@ -53,6 +54,9 @@ namespace Eventos
         public ContactFragment contactFragment;
         public SplashFragment splashFragment;
 
+       
+
+
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
         protected override void OnCreate(Bundle bundle)
@@ -63,12 +67,15 @@ namespace Eventos
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            dataServiceInstance = new DataService();
+            string data = Intent.GetStringExtra("Data");
+            MainEvent eventData = new MainEvent();
+            eventData = JsonConvert.DeserializeObject<MainEvent>(data);
+            dataServiceInstance.SetEvent(eventData);
 
             FindViews();
             CreateActionDrawer();
 
-            mainMenuFragment = new MainMenuFragment();
+            mainMenuFragment = new MainMenuFragment(dataServiceInstance);
             frequentQuestionsFragment = new FrequentQuestionsFragment();
             presentersFragment = new PresentersFragment();
             galleryFragment = new GalleryFragment();
@@ -78,6 +85,7 @@ namespace Eventos
             calendarFragment = new CalendarFragment();
             contactFragment = new ContactFragment();
             splashFragment = new SplashFragment();
+
 
             //frequentQuestionsFragment.PopulateMenu();
 
@@ -110,11 +118,10 @@ namespace Eventos
             transaction.Hide(frequentQuestionsFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, mainMenuFragment, "Main Menu");
-            transaction.Hide(mainMenuFragment);
 
-            transaction.Add(Resource.Id.fragmentContainer, splashFragment, "Splash Fragment");
             transaction.Commit();
 
+            
             //Task.Run(() => ExecuteCheckAsync());
             //t.Wait();
 
@@ -124,7 +131,7 @@ namespace Eventos
             //backgroundTask.Start();
             //backgroundTask.Wait();
 
-            currentFragment = splashFragment;
+            currentFragment = mainMenuFragment;
         }
 
         public void ShowFragment(SupportFragment fragment)
@@ -171,6 +178,8 @@ namespace Eventos
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
         }
+
+ 
 
         protected override void OnSaveInstanceState(Bundle outState)
         {

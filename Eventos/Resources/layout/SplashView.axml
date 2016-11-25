@@ -10,8 +10,8 @@
         android:layout_width="300dp"
         android:id="@+id/eventLogoImageSplash"
         android:layout_centerInParent="true"
-        android_marginTop="30dp"
-        android:src="@drawable/leisa_christmas_false_color"/>
+        android:layout_marginTop="50dp"
+        android:src="@drawable/leisa_christmas_false_color" />
     <ImageView
         android:layout_alignParentBottom="true"
         android:gravity="bottom"
@@ -19,6 +19,6 @@
         android:layout_width="300dp"
         android:id="@+id/dynamikLogoImage"
         android:layout_centerInParent="true"
-        android_marginBottom="30dp"
-        android:src="@drawable/leisa_christmas_false_color"/>
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/leisa_christmas_false_color" />
 </RelativeLayout>
