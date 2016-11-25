@@ -21,6 +21,7 @@ using static Android.Widget.AdapterView;
 using System.Threading.Tasks;
 using Eventos.Utility;
 using Newtonsoft.Json;
+using Square.Picasso;
 
 namespace Eventos
 {
@@ -54,8 +55,8 @@ namespace Eventos
         public ContactFragment contactFragment;
         public SplashFragment splashFragment;
 
-       
 
+        private ImageView drawerImageView;
 
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
@@ -162,7 +163,7 @@ namespace Eventos
                 0);
 
             //Hacer el adapter
-            MenuAdapter menuAdapter = new Adapters.MenuAdapter(this, menuElementsInstance.menuElements);
+            MenuAdapter menuAdapter = new Adapters.MenuAdapter(this, menuElementsInstance.menuElements, dataServiceInstance);
             mLeftDrawer.Adapter = menuAdapter;
 
             mDrawerLayout.SetDrawerListener(mActionBarToggle);
@@ -177,7 +178,10 @@ namespace Eventos
             mToolbar = FindViewById<SupportToolbar>(Resource.Id.appToolbar);
             mDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             mLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
+            drawerImageView = FindViewById<ImageView>(Resource.Id.drawerImageView);
         }
+
+        
 
  
 
@@ -257,33 +261,33 @@ namespace Eventos
             mDrawerLayout.CloseDrawer(mLeftDrawer);
             switch (e.Id)
             {
-                case 0:
+                case 1:
                     ShowFragment(mapFragment);
                     break;
-                case 1:
+                case 2:
                     ShowFragment(calendarFragment);
                     calendarFragment.PopulateData();
                     break;
-                case 2:
+                case 3:
                     ShowFragment(presentersFragment);
                     presentersFragment.PopulateMenu();
                     break;
-                case 3:
+                case 4:
                     ShowFragment(galleryFragment);
                     galleryFragment.PopulateMenu();
                     break;
-                case 4:
+                case 5:
                     ShowFragment(frequentQuestionsFragment);
                     frequentQuestionsFragment.PopulateMenu();
                     break;
-                case 5:
+                case 6:
                     ShowFragment(contactFragment);
                     contactFragment.PopulateData();
                     break;
                 default:
                     break;
             }
-            Toast.MakeText(this, e.Id.ToString(), ToastLength.Long).Show();
+            //Toast.MakeText(this, e.Id.ToString(), ToastLength.Long).Show();
         }
 
         public DataService GetDataServiceInstance()

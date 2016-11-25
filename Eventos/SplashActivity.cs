@@ -52,7 +52,7 @@ namespace Eventos
 
             Android.Views.Animations.Animation fade = AnimationUtils.LoadAnimation(this, Resource.Animation.animationSplah);
             fade.SetAnimationListener(animationListener);
-            splashImage.StartAnimation(fade);
+            //splashImage.StartAnimation(fade);
             logoImage.StartAnimation(fade);
 
             //Task.Run(() => this.sleep(30000));
@@ -68,7 +68,10 @@ namespace Eventos
         {
             await Task.Delay(miliSeconds);
 
-            data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
+            if (dataServiceInstance.GetEvent().Presenters!=null)
+            {
+                data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
+            }
 
             StartMainActivity();
         }

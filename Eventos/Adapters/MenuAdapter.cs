@@ -12,6 +12,8 @@ using Android.Widget;
 using Eventos.MenuData;
 using Android.Graphics;
 using static Android.Graphics.PorterDuff;
+using Eventos.core.DataService;
+using Square.Picasso;
 
 namespace Eventos.Adapters
 {
@@ -19,11 +21,13 @@ namespace Eventos.Adapters
     {
         private List<MenuList> items;
         private Activity context;
+        private DataService dataServiceInstance;
 
-        public MenuAdapter(Activity context, List<MenuList> items)
+        public MenuAdapter(Activity context, List<MenuList> items, DataService dataServiceInstance)
         {
             this.context = context;
             this.items = items;
+            this.dataServiceInstance = dataServiceInstance;
         }
 
         public override MenuList this[int position]
@@ -51,17 +55,27 @@ namespace Eventos.Adapters
         {
             var item = items[position];
 
-            convertView = context.LayoutInflater.Inflate(Resource.Layout.MenuRowView, parent, false);
+            if (position==0)
+            {
+                convertView = context.LayoutInflater.Inflate(Resource.Layout.MenuImageLayoutView, parent, false);
+                string url = "http://testappeventos.webcindario.com/Imagenes/" + dataServiceInstance.GetEvent().EventInformation.MainImage.ImagePath + "b.png";
+                Picasso.With(context).Load(url).Into(convertView.FindViewById<ImageView>(Resource.Id.drawerImageView));
+                return convertView;
+            }
+            else
+            {
+                convertView = context.LayoutInflater.Inflate(Resource.Layout.MenuRowView, parent, false);
 
-            var drawableImg = context.Resources.GetDrawable(context.Resources.GetIdentifier(item.iconPath, "drawable", context.PackageName));
-            var color = Color.ParseColor("#601b95");
+                var drawableImg = context.Resources.GetDrawable(context.Resources.GetIdentifier(item.iconPath, "drawable", context.PackageName));
+                var color = Color.ParseColor("#601b95");
 
-            drawableImg.SetColorFilter(color, Mode.SrcAtop);
+                drawableImg.SetColorFilter(color, Mode.SrcAtop);
 
-            convertView.FindViewById<ImageView>(Resource.Id.menuIcon).SetImageDrawable(drawableImg);
-            convertView.FindViewById<TextView>(Resource.Id.textMenu).Text = item.menuText;
+                convertView.FindViewById<ImageView>(Resource.Id.menuIcon).SetImageDrawable(drawableImg);
+                convertView.FindViewById<TextView>(Resource.Id.textMenu).Text = item.menuText;
 
-            return convertView;
+                return convertView;
+            }
         }
     }
 }

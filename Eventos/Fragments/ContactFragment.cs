@@ -28,6 +28,9 @@ namespace Eventos.Fragments
         TextView eventEmailText;
         TextView eventNumberText;
         LinearLayout mainLayout;
+        Button facebookButton;
+        Button twitterButton;
+        Button instagramButton;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -49,9 +52,10 @@ namespace Eventos.Fragments
         {
             base.OnActivityCreated(savedInstanceState);
             FindViews();
+            HandleEvents();
         }
 
-        public void FindViews()
+        private void FindViews()
         {
             eventNameText = this.View.FindViewById<TextView>(Resource.Id.eventTitleTextContact);
             eventDateText = this.View.FindViewById<TextView>(Resource.Id.eventDateTextContact);
@@ -61,6 +65,29 @@ namespace Eventos.Fragments
             eventNumberText = this.View.FindViewById<TextView>(Resource.Id.eventPhoneNumbersContact);
             eventAddressText = this.View.FindViewById<TextView>(Resource.Id.eventPlaceTextContact);
             mainLayout = this.View.FindViewById<LinearLayout>(Resource.Id.contactLayout);
+            facebookButton = this.View.FindViewById<Button>(Resource.Id.contactFacebookButton);
+            twitterButton = this.View.FindViewById<Button>(Resource.Id.contactTwitterButton);
+            instagramButton = this.View.FindViewById<Button>(Resource.Id.contactInstagramButton);
+        }
+
+        private void HandleEvents()
+        {
+            facebookButton.Click += FacebookIntent;
+            twitterButton.Click += TwitterIntent;
+            instagramButton.Click += InstagramIntent;
+        }
+
+        private void FacebookIntent(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TwitterIntent(object sender, EventArgs e)
+        {
+        }
+
+        private void InstagramIntent(object sender, EventArgs e)
+        {
         }
 
         public void InstantiateDataService(DataService dataServiceInstance)

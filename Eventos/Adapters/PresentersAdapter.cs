@@ -57,7 +57,7 @@ namespace Eventos.Adapters
 
             ImageView imageView = convertView.FindViewById<ImageView>(Resource.Id.presenterImageView1);
 
-            Picasso.With(context).Load(imageUrl).CenterCrop().Resize(400,400).Into(imageView);
+            Picasso.With(context).Load(imageUrl).CenterCrop().Fit().Into(imageView);
 
             return convertView;
         }

@@ -1909,11 +1909,11 @@ namespace Eventos
 			// aapt resource value: 0x7f0b000a
 			public const int MvxBindingTagUnique = 2131427338;
 			
-			// aapt resource value: 0x7f0b00b3
-			public const int PresenterDetailListView = 2131427507;
+			// aapt resource value: 0x7f0b00b4
+			public const int PresenterDetailListView = 2131427508;
 			
-			// aapt resource value: 0x7f0b00b7
-			public const int PresentersGridView = 2131427511;
+			// aapt resource value: 0x7f0b00b8
+			public const int PresentersGridView = 2131427512;
 			
 			// aapt resource value: 0x7f0b008a
 			public const int TextButtonContainerA = 2131427466;
@@ -1921,8 +1921,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b008f
 			public const int TextButtonContainerB = 2131427471;
 			
-			// aapt resource value: 0x7f0b0092
-			public const int action0 = 2131427474;
+			// aapt resource value: 0x7f0b0093
+			public const int action0 = 2131427475;
 			
 			// aapt resource value: 0x7f0b0051
 			public const int action_bar = 2131427409;
@@ -1948,8 +1948,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0052
 			public const int action_context_bar = 2131427410;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int action_divider = 2131427478;
+			// aapt resource value: 0x7f0b0097
+			public const int action_divider = 2131427479;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int action_menu_divider = 2131427330;
@@ -2011,14 +2011,14 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0063
 			public const int calendarListView = 2131427427;
 			
-			// aapt resource value: 0x7f0b0093
-			public const int cancel_action = 2131427475;
+			// aapt resource value: 0x7f0b0094
+			public const int cancel_action = 2131427476;
 			
 			// aapt resource value: 0x7f0b0049
 			public const int checkbox = 2131427401;
 			
-			// aapt resource value: 0x7f0b0099
-			public const int chronometer = 2131427481;
+			// aapt resource value: 0x7f0b009a
+			public const int chronometer = 2131427482;
 			
 			// aapt resource value: 0x7f0b002e
 			public const int clamp = 2131427374;
@@ -2074,11 +2074,14 @@ namespace Eventos
 			// aapt resource value: 0x7f0b001a
 			public const int disableHome = 2131427354;
 			
+			// aapt resource value: 0x7f0b0090
+			public const int drawerImageView = 2131427472;
+			
 			// aapt resource value: 0x7f0b007c
 			public const int drawer_layout = 2131427452;
 			
-			// aapt resource value: 0x7f0b00ba
-			public const int dynamikLogoImage = 2131427514;
+			// aapt resource value: 0x7f0b00bb
+			public const int dynamikLogoImage = 2131427515;
 			
 			// aapt resource value: 0x7f0b0053
 			public const int edit_query = 2131427411;
@@ -2086,8 +2089,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0027
 			public const int end = 2131427367;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int end_padder = 2131427486;
+			// aapt resource value: 0x7f0b009f
+			public const int end_padder = 2131427487;
 			
 			// aapt resource value: 0x7f0b0084
 			public const int eventAddress = 2131427460;
@@ -2113,8 +2116,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0080
 			public const int eventImage = 2131427456;
 			
-			// aapt resource value: 0x7f0b00b9
-			public const int eventLogoImageSplash = 2131427513;
+			// aapt resource value: 0x7f0b00ba
+			public const int eventLogoImageSplash = 2131427514;
 			
 			// aapt resource value: 0x7f0b006d
 			public const int eventMailTextContact = 2131427437;
@@ -2182,11 +2185,11 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0078
 			public const int imageDetailedView = 2131427448;
 			
-			// aapt resource value: 0x7f0b009d
-			public const int info = 2131427485;
+			// aapt resource value: 0x7f0b009e
+			public const int info = 2131427486;
 			
-			// aapt resource value: 0x7f0b00ae
-			public const int layoutPresenterDetail = 2131427502;
+			// aapt resource value: 0x7f0b00af
+			public const int layoutPresenterDetail = 2131427503;
 			
 			// aapt resource value: 0x7f0b007e
 			public const int left_drawer = 2131427454;
@@ -2194,11 +2197,11 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0017
 			public const int light = 2131427351;
 			
-			// aapt resource value: 0x7f0b0097
-			public const int line1 = 2131427479;
+			// aapt resource value: 0x7f0b0098
+			public const int line1 = 2131427480;
 			
-			// aapt resource value: 0x7f0b009b
-			public const int line3 = 2131427483;
+			// aapt resource value: 0x7f0b009c
+			public const int line3 = 2131427484;
 			
 			// aapt resource value: 0x7f0b0018
 			public const int listMode = 2131427352;
@@ -2209,14 +2212,14 @@ namespace Eventos
 			// aapt resource value: 0x7f0b007f
 			public const int mainMenuLayout = 2131427455;
 			
-			// aapt resource value: 0x7f0b00a7
-			public const int mapView = 2131427495;
+			// aapt resource value: 0x7f0b00a8
+			public const int mapView = 2131427496;
 			
-			// aapt resource value: 0x7f0b0095
-			public const int media_actions = 2131427477;
+			// aapt resource value: 0x7f0b0096
+			public const int media_actions = 2131427478;
 			
-			// aapt resource value: 0x7f0b0090
-			public const int menuIcon = 2131427472;
+			// aapt resource value: 0x7f0b0091
+			public const int menuIcon = 2131427473;
 			
 			// aapt resource value: 0x7f0b0028
 			public const int middle = 2131427368;
@@ -2248,65 +2251,65 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0087
 			public const int placeButton = 2131427463;
 			
-			// aapt resource value: 0x7f0b00a1
-			public const int place_autocomplete_clear_button = 2131427489;
-			
-			// aapt resource value: 0x7f0b00a3
-			public const int place_autocomplete_powered_by_google = 2131427491;
-			
-			// aapt resource value: 0x7f0b00a5
-			public const int place_autocomplete_prediction_primary_text = 2131427493;
-			
-			// aapt resource value: 0x7f0b00a6
-			public const int place_autocomplete_prediction_secondary_text = 2131427494;
+			// aapt resource value: 0x7f0b00a2
+			public const int place_autocomplete_clear_button = 2131427490;
 			
 			// aapt resource value: 0x7f0b00a4
-			public const int place_autocomplete_progress = 2131427492;
+			public const int place_autocomplete_powered_by_google = 2131427492;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int place_autocomplete_search_button = 2131427487;
+			// aapt resource value: 0x7f0b00a6
+			public const int place_autocomplete_prediction_primary_text = 2131427494;
+			
+			// aapt resource value: 0x7f0b00a7
+			public const int place_autocomplete_prediction_secondary_text = 2131427495;
+			
+			// aapt resource value: 0x7f0b00a5
+			public const int place_autocomplete_progress = 2131427493;
 			
 			// aapt resource value: 0x7f0b00a0
-			public const int place_autocomplete_search_input = 2131427488;
+			public const int place_autocomplete_search_button = 2131427488;
 			
-			// aapt resource value: 0x7f0b00a2
-			public const int place_autocomplete_separator = 2131427490;
+			// aapt resource value: 0x7f0b00a1
+			public const int place_autocomplete_search_input = 2131427489;
 			
-			// aapt resource value: 0x7f0b00b0
-			public const int presenterDetailNameText = 2131427504;
+			// aapt resource value: 0x7f0b00a3
+			public const int place_autocomplete_separator = 2131427491;
 			
 			// aapt resource value: 0x7f0b00b1
-			public const int presenterDetailProfileText = 2131427505;
+			public const int presenterDetailNameText = 2131427505;
 			
-			// aapt resource value: 0x7f0b00ad
-			public const int presenterDetailWorkDescription = 2131427501;
+			// aapt resource value: 0x7f0b00b2
+			public const int presenterDetailProfileText = 2131427506;
 			
-			// aapt resource value: 0x7f0b00b8
-			public const int presenterDetailWorkName = 2131427512;
+			// aapt resource value: 0x7f0b00ae
+			public const int presenterDetailWorkDescription = 2131427502;
 			
-			// aapt resource value: 0x7f0b00a9
-			public const int presenterDetailWorkTitle = 2131427497;
-			
-			// aapt resource value: 0x7f0b00ac
-			public const int presenterDetailWorkYear = 2131427500;
-			
-			// aapt resource value: 0x7f0b00af
-			public const int presenterImageDetailView1 = 2131427503;
-			
-			// aapt resource value: 0x7f0b00b4
-			public const int presenterImageView1 = 2131427508;
+			// aapt resource value: 0x7f0b00b9
+			public const int presenterDetailWorkName = 2131427513;
 			
 			// aapt resource value: 0x7f0b00aa
-			public const int presenterImageWorkDetail = 2131427498;
+			public const int presenterDetailWorkTitle = 2131427498;
+			
+			// aapt resource value: 0x7f0b00ad
+			public const int presenterDetailWorkYear = 2131427501;
+			
+			// aapt resource value: 0x7f0b00b0
+			public const int presenterImageDetailView1 = 2131427504;
 			
 			// aapt resource value: 0x7f0b00b5
-			public const int presenterTextA1 = 2131427509;
-			
-			// aapt resource value: 0x7f0b00b6
-			public const int presenterTextB1 = 2131427510;
+			public const int presenterImageView1 = 2131427509;
 			
 			// aapt resource value: 0x7f0b00ab
-			public const int presenterWorkDetailImageDescription = 2131427499;
+			public const int presenterImageWorkDetail = 2131427499;
+			
+			// aapt resource value: 0x7f0b00b6
+			public const int presenterTextA1 = 2131427510;
+			
+			// aapt resource value: 0x7f0b00b7
+			public const int presenterTextB1 = 2131427511;
+			
+			// aapt resource value: 0x7f0b00ac
+			public const int presenterWorkDetailImageDescription = 2131427500;
 			
 			// aapt resource value: 0x7f0b0005
 			public const int progress_circular = 2131427333;
@@ -2374,11 +2377,11 @@ namespace Eventos
 			// aapt resource value: 0x7f0b007a
 			public const int shareButtonImageDetail = 2131427450;
 			
-			// aapt resource value: 0x7f0b00a8
-			public const int shareButtonPlace = 2131427496;
+			// aapt resource value: 0x7f0b00a9
+			public const int shareButtonPlace = 2131427497;
 			
-			// aapt resource value: 0x7f0b00b2
-			public const int shareButtonPresenterDetail = 2131427506;
+			// aapt resource value: 0x7f0b00b3
+			public const int shareButtonPresenterDetail = 2131427507;
 			
 			// aapt resource value: 0x7f0b004a
 			public const int shortcut = 2131427402;
@@ -2410,8 +2413,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0013
 			public const int standard = 2131427347;
 			
-			// aapt resource value: 0x7f0b0094
-			public const int status_bar_latest_event_content = 2131427476;
+			// aapt resource value: 0x7f0b0095
+			public const int status_bar_latest_event_content = 2131427477;
 			
 			// aapt resource value: 0x7f0b005c
 			public const int submit_area = 2131427420;
@@ -2422,20 +2425,20 @@ namespace Eventos
 			// aapt resource value: 0x7f0b000f
 			public const int terrain = 2131427343;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int text = 2131427484;
+			// aapt resource value: 0x7f0b009d
+			public const int text = 2131427485;
 			
-			// aapt resource value: 0x7f0b009a
-			public const int text2 = 2131427482;
+			// aapt resource value: 0x7f0b009b
+			public const int text2 = 2131427483;
 			
-			// aapt resource value: 0x7f0b0091
-			public const int textMenu = 2131427473;
+			// aapt resource value: 0x7f0b0092
+			public const int textMenu = 2131427474;
 			
 			// aapt resource value: 0x7f0b0044
 			public const int textSpacerNoButtons = 2131427396;
 			
-			// aapt resource value: 0x7f0b0098
-			public const int time = 2131427480;
+			// aapt resource value: 0x7f0b0099
+			public const int time = 2131427481;
 			
 			// aapt resource value: 0x7f0b003a
 			public const int title = 2131427386;
@@ -2614,79 +2617,82 @@ namespace Eventos
 			public const int MainMenuFragmentView = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int MenuRowView = 2130903076;
+			public const int MenuImageLayoutView = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_media_action = 2130903077;
+			public const int MenuRowView = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_media_cancel_action = 2130903078;
+			public const int notification_media_action = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_template_big_media = 2130903079;
+			public const int notification_media_cancel_action = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_big_media_narrow = 2130903080;
+			public const int notification_template_big_media = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_lines = 2130903081;
+			public const int notification_template_big_media_narrow = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_media = 2130903082;
+			public const int notification_template_lines = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int notification_template_part_chronometer = 2130903083;
+			public const int notification_template_media = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int notification_template_part_time = 2130903084;
+			public const int notification_template_part_chronometer = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int place_autocomplete_fragment = 2130903085;
+			public const int notification_template_part_time = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int place_autocomplete_item_powered_by_google = 2130903086;
+			public const int place_autocomplete_fragment = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int place_autocomplete_item_prediction = 2130903087;
+			public const int place_autocomplete_item_powered_by_google = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int place_autocomplete_progress = 2130903088;
+			public const int place_autocomplete_item_prediction = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int PlaceFragment = 2130903089;
+			public const int place_autocomplete_progress = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int PresenterConferenceRow = 2130903090;
+			public const int PlaceFragment = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int PresenterDetailInfoRow = 2130903091;
+			public const int PresenterConferenceRow = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int PresenterDetailView = 2130903092;
+			public const int PresenterDetailInfoRow = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int PresenterElementSingle = 2130903093;
+			public const int PresenterDetailView = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int PresentersFragmentView = 2130903094;
+			public const int PresenterElementSingle = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int PresenterWorkRow = 2130903095;
+			public const int PresentersFragmentView = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int select_dialog_item_material = 2130903096;
+			public const int PresenterWorkRow = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int select_dialog_multichoice_material = 2130903097;
+			public const int select_dialog_item_material = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int select_dialog_singlechoice_material = 2130903098;
+			public const int select_dialog_multichoice_material = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int SplashView = 2130903099;
+			public const int select_dialog_singlechoice_material = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int support_simple_spinner_dropdown_item = 2130903100;
+			public const int SplashView = 2130903100;
+			
+			// aapt resource value: 0x7f03003d
+			public const int support_simple_spinner_dropdown_item = 2130903101;
 			
 			static Layout()
 			{

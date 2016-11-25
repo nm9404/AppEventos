@@ -25,8 +25,16 @@ namespace Eventos.Utility
 
         public void OnAnimationEnd(Animation animation)
         {
-            context.data = JsonConvert.SerializeObject(context.dataServiceInstance.GetEvent());
-            if (context.data == "{}")
+            if (context.dataServiceInstance.GetEvent().Presenters!=null)
+            {
+                context.data = JsonConvert.SerializeObject(context.dataServiceInstance.GetEvent());
+            }
+            else
+            {
+                context.data = "";
+            }
+
+            if (context.data == "{}" || context.data==null || context.data=="")
             {
                 context.BuildAlertDialog();
             }
