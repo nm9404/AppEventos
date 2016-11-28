@@ -18,10 +18,14 @@ namespace Eventos.Utility
     public class ImageTarget : Java.Lang.Object, ITarget
     {
         public View view;
+        public bool filter { get; set; }
+        public int alpha { get; set; }
 
         public ImageTarget(View view)
         {
             this.view = view;
+            filter = true;
+            alpha = 40;
         }
 
         public void OnBitmapFailed(Drawable p0)
@@ -32,8 +36,15 @@ namespace Eventos.Utility
         public void OnBitmapLoaded(Bitmap p0, Picasso.LoadedFrom p1)
         {
             view.SetBackgroundDrawable(new BitmapDrawable(view.Context.Resources, p0));
-            view.Background.SetColorFilter(new Color(96, 27, 149), PorterDuff.Mode.Add);
-            view.Background.Alpha = 40;
+            if (filter)
+            {
+                view.Background.SetColorFilter(new Color(96, 27, 149), PorterDuff.Mode.Add);
+            }
+            else
+            {
+                view.Background.SetColorFilter(new Color(100, 100, 100), PorterDuff.Mode.Multiply);
+            }
+            view.Background.Alpha = alpha;
         }
 
         public void OnPrepareLoad(Drawable p0)

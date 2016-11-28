@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:gravity="center_vertical"
-    android:background="#FFF">
+    android:background="#00000000">
     <LinearLayout
         android:layout_centerVertical="true"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF">
+        android:background="#00000000">
         <ImageView
             android:id="@+id/menuIcon"
             android:layout_height="35dp"
@@ -29,7 +29,7 @@
             android:layout_centerVertical="true"
             android:layout_centerInParent="true"
             android:padding="5dip"
-            android:textColor="#601b95"
+            android:textColor="#FFFFFF"
             android:textSize="17sp" />
     </LinearLayout>
 </LinearLayout>
