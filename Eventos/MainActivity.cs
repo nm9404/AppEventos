@@ -181,10 +181,6 @@ namespace Eventos
             drawerImageView = FindViewById<ImageView>(Resource.Id.drawerImageView);
         }
 
-        
-
- 
-
         protected override void OnSaveInstanceState(Bundle outState)
         {
             if (mDrawerLayout.IsDrawerOpen((int)GravityFlags.Left))
@@ -284,10 +280,20 @@ namespace Eventos
                     ShowFragment(contactFragment);
                     contactFragment.PopulateData();
                     break;
+                case 7:
+                    facebookIntent();
+                    break;
                 default:
                     break;
             }
             //Toast.MakeText(this, e.Id.ToString(), ToastLength.Long).Show();
+        }
+
+        public void facebookIntent()
+        {
+            Android.Net.Uri uri = Android.Net.Uri.Parse("fb://page/153563447786");
+            Intent intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
         }
 
         public DataService GetDataServiceInstance()

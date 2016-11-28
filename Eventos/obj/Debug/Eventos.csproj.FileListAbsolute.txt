@@ -641,7 +641,6 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\layout\calendarda
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\layout\conferencedescriptionrow.xml
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\contactfragmentview.xml
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\splashview.xml
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\anim\animationsplah.xml
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\layout\contactfragmentview.xml
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\layout\splashview.xml
@@ -679,6 +678,22 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\Eventos.dll.mdb
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\menuimagelayoutview.xml
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-hdpi\facebook_letter_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-hdpi\instagram_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-hdpi\twitter_logo_silhouette.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-mdpi\facebook_letter_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-mdpi\instagram_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-mdpi\twitter_logo_silhouette.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xhdpi\facebook_letter_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xhdpi\instagram_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xhdpi\twitter_logo_silhouette.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xxhdpi\facebook_letter_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xxhdpi\instagram_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xxhdpi\twitter_logo_silhouette.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xxxhdpi\facebook_letter_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xxxhdpi\instagram_logo.png
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-xxxhdpi\twitter_logo_silhouette.png
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Java.Interop.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Mono.Android.dll.mdb
@@ -711,6 +726,5 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\layout\menuimagelayoutview.xml
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb

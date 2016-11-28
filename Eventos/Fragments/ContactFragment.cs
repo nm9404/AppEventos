@@ -79,15 +79,23 @@ namespace Eventos.Fragments
 
         private void FacebookIntent(object sender, EventArgs e)
         {
-
+            Android.Net.Uri uri = Android.Net.Uri.Parse("fb://page/153563447786");
+            Intent intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
         }
 
         private void TwitterIntent(object sender, EventArgs e)
         {
+            Android.Net.Uri uri = Android.Net.Uri.Parse("twitter://user?screen_name=inexmoda");
+            Intent intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
         }
 
         private void InstagramIntent(object sender, EventArgs e)
         {
+            Android.Net.Uri uri = Android.Net.Uri.Parse("http://instagram.com/_u/inexmoda");
+            Intent intent = new Intent(Intent.ActionView, uri);
+            StartActivity(intent);
         }
 
         public void InstantiateDataService(DataService dataServiceInstance)
