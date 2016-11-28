@@ -132,6 +132,7 @@ namespace Eventos
             Intent intent = new Intent(this, typeof(MainActivity));
             intent.PutExtra("Data", data);
             StartActivity(intent);
+            Finish();
         }
     }
 }

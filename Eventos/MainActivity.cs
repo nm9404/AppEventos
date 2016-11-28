@@ -75,6 +75,7 @@ namespace Eventos
 
             FindViews();
             CreateActionDrawer();
+            SetListBackground();
 
             mainMenuFragment = new MainMenuFragment(dataServiceInstance);
             frequentQuestionsFragment = new FrequentQuestionsFragment();
@@ -94,14 +95,14 @@ namespace Eventos
 
             var transaction = SupportFragmentManager.BeginTransaction();
 
-            transaction.Add(Resource.Id.fragmentContainer, contactFragment, "GalleryContact");
+            transaction.Add(Resource.Id.fragmentContainer, galleryDetailFragment, "Gallery Detail");
+            transaction.Hide(galleryDetailFragment);
+
+            transaction.Add(Resource.Id.fragmentContainer, contactFragment, "Contact");
             transaction.Hide(contactFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, calendarFragment, "Calendar");
             transaction.Hide(calendarFragment);
-
-            transaction.Add(Resource.Id.fragmentContainer, galleryDetailFragment, "Gallery Detail");
-            transaction.Hide(galleryDetailFragment);
 
             transaction.Add(Resource.Id.fragmentContainer, presenterDetailFragment, "Presenter Detail");
             transaction.Hide(presenterDetailFragment);
@@ -181,12 +182,21 @@ namespace Eventos
             drawerImageView = FindViewById<ImageView>(Resource.Id.drawerImageView);
         }
 
+        private void SetListBackground()
+        {
+            ImageTarget imageTarget = new ImageTarget(mLeftDrawer);
+            imageTarget.filter = false;
+            imageTarget.alpha = 255;
+            string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
+            Picasso.With(this).Load(url).Resize(600, 1000).CenterCrop().Into(imageTarget);
+        }
+
         protected override void OnSaveInstanceState(Bundle outState)
         {
             if (mDrawerLayout.IsDrawerOpen((int)GravityFlags.Left))
             {
                 outState.PutString("DrawerState", "Opened");
-                currentFragment = fragmentStack.Pop();
+                //currentFragment = fragmentStack.Pop(); :|
             }
             else
             {
@@ -257,6 +267,9 @@ namespace Eventos
             mDrawerLayout.CloseDrawer(mLeftDrawer);
             switch (e.Id)
             {
+                case 0:
+                    ShowFragment(mainMenuFragment);
+                    break;
                 case 1:
                     ShowFragment(mapFragment);
                     break;

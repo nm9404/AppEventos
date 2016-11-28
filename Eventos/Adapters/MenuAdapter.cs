@@ -58,7 +58,7 @@ namespace Eventos.Adapters
             if (position==0)
             {
                 convertView = context.LayoutInflater.Inflate(Resource.Layout.MenuImageLayoutView, parent, false);
-                string url = "http://testappeventos.webcindario.com/Imagenes/" + dataServiceInstance.GetEvent().EventInformation.MainImage.ImagePath + "b.png";
+                string url = "http://testappeventos.webcindario.com/Imagenes/" + dataServiceInstance.GetEvent().EventInformation.MainImage.ImagePath + ".png";
                 Picasso.With(context).Load(url).Into(convertView.FindViewById<ImageView>(Resource.Id.drawerImageView));
                 return convertView;
             }
@@ -67,7 +67,8 @@ namespace Eventos.Adapters
                 convertView = context.LayoutInflater.Inflate(Resource.Layout.MenuRowView, parent, false);
 
                 var drawableImg = context.Resources.GetDrawable(context.Resources.GetIdentifier(item.iconPath, "drawable", context.PackageName));
-                var color = Color.ParseColor("#601b95");
+                var color = Color.ParseColor("#FFFFFF");
+                
 
                 drawableImg.SetColorFilter(color, Mode.SrcAtop);
 
