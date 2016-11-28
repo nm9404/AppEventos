@@ -19,6 +19,7 @@ using IAlertDialog = Android.App.AlertDialog;
 using Eventos.core.Model;
 using IAlert = Android.App.AlertDialog;
 using Eventos.Utility;
+using Android.Net;
 
 namespace Eventos
 {
@@ -30,6 +31,7 @@ namespace Eventos
         public MainEvent mainEvent;
         public DataService dataServiceInstance;
         public string data = "";
+        public NetworkInfo networkInfo;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -52,10 +54,29 @@ namespace Eventos
 
             Android.Views.Animations.Animation fade = AnimationUtils.LoadAnimation(this, Resource.Animation.animationSplah);
             fade.SetAnimationListener(animationListener);
-            //splashImage.StartAnimation(fade);
             logoImage.StartAnimation(fade);
 
+            if (!IsInternetConnectionAvailable())
+            {
+                IAlert.Builder alert = new IAlert.Builder(this);
+                alert.SetTitle("No hay conexión a internet");
+                alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
+                alert.SetPositiveButton("Ok", (senderAlert, args) => {
+                    System.Environment.Exit(0);
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
+            
+            //splashImage.StartAnimation(fade);
             //Task.Run(() => this.sleep(30000));
+        }
+
+        public bool IsInternetConnectionAvailable()
+        {
+            ConnectivityManager conMngr = (ConnectivityManager)this.GetSystemService(Context.ConnectivityService);
+            networkInfo = conMngr.ActiveNetworkInfo;
+            return networkInfo != null && networkInfo.IsConnected && networkInfo.IsAvailable;
         }
 
         public void FindViews()
@@ -72,6 +93,17 @@ namespace Eventos
             {
                 data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
             }
+            else
+            {
+                IAlert.Builder alert = new IAlert.Builder(this);
+                alert.SetTitle("No hay conexión a internet");
+                alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
+                alert.SetPositiveButton("Ok", (senderAlert, args) => {
+                    System.Environment.Exit(0);
+                });
+                Dialog dialog = alert.Create();
+                dialog.Show();
+            }
 
             StartMainActivity();
         }
@@ -87,7 +119,8 @@ namespace Eventos
             });
 
             alert.SetNegativeButton("No", (senderAlert, args) => {
-                Toast.MakeText(this, "No", ToastLength.Short).Show();
+                Toast.MakeText(this, "Cerrando App...", ToastLength.Short).Show();
+                System.Environment.Exit(0);
             });
 
             Dialog dialog = alert.Create();
