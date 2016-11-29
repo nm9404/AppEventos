@@ -42,7 +42,7 @@ namespace Eventos.Utility
             }
             else
             {
-                view.Background.SetColorFilter(new Color(100, 100, 100), PorterDuff.Mode.Multiply);
+                
             }
             view.Background.Alpha = alpha;
         }

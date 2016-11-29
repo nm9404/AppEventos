@@ -21,12 +21,12 @@ namespace Eventos.MenuData
             menuElements = new List<MenuList>()
             {
                 new MenuList() {iconPath="", menuText="" },
-                new MenuList() {iconPath="ic_view_module_white_48dp", menuText="Lugar" },
-                new MenuList() {iconPath="ic_trending_up_white_48dp", menuText="Calendario" },
-                new MenuList() {iconPath="ic_access_time_white_48dp", menuText="Expositores" },
-                new MenuList() {iconPath="ic_settings_white_48dp", menuText="Galería" },
-                new MenuList() {iconPath="ic_keyboard_tab_white_48dp", menuText="Preguntas Frecuentes" },
-                new MenuList() {iconPath="ic_keyboard_tab_white_48dp", menuText="Contacto" },
+                new MenuList() {iconPath="map_placeholder_icon", menuText="Lugar" },
+                new MenuList() {iconPath="calendar_with_clock", menuText="Calendario" },
+                new MenuList() {iconPath="lady_icon", menuText="Expositores" },
+                new MenuList() {iconPath="image_icon", menuText="Galería" },
+                new MenuList() {iconPath="question_icon", menuText="Preguntas Frecuentes" },
+                new MenuList() {iconPath="online_help_icon", menuText="Contacto" },
                 new MenuList() {iconPath="ic_trending_up_white_48dp", menuText="Facebook" }
             };
         }

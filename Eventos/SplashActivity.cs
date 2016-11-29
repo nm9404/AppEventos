@@ -20,6 +20,7 @@ using Eventos.core.Model;
 using IAlert = Android.App.AlertDialog;
 using Eventos.Utility;
 using Android.Net;
+using Android.Graphics;
 
 namespace Eventos
 {
@@ -32,6 +33,7 @@ namespace Eventos
         public DataService dataServiceInstance;
         public string data = "";
         public NetworkInfo networkInfo;
+        public View relativeLayout;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -47,8 +49,14 @@ namespace Eventos
 
         public void SetBackgrounds()
         {
-            Picasso.With(this).Load("http://testappeventos.webcindario.com/Imagenes/EventImage/1b.png").Into(splashImage);
-            Picasso.With(this).Load("http://testappeventos.webcindario.com/Imagenes/EventImage/LogoDynamik_Horizontal.png").Into(logoImage);
+            ImageTarget imageTarget = new ImageTarget(relativeLayout);
+            Display display = WindowManager.DefaultDisplay;
+            Point size = new Point();
+            display.GetSize(size);
+
+            Picasso.With(this).Load(Resource.Drawable.logo_splash).Fit().CenterCrop().Into(splashImage);
+            Picasso.With(this).Load(Resource.Drawable.logo_dynamik_splash).Fit().CenterCrop().Into(logoImage);
+            Picasso.With(this).Load(Resource.Drawable.splash_bg).Resize(size.X, size.Y).CenterCrop().Into(imageTarget);
 
             AnimationListener animationListener = new AnimationListener(this);
 
@@ -83,6 +91,7 @@ namespace Eventos
         {
             splashImage = FindViewById<ImageView>(Resource.Id.eventLogoImageSplash);
             logoImage = FindViewById<ImageView>(Resource.Id.dynamikLogoImage);
+            relativeLayout = FindViewById<RelativeLayout>(Resource.Id.splashLayout);
         }
 
         public async Task sleep(int miliSeconds)

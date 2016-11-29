@@ -187,8 +187,8 @@ namespace Eventos
             ImageTarget imageTarget = new ImageTarget(mLeftDrawer);
             imageTarget.filter = false;
             imageTarget.alpha = 255;
-            string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
-            Picasso.With(this).Load(url).Resize(600, 1000).CenterCrop().Into(imageTarget);
+            //string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
+            Picasso.With(this).Load(Resource.Drawable.menu).Resize(600, 1000).CenterCrop().Into(imageTarget);
         }
 
         protected override void OnSaveInstanceState(Bundle outState)
