@@ -79,7 +79,7 @@ namespace Eventos.Fragments
             SetBackgrounds(position);
             string imageUrl = "http://testappeventos.webcindario.com/Imagenes/" + presentersList[position].Photo.ImagePath + ".jpg";
 
-            Picasso.With(Context).Load(imageUrl).Fit().CenterCrop().Into(imageView);
+            Picasso.With(Context).Load(imageUrl).Fit().CenterCrop().Placeholder(Resource.Animation.loadingAnimation).Into(imageView);
 
             presenterNameText.Text = presentersList[position].Name;
             presenterDescriptionText.Text = presentersList[position].Profile;
