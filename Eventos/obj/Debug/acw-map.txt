@@ -18,6 +18,10 @@ Eventos.Utility.ImageTarget, Eventos;md5ec4caa34753a12429bcec816513a23c6.ImageTa
 Eventos.Utility.ImageTarget, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
 Eventos.Utility.ImageTarget;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
 eventos.utility.ImageTarget;md5ec4caa34753a12429bcec816513a23c6.ImageTarget
+Eventos.Utility.RoundedCornerTransform, Eventos;md5ec4caa34753a12429bcec816513a23c6.RoundedCornerTransform
+Eventos.Utility.RoundedCornerTransform, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ec4caa34753a12429bcec816513a23c6.RoundedCornerTransform
+Eventos.Utility.RoundedCornerTransform;md5ec4caa34753a12429bcec816513a23c6.RoundedCornerTransform
+eventos.utility.RoundedCornerTransform;md5ec4caa34753a12429bcec816513a23c6.RoundedCornerTransform
 Eventos.MyActionBarToggle.MyActionBarToggle, Eventos;md57d760e5d62e6f5d15efe4e70b5f40748.MyActionBarToggle
 Eventos.MyActionBarToggle.MyActionBarToggle, Eventos, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md57d760e5d62e6f5d15efe4e70b5f40748.MyActionBarToggle
 Eventos.MyActionBarToggle.MyActionBarToggle;md57d760e5d62e6f5d15efe4e70b5f40748.MyActionBarToggle

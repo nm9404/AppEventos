@@ -60,7 +60,8 @@ namespace Eventos.Adapters
 
                 string url = "http://testappeventos.webcindario.com/Imagenes/" + conference.Picture.ImagePath + ".png";
                 ImageView imageView = convertView.FindViewById<ImageView>(Resource.Id.presenterImageWorkDetail);
-                Picasso.With(context).Load(url).Fit().CenterCrop().Placeholder(Resource.Animation.loadingAnimation).Into(imageView);
+                Picasso.With(context).Load(url).Fit().CenterCrop().Placeholder(Resource.Drawable.loadingAnimation).Into(imageView);
+                //Picasso.With(context).Load(url).Fit().CenterCrop().Into(imageView);
 
                 List<String> hourData = new List<String>();
                 hourData.Add(conference.Hour.Hours.ToString());
@@ -86,7 +87,7 @@ namespace Eventos.Adapters
 
                 string url = "http://testappeventos.webcindario.com/Imagenes/" + items[position].Picture.ImagePath + ".jpg";
                 ImageView imageView = convertView.FindViewById<ImageView>(Resource.Id.presenterImageWorkDetail);
-                Picasso.With(context).Load(url).Fit().CenterCrop().Placeholder(Resource.Animation.loadingAnimation).Into(imageView);
+                Picasso.With(context).Load(url).Fit().CenterCrop().Placeholder(Resource.Drawable.loadingAnimation).Into(imageView);
 
                 convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkName).Text = items[position].Title;
                 convertView.FindViewById<TextView>(Resource.Id.presenterDetailWorkYear).Text = items[position].Year.ToString();

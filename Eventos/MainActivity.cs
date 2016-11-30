@@ -22,6 +22,7 @@ using System.Threading.Tasks;
 using Eventos.Utility;
 using Newtonsoft.Json;
 using Square.Picasso;
+using Android.Graphics.Drawables;
 
 namespace Eventos
 {
@@ -54,6 +55,8 @@ namespace Eventos
         public CalendarFragment calendarFragment;
         public ContactFragment contactFragment;
         public SplashFragment splashFragment;
+
+        public AnimationDrawable loadingAnimation;
 
 
         private ImageView drawerImageView;

@@ -186,6 +186,7 @@
     <Compile Include="Utility\ImageLoader.cs" />
     <Compile Include="Utility\ImageTarget.cs" />
     <Compile Include="Utility\MathOperations.cs" />
+    <Compile Include="Utility\RoundedCornerTransform.cs" />
     <Compile Include="Utility\YearListOrder.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -700,7 +701,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\question_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\anim\loadingAnimation.xml" />
+    <AndroidResource Include="Resources\drawable\loadingAnimation.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Loading.png" />
@@ -746,6 +747,30 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\loaderAnimation.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Spinner_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Spinner_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Spinner_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Spinner_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Spinner_E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Spinner_F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Spinner_G.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
