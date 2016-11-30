@@ -70,6 +70,7 @@ namespace Eventos
                 alert.SetTitle("No hay conexión a internet");
                 alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
                 alert.SetPositiveButton("Ok", (senderAlert, args) => {
+                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
                     System.Environment.Exit(0);
                 });
                 Dialog dialog = alert.Create();
@@ -98,7 +99,7 @@ namespace Eventos
         {
             await Task.Delay(miliSeconds);
 
-            if (dataServiceInstance.GetEvent().Presenters!=null)
+            if (dataServiceInstance.GetEvent().Presenters!=null || dataServiceInstance!=null || dataServiceInstance.GetEvent().Presenters.Count!=0)
             {
                 data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
             }
@@ -108,6 +109,7 @@ namespace Eventos
                 alert.SetTitle("No hay conexión a internet");
                 alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
                 alert.SetPositiveButton("Ok", (senderAlert, args) => {
+                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
                     System.Environment.Exit(0);
                 });
                 Dialog dialog = alert.Create();
@@ -129,6 +131,7 @@ namespace Eventos
 
             alert.SetNegativeButton("No", (senderAlert, args) => {
                 Toast.MakeText(this, "Cerrando App...", ToastLength.Short).Show();
+                Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
                 System.Environment.Exit(0);
             });
 

@@ -20,7 +20,6 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040008;
         public static final int abc_slide_out_top=0x7f040009;
         public static final int animationsplah=0x7f04000a;
-        public static final int loadinganimation=0x7f04000b;
     }
     public static final class attr {
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -2102,22 +2101,31 @@ containing a value of this type.
         public static final int instagram_logo=0x7f020088;
         public static final int lady_icon=0x7f020089;
         public static final int leisa_christmas_false_color=0x7f02008a;
-        public static final int loading=0x7f02008b;
-        public static final int loading_asset=0x7f02008c;
-        public static final int logo_dynamik_splash=0x7f02008d;
-        public static final int logo_splash=0x7f02008e;
-        public static final int map_placeholder_icon=0x7f02008f;
-        public static final int menu=0x7f020090;
-        public static final int menu_b=0x7f020091;
-        public static final int notification_template_icon_bg=0x7f02009a;
-        public static final int online_help_icon=0x7f020092;
-        public static final int places_ic_clear=0x7f020093;
-        public static final int places_ic_search=0x7f020094;
-        public static final int powered_by_google_dark=0x7f020095;
-        public static final int powered_by_google_light=0x7f020096;
-        public static final int question_icon=0x7f020097;
-        public static final int splash_bg=0x7f020098;
-        public static final int twitter_logo_silhouette=0x7f020099;
+        public static final int loaderanimation=0x7f02008b;
+        public static final int loading=0x7f02008c;
+        public static final int loading_asset=0x7f02008d;
+        public static final int loadinganimation=0x7f02008e;
+        public static final int logo_dynamik_splash=0x7f02008f;
+        public static final int logo_splash=0x7f020090;
+        public static final int map_placeholder_icon=0x7f020091;
+        public static final int menu=0x7f020092;
+        public static final int menu_b=0x7f020093;
+        public static final int notification_template_icon_bg=0x7f0200a3;
+        public static final int online_help_icon=0x7f020094;
+        public static final int places_ic_clear=0x7f020095;
+        public static final int places_ic_search=0x7f020096;
+        public static final int powered_by_google_dark=0x7f020097;
+        public static final int powered_by_google_light=0x7f020098;
+        public static final int question_icon=0x7f020099;
+        public static final int spinner_a=0x7f02009a;
+        public static final int spinner_b=0x7f02009b;
+        public static final int spinner_c=0x7f02009c;
+        public static final int spinner_d=0x7f02009d;
+        public static final int spinner_e=0x7f02009e;
+        public static final int spinner_f=0x7f02009f;
+        public static final int spinner_g=0x7f0200a0;
+        public static final int splash_bg=0x7f0200a1;
+        public static final int twitter_logo_silhouette=0x7f0200a2;
     }
     public static final class id {
         public static final int GalleryGridView=0x7f0b0077;

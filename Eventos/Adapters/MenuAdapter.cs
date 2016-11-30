@@ -69,7 +69,6 @@ namespace Eventos.Adapters
                 var drawableImg = context.Resources.GetDrawable(context.Resources.GetIdentifier(item.iconPath, "drawable", context.PackageName));
                 var color = Color.ParseColor("#FFFFFF");
                 
-
                 drawableImg.SetColorFilter(color, Mode.SrcAtop);
 
                 convertView.FindViewById<ImageView>(Resource.Id.menuIcon).SetImageDrawable(drawableImg);

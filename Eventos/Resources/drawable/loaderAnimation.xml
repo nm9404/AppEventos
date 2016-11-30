@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+                android:oneshot="false">
+  <item android:drawable="@drawable/Spinner_A" android:duration="100" />
+  <item android:drawable="@drawable/Spinner_B" android:duration="100" />
+  <item android:drawable="@drawable/Spinner_C" android:duration="100" />
+  <item android:drawable="@drawable/Spinner_D" android:duration="100" />
+  <item android:drawable="@drawable/Spinner_E" android:duration="100" />
+  <item android:drawable="@drawable/Spinner_F" android:duration="100" />
+  <item android:drawable="@drawable/Spinner_G" android:duration="100" />
+  
+</animation-list>
