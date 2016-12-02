@@ -188,6 +188,7 @@
     <Compile Include="Utility\ImageTarget.cs" />
     <Compile Include="Utility\MathOperations.cs" />
     <Compile Include="Utility\RoundedCornerTransform.cs" />
+    <Compile Include="Utility\TouchListener.cs" />
     <Compile Include="Utility\YearListOrder.cs" />
   </ItemGroup>
   <ItemGroup>
