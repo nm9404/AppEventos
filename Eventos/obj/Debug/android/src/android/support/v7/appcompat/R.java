@@ -2110,15 +2110,22 @@ containing a value of this type.
         public static int map_placeholder_icon=0x7f020091;
         public static int menu=0x7f020092;
         public static int menu_b=0x7f020093;
-        public static int notification_template_icon_bg=0x7f02009c;
+        public static int notification_template_icon_bg=0x7f0200a3;
         public static int online_help_icon=0x7f020094;
         public static int places_ic_clear=0x7f020095;
         public static int places_ic_search=0x7f020096;
         public static int powered_by_google_dark=0x7f020097;
         public static int powered_by_google_light=0x7f020098;
         public static int question_icon=0x7f020099;
-        public static int splash_bg=0x7f02009a;
-        public static int twitter_logo_silhouette=0x7f02009b;
+        public static int spinner_a=0x7f02009a;
+        public static int spinner_b=0x7f02009b;
+        public static int spinner_c=0x7f02009c;
+        public static int spinner_d=0x7f02009d;
+        public static int spinner_e=0x7f02009e;
+        public static int spinner_f=0x7f02009f;
+        public static int spinner_g=0x7f0200a0;
+        public static int splash_bg=0x7f0200a1;
+        public static int twitter_logo_silhouette=0x7f0200a2;
     }
     public static final class id {
         public static int GalleryGridView=0x7f0b0077;

@@ -17,6 +17,7 @@ using Android.Graphics.Drawables;
 using Android.Graphics;
 using Android.Provider;
 using System.IO;
+using Eventos.Utility;
 
 namespace Eventos.Fragments
 {
@@ -107,7 +108,7 @@ namespace Eventos.Fragments
         {
             string imageUrl = "http://testappeventos.webcindario.com/Imagenes/" + imageList[position].ImagePath + ".jpg";
 
-            Picasso.With(Context).Load(imageUrl).Fit().CenterCrop().Into(photoImageView);
+            Picasso.With(Context).Load(imageUrl).Placeholder(AnimationHelper.instanceAnimationDrawable(this.Activity, Resource.Drawable.loaderAnimationPurpleRect)).Into(photoImageView);
 
             imageDetailText.Text = imageList[position].Description;
         }

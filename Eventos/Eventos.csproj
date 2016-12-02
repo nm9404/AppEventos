@@ -180,6 +180,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
+    <Compile Include="Utility\AnimationHelper.cs" />
     <Compile Include="Utility\AnimationListener.cs" />
     <Compile Include="Utility\Conversions.cs" />
     <Compile Include="Utility\ImageHelper.cs" />
@@ -701,7 +702,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\question_icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\loadingAnimation.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\loadingAnimation.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Loading.png" />
@@ -719,16 +720,16 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\Loading.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_dynamik_splash.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\logo_dynamik_splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_splash.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\logo_splash.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\menu_b.jpg" />
+    <AndroidResource Include="Resources\drawable-nodpi\menu_b.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\splash_bg.jpg" />
+    <AndroidResource Include="Resources\drawable-nodpi\splash_bg.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxhdpi\Loading_Asset.png" />
@@ -746,31 +747,79 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Loading_Asset.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\menu.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\loaderAnimation.xml" />
+    <AndroidResource Include="Resources\drawable-nodpi\loaderAnimationWhiteSq.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Spinner_A.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_A.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Spinner_B.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_B.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Spinner_C.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_C.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Spinner_D.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_D.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Spinner_E.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_E.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Spinner_F.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_F.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Spinner_G.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_AV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_AVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_BV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_BVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_CV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_CVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_DV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_DVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_EV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_EVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_FV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_FVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_GV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\Spinner_GVE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\loaderAnimationPurpleRect.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-nodpi\loaderAnimationPurpleSq.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\build\Xamarin.Android.Support.Vector.Drawable.targets')" />
