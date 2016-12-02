@@ -23,10 +23,11 @@ namespace Eventos.Fragments
 {
     public class GalleryDetailFragment : SupportFragment
     {
-        private List<MImage> imageList = new List<MImage>();
+        public List<MImage> imageList = new List<MImage>();
         private TextView imageDetailText;
         private Button shareImageButton;
-        private ImageView photoImageView;
+        public ImageView photoImageView;
+        public int position;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
@@ -69,6 +70,7 @@ namespace Eventos.Fragments
         public void HandleEvents()
         {
             shareImageButton.Click += ShareImageMouseClickButton;
+
         }
 
         public void Share(string title, string content)
@@ -106,6 +108,11 @@ namespace Eventos.Fragments
 
         public void PopulateData(int position)
         {
+            TouchListener touchListener = new TouchListener(photoImageView, this);
+            photoImageView.SetOnTouchListener(touchListener);
+
+            this.position = position;
+
             string imageUrl = "http://testappeventos.webcindario.com/Imagenes/" + imageList[position].ImagePath + ".jpg";
 
             Picasso.With(Context).Load(imageUrl).Placeholder(AnimationHelper.instanceAnimationDrawable(this.Activity, Resource.Drawable.loaderAnimationPurpleRect)).Into(photoImageView);
