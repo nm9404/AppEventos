@@ -26,32 +26,25 @@ namespace Eventos.Utility
 
         public Bitmap Transform(Bitmap p0)
         {
-            int size = Math.Min(p0.Width, p0.Height);
+            int minEdge = Math.Min(p0.Width, p0.Height);
+            int dx = (p0.Width - minEdge) / 2;
+            int dy = (p0.Height - minEdge) / 2;
 
-            int x = (p0.Width - size) / 2;
-            int y = (p0.Height - size) / 2;
+            Shader shader = new BitmapShader(p0, Shader.TileMode.Clamp, Shader.TileMode.Clamp);
+            Matrix matrix = new Matrix();
+            matrix.SetTranslate(-dx, -dy);
+            shader.SetLocalMatrix(matrix);
 
-            Bitmap squaredBitmap = Bitmap.CreateBitmap(p0, x, y, size, size);
-
-            if (squaredBitmap != p0)
-            {
-                p0.Recycle();
-            }
-
-            Bitmap bitmap = Bitmap.CreateBitmap(size, size, p0.GetConfig());
-
-            Canvas canvas = new Canvas();
             Paint paint = new Paint();
-            BitmapShader shader = new BitmapShader(squaredBitmap, BitmapShader.TileMode.Clamp, BitmapShader.TileMode.Clamp);
-            paint.SetShader(shader);
             paint.AntiAlias = true;
+            paint.SetShader(shader);
 
-            float r = size / 2.0f;
-            canvas.DrawCircle(r,r,r,paint);
+            Bitmap output = Bitmap.CreateBitmap(minEdge, minEdge, p0.GetConfig());
+            Canvas canvas = new Canvas(output);
+            canvas.DrawOval(new RectF(0, 0, minEdge, minEdge), paint);
 
-            squaredBitmap.Recycle();
-            return bitmap;
-           
+            p0.Recycle();
+            return output;
         }
     }
 }
