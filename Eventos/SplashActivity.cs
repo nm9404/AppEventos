@@ -21,6 +21,7 @@ using IAlert = Android.App.AlertDialog;
 using Eventos.Utility;
 using Android.Net;
 using Android.Graphics;
+using System.IO;
 
 namespace Eventos
 {
@@ -47,6 +48,35 @@ namespace Eventos
             // Create your application here
         }
 
+        public void CheckInternetConnection()
+        {
+            if (!IsInternetConnectionAvailable())
+            {
+                try
+                {
+                    var document = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+                    var filename = System.IO.Path.Combine(document, "data.json");
+                    String text = File.ReadAllText(filename);
+                    if (text != null)
+                    {
+                        StartMainActivity();
+                    }
+                }
+                catch (Exception e)
+                {
+                    IAlert.Builder alert = new IAlert.Builder(this);
+                    alert.SetTitle("No hay conexión a internet");
+                    alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
+                    alert.SetPositiveButton("Ok", (senderAlert, args) => {
+                        Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+                        System.Environment.Exit(0);
+                    });
+                    Dialog dialog = alert.Create();
+                    dialog.Show();
+                }
+            }
+        }
+
         public void SetBackgrounds()
         {
             ImageTarget imageTarget = new ImageTarget(relativeLayout);
@@ -64,18 +94,7 @@ namespace Eventos
             fade.SetAnimationListener(animationListener);
             logoImage.StartAnimation(fade);
 
-            if (!IsInternetConnectionAvailable())
-            {
-                IAlert.Builder alert = new IAlert.Builder(this);
-                alert.SetTitle("No hay conexión a internet");
-                alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
-                alert.SetPositiveButton("Ok", (senderAlert, args) => {
-                    Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
-                    System.Environment.Exit(0);
-                });
-                Dialog dialog = alert.Create();
-                dialog.Show();
-            }
+
             
             //splashImage.StartAnimation(fade);
             //Task.Run(() => this.sleep(30000));
@@ -99,24 +118,42 @@ namespace Eventos
         {
             await Task.Delay(miliSeconds);
 
-            if (dataServiceInstance.GetEvent().Presenters!=null || dataServiceInstance!=null || dataServiceInstance.GetEvent().Presenters.Count!=0)
+            if (dataServiceInstance.GetEvent().Presenters!=null)
             {
                 data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
+                SaveDataToJsonFile();
+                StartMainActivity();
             }
             else
             {
-                IAlert.Builder alert = new IAlert.Builder(this);
-                alert.SetTitle("No hay conexión a internet");
-                alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
-                alert.SetPositiveButton("Ok", (senderAlert, args) => {
+                try
+                {
+                    var document = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+                    var filename = System.IO.Path.Combine(document, "data.json");
+                    String text = File.ReadAllText(filename);
+                    if (text != null)
+                    {
+                        StartMainActivity();
+                        //Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+                        //System.Environment.Exit(0);
+                    }
+                }
+                catch (Exception e)
+                {
                     Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
                     System.Environment.Exit(0);
-                });
-                Dialog dialog = alert.Create();
-                dialog.Show();
+                }
             }
 
-            StartMainActivity();
+           
+        }
+
+        public void SaveDataToJsonFile()
+        {
+            var document = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            var filename = System.IO.Path.Combine(document, "data.json");
+            File.WriteAllText(filename, data);
+            //File.AppendAllText(filename, data);
         }
 
         public void BuildAlertDialog()

@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
 using Newtonsoft.Json;
+using System.IO;
 
 namespace Eventos.Utility
 {
@@ -25,9 +26,11 @@ namespace Eventos.Utility
 
         public void OnAnimationEnd(Animation animation)
         {
-            if (context.dataServiceInstance.GetEvent().Presenters!=null)
+            context.CheckInternetConnection();
+            if (context.dataServiceInstance.GetEvent().Presenters != null)
             {
                 context.data = JsonConvert.SerializeObject(context.dataServiceInstance.GetEvent());
+                context.SaveDataToJsonFile();
             }
             else
             {
@@ -36,7 +39,10 @@ namespace Eventos.Utility
 
             if (context.data == "{}" || context.data==null || context.data=="")
             {
-                context.BuildAlertDialog();
+                if (context.IsInternetConnectionAvailable())
+                {
+                    context.BuildAlertDialog();
+                }
             }
             else
             {

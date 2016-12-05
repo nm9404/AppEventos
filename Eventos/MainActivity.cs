@@ -23,6 +23,7 @@ using Eventos.Utility;
 using Newtonsoft.Json;
 using Square.Picasso;
 using Android.Graphics.Drawables;
+using System.IO;
 
 namespace Eventos
 {
@@ -71,9 +72,12 @@ namespace Eventos
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
-            string data = Intent.GetStringExtra("Data");
+            //string data = Intent.GetStringExtra("Data");
             MainEvent eventData = new MainEvent();
-            eventData = JsonConvert.DeserializeObject<MainEvent>(data);
+            var document = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            var filename = Path.Combine(document, "data.json");
+            String text = File.ReadAllText(filename);
+            eventData = JsonConvert.DeserializeObject<MainEvent>(text);
             dataServiceInstance.SetEvent(eventData);
 
             FindViews();
