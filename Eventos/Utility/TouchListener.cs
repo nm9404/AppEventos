@@ -50,7 +50,7 @@ namespace Eventos.Utility
                 case MotionEventActions.Up:
                     v.Layout((int)(0), v.Top, (int)(v.Width), v.Bottom);
 
-                    if (mLeft>v.Width/4)
+                    if (mLeft>v.Width/8)
                     {
                         if(galleryDetailFragment.position>0)
                         {
@@ -59,7 +59,7 @@ namespace Eventos.Utility
                     }
                     else
                     {
-                        if (mLeft<-v.Width/4)
+                        if (mLeft<-v.Width/8)
                         {
                             if (galleryDetailFragment.position<galleryDetailFragment.imageList.Count-1)
                             {
