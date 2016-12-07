@@ -867,5 +867,10 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\sp
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\spinner_gve.png
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\loaderanimationpurplerect.xml
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\loaderanimationpurplesq.xml
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-hdpi\app_icon.png
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-mdpi\app_icon.png
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-xhdpi\app_icon.png
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-xxhdpi\app_icon.png
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-xxxhdpi\app_icon.png
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\Eventos.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb
