@@ -39,6 +39,7 @@ namespace Eventos
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             SetContentView(Resource.Layout.SplashView);
             mainEvent = new MainEvent();
             dataServiceInstance = new DataService();
