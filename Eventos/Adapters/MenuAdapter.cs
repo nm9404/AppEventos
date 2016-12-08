@@ -59,7 +59,7 @@ namespace Eventos.Adapters
             {
                 convertView = context.LayoutInflater.Inflate(Resource.Layout.MenuImageLayoutView, parent, false);
                 string url = "http://testappeventos.webcindario.com/Imagenes/" + dataServiceInstance.GetEvent().EventInformation.MainImage.ImagePath + ".png";
-                Picasso.With(context).Load(url).Into(convertView.FindViewById<ImageView>(Resource.Id.drawerImageView));
+                Picasso.With(context).Load(Resource.Drawable.logoEvento).Into(convertView.FindViewById<ImageView>(Resource.Id.drawerImageView));
                 return convertView;
             }
             else

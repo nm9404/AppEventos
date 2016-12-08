@@ -25,7 +25,7 @@ using System.IO;
 
 namespace Eventos
 {
-    [Activity(Label = "SplashActivity", MainLauncher = true, Theme = "@style/MyTheme")]
+    [Activity(Label = "ColombiaModa", MainLauncher = true, Theme = "@style/MyTheme")]
     public class SplashActivity : ActionBarActivity
     {
         private ImageView splashImage;
@@ -46,6 +46,7 @@ namespace Eventos
             dataServiceInstance.SetEventOnline();
             FindViews();
             SetBackgrounds();
+            CheckInternetConnection();
             // Create your application here
         }
 
