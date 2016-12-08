@@ -27,7 +27,7 @@ using System.IO;
 
 namespace Eventos
 {
-    [Activity(Label = "Eventos", MainLauncher = false, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
+    [Activity(Label = "ColombiaModa", MainLauncher = false, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
     public class MainActivity : ActionBarActivity
     {
         int count = 1;
@@ -130,7 +130,7 @@ namespace Eventos
 
             transaction.Commit();
 
-            
+
             //Task.Run(() => ExecuteCheckAsync());
             //t.Wait();
 
@@ -235,7 +235,7 @@ namespace Eventos
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch(item.ItemId)
+            switch (item.ItemId)
             {
                 case (Android.Resource.Id.Home):
                     mDrawerLayout.CloseDrawer(mLeftDrawer);
@@ -245,7 +245,7 @@ namespace Eventos
                     }
                     return true;
                 default:
-                     
+
                     return true;
             }
         }
@@ -270,35 +270,42 @@ namespace Eventos
                 InstanceDataOnFragments();
                 fragmentInstantiated = true;
             }
-            
+
             mDrawerLayout.CloseDrawer(mLeftDrawer);
             switch (e.Id)
             {
                 case 0:
                     ShowFragment(mainMenuFragment);
+                    SupportActionBar.SetTitle(Resource.String.titleMain);
                     break;
                 case 1:
                     ShowFragment(mapFragment);
+                    SupportActionBar.SetTitle(Resource.String.titlePlace);
                     break;
                 case 2:
                     ShowFragment(calendarFragment);
                     calendarFragment.PopulateData();
+                    SupportActionBar.SetTitle(Resource.String.titleCalendar);
                     break;
                 case 3:
                     ShowFragment(presentersFragment);
                     presentersFragment.PopulateMenu();
+                    SupportActionBar.SetTitle(Resource.String.titlePresenters);
                     break;
                 case 4:
                     ShowFragment(galleryFragment);
                     galleryFragment.PopulateMenu();
+                    SupportActionBar.SetTitle(Resource.String.titleGaleria);
                     break;
                 case 5:
                     ShowFragment(frequentQuestionsFragment);
                     frequentQuestionsFragment.PopulateMenu();
+                    SupportActionBar.SetTitle(Resource.String.titleFrequentQuestions);
                     break;
                 case 6:
                     ShowFragment(contactFragment);
                     contactFragment.PopulateData();
+                    SupportActionBar.SetTitle(Resource.String.titleContact);
                     break;
                 case 7:
                     facebookIntent();

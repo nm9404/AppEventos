@@ -2552,6 +2552,13 @@ containing a value of this type.
          */
         public static final int place_autocomplete_search_hint=0x7f070000;
         public static final int status_bar_notification_info_overflow=0x7f070034;
+        public static final int titleCalendar=0x7f070043;
+        public static final int titleContact=0x7f070046;
+        public static final int titleFrequentQuestions=0x7f070047;
+        public static final int titleGaleria=0x7f070045;
+        public static final int titleMain=0x7f070041;
+        public static final int titlePlace=0x7f070042;
+        public static final int titlePresenters=0x7f070044;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0a007d;

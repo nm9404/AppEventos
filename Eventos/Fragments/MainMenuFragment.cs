@@ -75,7 +75,7 @@ namespace Eventos
         {
             ImageTarget target = new ImageTarget(mainLayout);
             string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
-            Picasso.With(this.Activity).Load(url).CenterCrop().Resize(720, 1025).Into(target);
+            Picasso.With(this.Activity).Load(url).Placeholder(Resource.Drawable.bg).CenterCrop().Resize(720, 1025).Into(target);
         }
 
         public void InstantiateDataService(DataService dataServiceInstance)
@@ -123,7 +123,8 @@ namespace Eventos
             hourText.Text = hourData[0].ToString() + " : " + hourData[1].ToString();
             dateText.Text = mainEvent.Presenters[0].Conferences[0].Date.Day.ToString() + " de " + Conversions.ConvertNumberToMonth(mainEvent.Presenters[0].Conferences[0].Date.Month) + " de " + mainEvent.Presenters[0].Conferences[0].Date.Year.ToString();
             addressText.Text = mainEvent.Place.Address.ToString();
-            Picasso.With(this.Activity).Load("http://testappeventos.webcindario.com/Imagenes/"+mainEvent.EventInformation.MainImage.ImagePath+".png").Into(eventImage);
+            string url = "http://testappeventos.webcindario.com/Imagenes/" + mainEvent.EventInformation.MainImage.ImagePath + ".png";
+            Picasso.With(this.Activity).Load(Resource.Drawable.logoEvento).Into(eventImage);
         }
 
         public void HandleEvents()
@@ -141,6 +142,7 @@ namespace Eventos
             MainActivity activity = (MainActivity)this.Activity;
             activity.InstanceDataOnFragments();
             activity.ShowFragment(activity.mapFragment);
+            activity.SupportActionBar.SetTitle(Resource.String.titlePlace);
         }
 
         public void FaqButtonEventClick(object sender, EventArgs e)
@@ -149,6 +151,7 @@ namespace Eventos
             activity.InstanceDataOnFragments();
             activity.frequentQuestionsFragment.PopulateMenu();
             activity.ShowFragment(activity.frequentQuestionsFragment);
+            activity.SupportActionBar.SetTitle(Resource.String.titleFrequentQuestions);
         }
 
         public void PresentersButtonEventClick(object sender, EventArgs e)
@@ -157,6 +160,7 @@ namespace Eventos
             activity.InstanceDataOnFragments();
             activity.presentersFragment.PopulateMenu();
             activity.ShowFragment(activity.presentersFragment);
+            activity.SupportActionBar.SetTitle(Resource.String.titlePresenters);
         }
 
         public void AgendaButtonEventClick(object sender, EventArgs e)
@@ -165,6 +169,7 @@ namespace Eventos
             activity.InstanceDataOnFragments();
             activity.calendarFragment.PopulateData();
             activity.ShowFragment(activity.calendarFragment);
+            activity.SupportActionBar.SetTitle(Resource.String.titleCalendar);
         }
 
         public void ContactButtonEventClick(object sender, EventArgs e)
@@ -173,6 +178,7 @@ namespace Eventos
             activity.InstanceDataOnFragments();
             activity.contactFragment.PopulateData();
             activity.ShowFragment(activity.contactFragment);
+            activity.SupportActionBar.SetTitle(Resource.String.titleContact);
         }
 
         public void GalleryButtonEventClick(object sender, EventArgs e)
@@ -181,6 +187,7 @@ namespace Eventos
             activity.InstanceDataOnFragments();
             activity.galleryFragment.PopulateMenu();
             activity.ShowFragment(activity.galleryFragment);
+            activity.SupportActionBar.SetTitle(Resource.String.titleGaleria);
         }
     }
 }

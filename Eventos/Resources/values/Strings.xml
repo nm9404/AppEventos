@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">Eventos</string>
+    <string name="ApplicationName">ColombiaModa</string>
+    <string name="titleMain">ColombiaModa</string>
+  <string name="titlePlace">Lugar</string>
+  <string name="titleCalendar">Calendario</string>
+  <string name="titlePresenters">Expositores</string>
+  <string name="titleGaleria">Galeria</string>
+  <string name="titleContact">Contacto</string>
+  <string name="titleFrequentQuestions">Preguntas Frecuentes</string>
 </resources>
