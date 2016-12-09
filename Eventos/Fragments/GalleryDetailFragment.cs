@@ -115,7 +115,7 @@ namespace Eventos.Fragments
 
             string imageUrl = "http://testappeventos.webcindario.com/Imagenes/" + imageList[position].ImagePath + ".jpg";
 
-            Picasso.With(Context).Load(imageUrl).Placeholder(AnimationHelper.instanceAnimationDrawable(this.Activity, Resource.Drawable.loaderAnimationPurpleRect)).Into(photoImageView);
+            Picasso.With(Context).Load(imageUrl).Fit().CenterCrop().Placeholder(AnimationHelper.instanceAnimationDrawable(this.Activity, Resource.Drawable.loaderAnimationPurpleRect)).Into(photoImageView);
 
             imageDetailText.Text = imageList[position].Description;
         }
