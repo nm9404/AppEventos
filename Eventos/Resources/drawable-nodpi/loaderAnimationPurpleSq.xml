@@ -3,10 +3,8 @@
                 android:oneshot="false">
   <item android:drawable="@drawable/Spinner_AV" android:duration="100" />
   <item android:drawable="@drawable/Spinner_BV" android:duration="100" />
-  <item android:drawable="@drawable/Spinner_CV" android:duration="100" />
   <item android:drawable="@drawable/Spinner_DV" android:duration="100" />
   <item android:drawable="@drawable/Spinner_EV" android:duration="100" />
-  <item android:drawable="@drawable/Spinner_FV" android:duration="100" />
   <item android:drawable="@drawable/Spinner_GV" android:duration="100" />
   
 </animation-list>

@@ -32,7 +32,7 @@
             android:text="Marzo" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
         android:padding="9dp"
