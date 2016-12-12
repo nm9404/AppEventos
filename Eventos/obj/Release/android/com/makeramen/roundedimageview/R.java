@@ -2207,7 +2207,7 @@ containing a value of this type.
         public static final int disableHome=0x7f0b001a;
         public static final int drawerImageView=0x7f0b0090;
         public static final int drawer_layout=0x7f0b007c;
-        public static final int dynamikLogoImage=0x7f0b00bc;
+        public static final int dynamikLogoImage=0x7f0b00bd;
         public static final int edit_query=0x7f0b0053;
         public static final int end=0x7f0b0027;
         public static final int end_padder=0x7f0b009f;
@@ -2219,7 +2219,7 @@ containing a value of this type.
         public static final int eventHashtagContact=0x7f0b006c;
         public static final int eventHour=0x7f0b0083;
         public static final int eventImage=0x7f0b0080;
-        public static final int eventLogoImageSplash=0x7f0b00bb;
+        public static final int eventLogoImageSplash=0x7f0b00bc;
         public static final int eventMailTextContact=0x7f0b006d;
         public static final int eventPhoneNumbersContact=0x7f0b006e;
         public static final int eventPlaceTextContact=0x7f0b006a;
@@ -2248,6 +2248,7 @@ containing a value of this type.
         public static final int light=0x7f0b0017;
         public static final int line1=0x7f0b0098;
         public static final int line3=0x7f0b009c;
+        public static final int linearLayoutPresenterWork=0x7f0b00b9;
         public static final int listMode=0x7f0b0018;
         public static final int list_item=0x7f0b0038;
         public static final int mainMenuLayout=0x7f0b007f;
@@ -2275,7 +2276,7 @@ containing a value of this type.
         public static final int presenterDetailNameText=0x7f0b00b1;
         public static final int presenterDetailProfileText=0x7f0b00b2;
         public static final int presenterDetailWorkDescription=0x7f0b00ae;
-        public static final int presenterDetailWorkName=0x7f0b00b9;
+        public static final int presenterDetailWorkName=0x7f0b00ba;
         public static final int presenterDetailWorkTitle=0x7f0b00aa;
         public static final int presenterDetailWorkYear=0x7f0b00ad;
         public static final int presenterImageDetailView1=0x7f0b00b0;
@@ -2313,7 +2314,7 @@ containing a value of this type.
         public static final int showHome=0x7f0b001d;
         public static final int showTitle=0x7f0b001e;
         public static final int spacer=0x7f0b003c;
-        public static final int splashLayout=0x7f0b00ba;
+        public static final int splashLayout=0x7f0b00bb;
         public static final int split_action_bar=0x7f0b0007;
         public static final int src_atop=0x7f0b0023;
         public static final int src_in=0x7f0b0024;

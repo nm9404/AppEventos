@@ -55,6 +55,7 @@ namespace Eventos.Adapters
         View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];
+
             convertView = context.LayoutInflater.Inflate(Resource.Layout.GalleryElement, parent, false);
 
             string imageUrl = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/Thumbs/" + (position + 1).ToString().TrimStart('0') + ".jpg";
