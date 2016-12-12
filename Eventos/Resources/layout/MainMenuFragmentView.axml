@@ -8,11 +8,10 @@
     android:background="#601b95">
     <ImageView
         android:layout_weight="1"
-        android:layout_width="match_parent"
+        android:layout_width="265dp"
+        android:layout_gravity="center"
         android:layout_height="70dp"
         android:layout_marginBottom="10dp"
-        android:paddingRight="30dp"
-        android:paddingLeft="50dp"
         android:layout_marginTop="20dp"
         android:id="@+id/eventImage" />
     <LinearLayout
@@ -25,39 +24,38 @@
         android:gravity="center"
         android:layout_centerVertical="true">
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="265dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:paddingRight="30dp"
-            android:paddingLeft="50dp"
             android:layout_marginBottom="2dp"
             android:textColor="#FFF"
             android:textSize="13dp"
             android:text="Lorém ¿? ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             android:id="@+id/eventDescriptionText" />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="265dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:paddingRight="30dp"
-            android:paddingLeft="50dp"
             android:textColor="#FFF"
+            android:textSize="13dp"
             android:text="15 Marzo 2016."
             android:layout_marginBottom="2dp"
             android:id="@+id/eventDateText" />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="265dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:paddingRight="30dp"
-            android:paddingLeft="50dp"
             android:textColor="#FFF"
+            android:textSize="13dp"
             android:layout_marginBottom="2dp"
             android:text="6:00 pm"
             android:id="@+id/eventHour" />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="265dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:paddingRight="30dp"
-            android:paddingLeft="50dp"
             android:textColor="#FFF"
+            android:textSize="13dp"
             android:text="Cll. 118 # 14 B - 54"
             android:id="@+id/eventAddress" />
     </LinearLayout>
@@ -68,7 +66,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="7dp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
         android:gravity="bottom">
@@ -80,7 +78,7 @@
             android:gravity="center_horizontal"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:id="@+id/buttonGroupA">
             <LinearLayout
                 android:orientation="horizontal"

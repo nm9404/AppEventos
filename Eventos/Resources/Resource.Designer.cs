@@ -2212,8 +2212,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b007c
 			public const int drawer_layout = 2131427452;
 			
-			// aapt resource value: 0x7f0b00bc
-			public const int dynamikLogoImage = 2131427516;
+			// aapt resource value: 0x7f0b00bd
+			public const int dynamikLogoImage = 2131427517;
 			
 			// aapt resource value: 0x7f0b0053
 			public const int edit_query = 2131427411;
@@ -2248,8 +2248,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b0080
 			public const int eventImage = 2131427456;
 			
-			// aapt resource value: 0x7f0b00bb
-			public const int eventLogoImageSplash = 2131427515;
+			// aapt resource value: 0x7f0b00bc
+			public const int eventLogoImageSplash = 2131427516;
 			
 			// aapt resource value: 0x7f0b006d
 			public const int eventMailTextContact = 2131427437;
@@ -2335,6 +2335,9 @@ namespace Eventos
 			// aapt resource value: 0x7f0b009c
 			public const int line3 = 2131427484;
 			
+			// aapt resource value: 0x7f0b00b9
+			public const int linearLayoutPresenterWork = 2131427513;
+			
 			// aapt resource value: 0x7f0b0018
 			public const int listMode = 2131427352;
 			
@@ -2416,8 +2419,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b00ae
 			public const int presenterDetailWorkDescription = 2131427502;
 			
-			// aapt resource value: 0x7f0b00b9
-			public const int presenterDetailWorkName = 2131427513;
+			// aapt resource value: 0x7f0b00ba
+			public const int presenterDetailWorkName = 2131427514;
 			
 			// aapt resource value: 0x7f0b00aa
 			public const int presenterDetailWorkTitle = 2131427498;
@@ -2530,8 +2533,8 @@ namespace Eventos
 			// aapt resource value: 0x7f0b003c
 			public const int spacer = 2131427388;
 			
-			// aapt resource value: 0x7f0b00ba
-			public const int splashLayout = 2131427514;
+			// aapt resource value: 0x7f0b00bb
+			public const int splashLayout = 2131427515;
 			
 			// aapt resource value: 0x7f0b0007
 			public const int split_action_bar = 2131427335;
