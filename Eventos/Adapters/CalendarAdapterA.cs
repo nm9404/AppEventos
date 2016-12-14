@@ -78,7 +78,7 @@ namespace Eventos.Adapters
         {
             View castedSender = (View)sender;
             MainActivity mainActivity = (MainActivity)context;
-            mainActivity.presenterDetailFragment.PopulateData(mainActivity.presenterDetailFragment.GetPresenterPositionFromId(dataServiceInstance.GetPresenterByConferenceId(Int32.Parse(castedSender.Tag.ToString())).PresenterId));
+            mainActivity.presenterDetailFragment.PopulateData(mainActivity.presenterDetailFragment.GetPresenterPositionFromId(dataServiceInstance.GetPresentersByConferenceId(Int32.Parse(castedSender.Tag.ToString()))[0].PresenterId));
             mainActivity.ShowFragment(mainActivity.presenterDetailFragment);
         }
     }

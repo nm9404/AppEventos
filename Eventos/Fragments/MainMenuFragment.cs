@@ -106,22 +106,24 @@ namespace Eventos
             List<String> hourData = new List<String>();
             MainEvent mainEvent = new MainEvent();
             mainEvent = dataServiceInstance.GetEvent();
+            Presenter firstPresenter = dataServiceInstance.GetAllPresenters()[0];
+            Conference firstConference = dataServiceInstance.GetConferenceByPresenterId(firstPresenter.PresenterId)[0];
 
-            hourData.Add(mainEvent.Presenters[0].Conferences[0].Hour.Hours.ToString());
+            hourData.Add(firstConference.Hour.Hours.ToString());
 
-            hourData.Add(mainEvent.Presenters[0].Conferences[0].Hour.Minutes.ToString());
-            if (mainEvent.Presenters[0].Conferences[0].Hour.Hours < 10)
+            hourData.Add(firstConference.Hour.Minutes.ToString());
+            if (firstConference.Hour.Hours < 10)
             {
                 hourData[0] = "0" + hourData[0];
             }
-            if (mainEvent.Presenters[0].Conferences[0].Hour.Minutes < 10)
+            if (firstConference.Hour.Minutes < 10)
             {
                 hourData[1] = "0" + hourData[1];
             }
 
             descriptionText.Text = mainEvent.EventInformation.EventDescription.ToString();
             hourText.Text = hourData[0].ToString() + " : " + hourData[1].ToString();
-            dateText.Text = mainEvent.Presenters[0].Conferences[0].Date.Day.ToString() + " de " + Conversions.ConvertNumberToMonth(mainEvent.Presenters[0].Conferences[0].Date.Month) + " de " + mainEvent.Presenters[0].Conferences[0].Date.Year.ToString();
+            dateText.Text = firstConference.Date.Day.ToString() + " de " + Conversions.ConvertNumberToMonth(firstConference.Date.Month) + " de " + firstConference.Date.Year.ToString();
             addressText.Text = mainEvent.Place.Address.ToString();
             string url = "http://testappeventos.webcindario.com/Imagenes/" + mainEvent.EventInformation.MainImage.ImagePath + ".png";
             Picasso.With(this.Activity).Load(Resource.Drawable.logoEvento).Into(eventImage);

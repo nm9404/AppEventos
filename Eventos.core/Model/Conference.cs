@@ -12,5 +12,6 @@ namespace Eventos.core.Model
         public Time Hour { get; set; }
         public DateF Date { get; set; }
         public int ConferenceId { get; set; }
+        public List<Presenter> Presenters { get; set; }
     }
 }

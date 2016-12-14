@@ -5,3 +5,9 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\bin\Release\Newtonsoft.Jso
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Release\Eventos.core.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Release\Eventos.core.dll
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos.core\obj\Release\Eventos.core.pdb
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\obj\Release\Eventos.core.dll
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\obj\Release\Eventos.core.pdb
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Eventos.core.dll
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Eventos.core.pdb
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Newtonsoft.Json.dll
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Newtonsoft.Json.xml

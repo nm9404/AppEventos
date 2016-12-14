@@ -58,7 +58,14 @@ namespace Eventos.Adapters
                 convertView.FindViewById<TextView>(Resource.Id.conferenceAbstractDescription).Text = items[position].ShortDescription;
                 if (items[position].ShortDescription == null || items[position].ShortDescription == String.Empty)
                 {
-                    convertView.FindViewById<TextView>(Resource.Id.conferenceAbstractDescription).Text = "Conferencia dictada por: " + dataServiceInstance.GetPresenterByConferenceId(items[position].ConferenceId).Name;
+                    string data = "Conferencia dicatada por: ";
+                    List<Presenter> presenters = dataServiceInstance.GetPresentersByConferenceId(items[position].ConferenceId);
+
+                    foreach (Presenter presenter in presenters)
+                    {
+                        data += presenter.Name;
+                    }
+                    convertView.FindViewById<TextView>(Resource.Id.conferenceAbstractDescription).Text = "Conferencia dictada por: " + data;
                 }
             }
             return convertView;

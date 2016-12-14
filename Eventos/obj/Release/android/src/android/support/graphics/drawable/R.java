@@ -2207,7 +2207,7 @@ containing a value of this type.
         public static int disableHome=0x7f0b001a;
         public static int drawerImageView=0x7f0b0090;
         public static int drawer_layout=0x7f0b007c;
-        public static int dynamikLogoImage=0x7f0b00bc;
+        public static int dynamikLogoImage=0x7f0b00bd;
         public static int edit_query=0x7f0b0053;
         public static int end=0x7f0b0027;
         public static int end_padder=0x7f0b009f;
@@ -2219,7 +2219,7 @@ containing a value of this type.
         public static int eventHashtagContact=0x7f0b006c;
         public static int eventHour=0x7f0b0083;
         public static int eventImage=0x7f0b0080;
-        public static int eventLogoImageSplash=0x7f0b00bb;
+        public static int eventLogoImageSplash=0x7f0b00bc;
         public static int eventMailTextContact=0x7f0b006d;
         public static int eventPhoneNumbersContact=0x7f0b006e;
         public static int eventPlaceTextContact=0x7f0b006a;
@@ -2248,6 +2248,7 @@ containing a value of this type.
         public static int light=0x7f0b0017;
         public static int line1=0x7f0b0098;
         public static int line3=0x7f0b009c;
+        public static int linearLayoutPresenterWork=0x7f0b00b9;
         public static int listMode=0x7f0b0018;
         public static int list_item=0x7f0b0038;
         public static int mainMenuLayout=0x7f0b007f;
@@ -2275,7 +2276,7 @@ containing a value of this type.
         public static int presenterDetailNameText=0x7f0b00b1;
         public static int presenterDetailProfileText=0x7f0b00b2;
         public static int presenterDetailWorkDescription=0x7f0b00ae;
-        public static int presenterDetailWorkName=0x7f0b00b9;
+        public static int presenterDetailWorkName=0x7f0b00ba;
         public static int presenterDetailWorkTitle=0x7f0b00aa;
         public static int presenterDetailWorkYear=0x7f0b00ad;
         public static int presenterImageDetailView1=0x7f0b00b0;
@@ -2313,7 +2314,7 @@ containing a value of this type.
         public static int showHome=0x7f0b001d;
         public static int showTitle=0x7f0b001e;
         public static int spacer=0x7f0b003c;
-        public static int splashLayout=0x7f0b00ba;
+        public static int splashLayout=0x7f0b00bb;
         public static int split_action_bar=0x7f0b0007;
         public static int src_atop=0x7f0b0023;
         public static int src_in=0x7f0b0024;
