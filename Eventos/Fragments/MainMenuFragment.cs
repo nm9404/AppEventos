@@ -66,16 +66,16 @@ namespace Eventos
         {
             base.OnActivityCreated(savedInstanceState);
             FindViews();
+            //SetBackgrounds();
             HandleEvents();
-            SetBackgrounds();
             SetTextsAndPicture();
         }
 
         public void SetBackgrounds()
         {
-            ImageTarget target = new ImageTarget(mainLayout);
-            string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
-            Picasso.With(this.Activity).Load(Resource.Drawable.bg).Placeholder(Resource.Drawable.bg).CenterCrop().Resize(720, 1025).Into(target);
+            ImageTarget target = new ImageTarget(this.View.FindViewById<LinearLayout>(Resource.Id.mainMenuLayout));
+            //string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
+            Picasso.With(this.Activity).Load(Resource.Drawable.bg).Placeholder(Resource.Drawable.bg).Error(Resource.Drawable.bg).CenterCrop().Resize(720, 1025).Into(target);
         }
 
         public void InstantiateDataService(DataService dataServiceInstance)
@@ -103,6 +103,7 @@ namespace Eventos
 
         private void SetTextsAndPicture()
         {
+            SetBackgrounds();
             List<String> hourData = new List<String>();
             MainEvent mainEvent = new MainEvent();
             mainEvent = dataServiceInstance.GetEvent();

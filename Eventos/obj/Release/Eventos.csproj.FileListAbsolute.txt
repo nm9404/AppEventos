@@ -286,8 +286,6 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\Syst
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\res\drawable-nodpi\logoevento.png
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\res\drawable-nodpi\bg.jpg
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\Eventos.dll.mdb
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\Eventos.dll
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\Eventos.pdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Eventos.dll.config
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Eventos.dll
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Eventos.pdb
@@ -331,6 +329,9 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\MvvmCross.Binding.d
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\MvvmCross.Localization.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\MvvmCross.Platform.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Newtonsoft.Json.xml
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\Eventos.csprojResolveAssemblyReference.cache
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\Eventos.dll
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\Eventos.pdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\android\bin\dynamikcreative.eventos.apk
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\res\layout\mainmenufragmentview.xml
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\res\layout\menurowview.xml
@@ -540,7 +541,6 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\res\drawable-nodpi\
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\res\drawable-nodpi\bg.jpg
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\R.cs.flag
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\uploadflags.txt
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\Eventos.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Eventos.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Java.Interop.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Mono.Android.dll.mdb
