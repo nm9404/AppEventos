@@ -574,4 +574,3 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\android\assets\Syst
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\android\assets\System.Xml.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\android\assets\System.Xml.Linq.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\Eventos.dll.mdb
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Eventos.dll.mdb

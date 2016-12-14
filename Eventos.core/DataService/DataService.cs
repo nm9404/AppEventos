@@ -27,6 +27,11 @@ namespace Eventos.core.DataService
             dataRepository.SetEvent(mainEvent);
         }
 
+        public List<Presenter> GetAllPresenters()
+        {
+            return dataRepository.GetAllPresenters();
+        }
+
         public Place GetPlaceById(int placeId)
         {
             return dataRepository.GetPlaceById(placeId);
@@ -82,9 +87,9 @@ namespace Eventos.core.DataService
             return dataRepository.GetEvent();
         }
 
-        public Presenter GetPresenterByConferenceId(int conferenceId)
+        public List<Presenter> GetPresentersByConferenceId(int conferenceId)
         {
-            return dataRepository.GetPresenterByConferenceId(conferenceId);
+            return dataRepository.GetPresentersByConferenceId(conferenceId);
         }
 
         public Conference GetConferenceByWorkId(int workId)

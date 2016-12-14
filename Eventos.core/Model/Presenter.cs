@@ -13,7 +13,6 @@ namespace Eventos.core.Model
         public String Country { get; set; }
         public Image Photo { get; set; }
         public List<Work> PreviousWorks { get; set; }
-        public List<Conference> Conferences { get; set; }
         public List<SocialNetwork> SocialNetworks { get; set; }
         public int PresenterId { get; set; }
     }

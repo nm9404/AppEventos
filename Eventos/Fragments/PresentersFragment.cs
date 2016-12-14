@@ -50,7 +50,7 @@ namespace Eventos.Fragments
 
         public void SetPresentersList(DataService dataServiceInstance)
         {
-            presentersList = dataServiceInstance.GetEvent().Presenters;
+            presentersList = dataServiceInstance.GetAllPresenters();
             MainActivity activity = (MainActivity)this.Activity;
             activity.presenterDetailFragment.instanceDataService(presentersList, dataServiceInstance);
         }

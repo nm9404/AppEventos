@@ -872,5 +872,7 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System.ServiceModel.Internals.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\logoevento.png
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\bg.jpg
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\Eventos.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb

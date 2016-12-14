@@ -62,7 +62,9 @@ namespace Eventos.core.Repository
         {
             IEnumerable<Presenter> persons =
 
-            from person in mainEvent.Presenters
+            from conference in GetAllConferences()
+            from person in conference.Presenters
+
             where person.PresenterId == personId
             select person;
 
@@ -86,8 +88,7 @@ namespace Eventos.core.Repository
             List<Place> PlacesList = new List<Place>();
 
             IEnumerable<Place> allPlaces =
-            from presenter in mainEvent.Presenters
-            from conference in presenter.Conferences
+            from conference in GetAllConferences()
             select conference.ConferencePlace;
 
             PlacesList = allPlaces.ToList<Place>();
@@ -98,12 +99,8 @@ namespace Eventos.core.Repository
 
         public List<Work> GetAllPreviousWorkByPresenterId(int presenterId)
         {
-            IEnumerable<Presenter> selectedPresenter =
-                from presenter in mainEvent.Presenters
-                where presenter.PresenterId == presenterId
-                select presenter;
-
-            return selectedPresenter.FirstOrDefault<Presenter>().PreviousWorks;
+            Presenter presenter = GetPresenterById(presenterId);
+            return presenter.PreviousWorks;
         }
 
         public List<Work> GetAllWorksByPresenterId(int presenterId)
@@ -126,21 +123,29 @@ namespace Eventos.core.Repository
         public List<Conference> GetAllConferences()
         {
             IEnumerable<Conference> allConferences =
-                from presenter in mainEvent.Presenters
-                from conference in presenter.Conferences
+                from conference in mainEvent.Conferences
                 select conference;
 
             return allConferences.ToList<Conference>();
         }
 
+        public List<Presenter> GetAllPresenters()
+        {
+            IEnumerable<Presenter> allPresenters =
+                from conference in mainEvent.Conferences
+                from presenter in conference.Presenters
+                select presenter;
+            return allPresenters.Distinct<Presenter>().ToList<Presenter>();
+        }
+
         public List<Conference> GetConferenceByPresenterId(int presenterId)
         {
-            IEnumerable<Presenter> selectedPresenter =
-                from presenter in mainEvent.Presenters
+            IEnumerable<Conference> allConferences =
+                from conference in mainEvent.Conferences
+                from presenter in conference.Presenters
                 where presenter.PresenterId == presenterId
-                select presenter;
-
-                return selectedPresenter.FirstOrDefault<Presenter>().Conferences;
+                select conference;
+            return allConferences.ToList<Conference>();
         }
 
         public Place GetPlaceByConferenceId(int conferenceId)
@@ -151,8 +156,8 @@ namespace Eventos.core.Repository
         public List<Conference> GetConferencesByDay(DateF day)
         {
             IEnumerable<Conference> conferencesByDay =
-                from person in mainEvent.Presenters
-                from conference in person.Conferences
+
+                from conference in mainEvent.Conferences
                 where conference.Date.Day == day.Day && conference.Date.Year == day.Year && conference.Date.Month == day.Month
                 select conference;
 
@@ -162,14 +167,13 @@ namespace Eventos.core.Repository
         public List<Work> GetAllWorks()
         {
             IEnumerable<Work> allPreviousWorks =
-                from presenter in mainEvent.Presenters
+                from presenter in GetAllPresenters()
                 from work in presenter.PreviousWorks
                 select work;
             allPreviousWorks.ToList<Work>();
 
             IEnumerable<Work> allConferenceWorks =
-                from presenter in mainEvent.Presenters
-                from work in presenter.Conferences
+                from work in mainEvent.Conferences
                 select work;
             allConferenceWorks.ToList<Work>();
 
@@ -179,8 +183,7 @@ namespace Eventos.core.Repository
         public Conference GetConferenceByWorkId(int workId)
         {
             IEnumerable<Conference> selectedConference =
-                from presenter in mainEvent.Presenters
-                from conference in presenter.Conferences
+                from conference in GetAllConferences()
                 where conference.WorkId == workId
                 select conference;
 
@@ -197,15 +200,10 @@ namespace Eventos.core.Repository
             return mainEvent;
         }
 
-        public Presenter GetPresenterByConferenceId(int conferenceId)
+        public List<Presenter> GetPresentersByConferenceId(int conferenceId)
         {
-            IEnumerable<Presenter> selectedPresenter =
-                from presenter in mainEvent.Presenters
-                from conference in presenter.Conferences
-                where conference.ConferenceId == conferenceId
-                select presenter;
-
-            return selectedPresenter.FirstOrDefault<Presenter>();
+            Conference conference = GetAllConferences().Where(i => i.ConferenceId == conferenceId).FirstOrDefault<Conference>();
+            return conference.Presenters;
         }
     }
 }

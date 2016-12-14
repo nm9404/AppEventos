@@ -27,7 +27,7 @@ namespace Eventos.Utility
         public void OnAnimationEnd(Animation animation)
         {
             context.CheckInternetConnection();
-            if (context.dataServiceInstance.GetEvent().Presenters != null)
+            if (context.dataServiceInstance.GetEvent().Conferences != null)
             {
                 context.data = JsonConvert.SerializeObject(context.dataServiceInstance.GetEvent());
                 context.SaveDataToJsonFile();

@@ -120,7 +120,7 @@ namespace Eventos
         {
             await Task.Delay(miliSeconds);
 
-            if (dataServiceInstance.GetEvent().Presenters!=null)
+            if (dataServiceInstance.GetEvent().Conferences!=null)
             {
                 data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
                 SaveDataToJsonFile();
