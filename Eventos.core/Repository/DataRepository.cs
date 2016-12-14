@@ -14,7 +14,7 @@ namespace Eventos.core.Repository
         //All Event Data
 
         private MainEvent mainEvent = new MainEvent();
-        string url = "https://drive.google.com/uc?export=download&confirm=no_antivirus&id=0BygDDSNmqMx7RC1JTVotWjFBUnc";
+        string url = "https://drive.google.com/uc?export=download&id=0BygDDSNmqMx7cGVzMDhOUWZralE";
 
         //Query Methods
 
