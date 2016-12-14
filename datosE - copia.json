@@ -39,7 +39,7 @@
         "NetworkName": "Instagram"
       }
     ],
-    "EventDescription": "ColombiaModa es un evento donde diseñadores de renombre muestran sus marcas y nuevas colecciones, es un evento para los amantes de la moda, ¡Disfruta de esta edición 2016 con nuevas tendencias para presentarte! ",
+    "EventDescription": "ColombiaModa es un evento donde diseñadores de renombre muestran sus marcas y nuevas colecciones, es un evento para los amantes de la moda, ¡Disfruta de esta edición 2016 con nuevas tendencias para presentarte!",
     "EventName": "ColombiaModa"
   },
   "Conferences": [
@@ -1769,62 +1769,62 @@
   "ImageGallery": [
     {
       "ImagePath": "ImageGallery/1",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 1",
+      "Description": "Fotografía en la pasarela de ColombiaModa",
       "ImageId": 100
     },
     {
       "ImagePath": "ImageGallery/2",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 2",
+      "Description": "Fotografía en la pasarela de ColombiaModa",
       "ImageId": 101
     },
     {
       "ImagePath": "ImageGallery/3",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 3",
+      "Description": "Fotografía en la pasarela de ColombiaModa",
       "ImageId": 102
     },
     {
       "ImagePath": "ImageGallery/4",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 4",
+      "Description": "Imagen del evento",
       "ImageId": 103
     },
     {
       "ImagePath": "ImageGallery/5",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 5",
+      "Description": "Fotografía en la pasarela de ColombiaModa",
       "ImageId": 104
     },
     {
       "ImagePath": "ImageGallery/6",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 6",
+      "Description": "Fotografía en la pasarela de ColombiaModa",
       "ImageId": 105
     },
     {
       "ImagePath": "ImageGallery/7",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 7",
+      "Description": "Fotografía de ensayo en la pasarela de ColombiaModa",
       "ImageId": 106
     },
     {
       "ImagePath": "ImageGallery/8",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 8",
+      "Description": "Imagen del evento",
       "ImageId": 107
     },
     {
       "ImagePath": "ImageGallery/9",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 9",
+      "Description": "Fotografía en la pasarela de ColombiaModa, ropa interior de Leonisa",
       "ImageId": 108
     },
     {
       "ImagePath": "ImageGallery/10",
-      "Title": "",
-      "Description": "",
+      "Title": "Fotografía 10",
+      "Description": "Imagen del Evento",
       "ImageId": 109
     }
   ],

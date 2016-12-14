@@ -75,7 +75,7 @@ namespace Eventos
         {
             ImageTarget target = new ImageTarget(mainLayout);
             string url = "http://testappeventos.webcindario.com/Imagenes/ImageGallery/bg.jpg";
-            Picasso.With(this.Activity).Load(url).Placeholder(Resource.Drawable.bg).CenterCrop().Resize(720, 1025).Into(target);
+            Picasso.With(this.Activity).Load(Resource.Drawable.bg).Placeholder(Resource.Drawable.bg).CenterCrop().Resize(720, 1025).Into(target);
         }
 
         public void InstantiateDataService(DataService dataServiceInstance)

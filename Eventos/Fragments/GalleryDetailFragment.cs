@@ -70,7 +70,6 @@ namespace Eventos.Fragments
         public void HandleEvents()
         {
             shareImageButton.Click += ShareImageMouseClickButton;
-
         }
 
         public void Share(string title, string content)
@@ -103,7 +102,7 @@ namespace Eventos.Fragments
 
         public void ShareImageMouseClickButton(object o, EventArgs e)
         {
-            Share("Fotografía", "Galeria Imagenes");
+            Share("Fotografía", imageList[position].Description.ToString());
         }
 
         public void PopulateData(int position)
