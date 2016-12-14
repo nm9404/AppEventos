@@ -145,20 +145,18 @@ namespace Eventos
 
         public void ShowFragment(SupportFragment fragment)
         {
-            if (fragment.IsVisible)
+            if (!fragment.IsVisible)
             {
-                return;
+                var transaction = SupportFragmentManager.BeginTransaction();
+
+                transaction.Hide(currentFragment);
+                transaction.Show(fragment);
+                transaction.AddToBackStack(null);
+                transaction.Commit();
+
+                fragmentStack.Push(currentFragment);
+                currentFragment = fragment;
             }
-
-            var transaction = SupportFragmentManager.BeginTransaction();
-
-            transaction.Hide(currentFragment);
-            transaction.Show(fragment);
-            transaction.AddToBackStack(null);
-            transaction.Commit();
-
-            fragmentStack.Push(currentFragment);
-            currentFragment = fragment;
         }
 
         public void CreateActionDrawer()
