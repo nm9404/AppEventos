@@ -46,6 +46,8 @@ namespace Eventos.Fragments
             MainActivity activity = (MainActivity)this.Activity;
 
             FindViews();
+
+            presentersView.ItemClick += PresenterItemClick;
         }
 
         public void SetPresentersList(DataService dataServiceInstance)
@@ -59,7 +61,6 @@ namespace Eventos.Fragments
         {
             PresentersAdapter presentersAdapter = new PresentersAdapter(presentersList, this.Activity);
             presentersView.Adapter = presentersAdapter;
-            presentersView.ItemClick += PresenterItemClick;
         }
 
         public void PresenterItemClick(object sender, AdapterView.ItemClickEventArgs e)
