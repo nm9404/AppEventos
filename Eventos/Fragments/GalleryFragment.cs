@@ -46,6 +46,9 @@ namespace Eventos.Fragments
             MainActivity activity = (MainActivity)this.Activity;
 
             FindViews();
+
+            imageGridView.ItemClick += GalleryItemClick;
+
         }
 
         public void SetImageList(List<MImage> imagesList)
@@ -60,7 +63,6 @@ namespace Eventos.Fragments
 
             GalleryMenuAdapter galleryMenuAdapter = new GalleryMenuAdapter(imagesList, this.Activity);
             imageGridView.Adapter = galleryMenuAdapter;
-            imageGridView.ItemClick += GalleryItemClick;
         }
 
         private void FindViews()
