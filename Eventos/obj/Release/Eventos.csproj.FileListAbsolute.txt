@@ -572,5 +572,6 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\Syst
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\System.ServiceModel.Internals.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\System.Xml.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\System.Xml.Linq.dll.mdb
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\Eventos.csprojResolveAssemblyReference.cache
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\Eventos.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\bin\Release\Eventos.dll.mdb
