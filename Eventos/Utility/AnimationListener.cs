@@ -13,6 +13,14 @@ using Android.Widget;
 using Newtonsoft.Json;
 using System.IO;
 
+//<summary>
+//This class is able to call all the methods of the animation listener used in the launch activity, implementing the interface Android.Views.Animations.Animation.IAnimationListener
+//</summary>
+//<see>
+//SplashActivity
+//</see>
+
+
 namespace Eventos.Utility
 {
     class AnimationListener : Java.Lang.Object, Android.Views.Animations.Animation.IAnimationListener
@@ -23,6 +31,13 @@ namespace Eventos.Utility
         {
             this.context = context;
         }
+
+        //<summary>
+        //    After the animation finishes, this method is called automatically and checks if an internet connection is available in context, also creates a JSon file in order to save it into the internal memory of the device, if no internet connection appears, this function is able to call the alert Dialog or exit the application in case of an error
+        //</summary>
+        //<param name = "animation">
+        //    Recieves the animation that's calling the Listener
+        //</param>
 
         public void OnAnimationEnd(Animation animation)
         {

@@ -17,6 +17,10 @@ namespace Eventos.Utility
 {
     public class ImageLoader
     {
+        //<summary>
+        //    This class is no longer used in the app
+        //</summary>
+
         private List<Bitmap> presentersThumbs;
 
         public static List<Bitmap> ReturnGalleryThumbs(List<MImages> imageList)

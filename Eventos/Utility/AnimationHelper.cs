@@ -13,6 +13,10 @@ using Android.Graphics.Drawables;
 
 namespace Eventos.Utility
 {
+    //<summary>
+    //    This class performs the instantiation of an animation drawable
+    //</summary>
+
     class AnimationHelper
     {
 

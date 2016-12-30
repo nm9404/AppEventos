@@ -14,6 +14,16 @@ namespace Eventos.Utility
 {
     public class Conversions
     {
+        //<summary>
+        //    This Function converts a number into its respective month
+        //</summary>
+        //<return>
+        //    returns string of the month name
+        //</return>
+        //<param name="num">
+        //    is the month number
+        //</param>
+
         public static string ConvertNumberToMonth(int num)
         {
             switch(num)

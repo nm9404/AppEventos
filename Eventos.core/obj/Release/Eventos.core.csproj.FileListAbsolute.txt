@@ -11,3 +11,4 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Eventos.core.d
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Eventos.core.pdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Newtonsoft.Json.dll
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\bin\Release\Newtonsoft.Json.xml
+E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos.core\obj\Release\Eventos.core.csprojResolveAssemblyReference.cache

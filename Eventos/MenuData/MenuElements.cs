@@ -12,6 +12,10 @@ using Android.Widget;
 
 namespace Eventos.MenuData
 {
+    //<summary>
+    //    This class has the data for the sidebar with the menu
+    //</summary>
+
     public class MenuElements
     {
         public List<MenuList> menuElements { get; set; }
