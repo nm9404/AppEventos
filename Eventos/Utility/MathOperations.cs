@@ -14,6 +14,16 @@ namespace Eventos.Utility
 {
     class MathOperations
     {
+
+        //<summary>
+        //    This Function evaluates if a number is even
+        //</summary>
+        //<return>
+        //    returns true for an even number and false for an odd one
+        //</return>
+        //<param name="num">
+        //    is the number
+        //</param>
         public static bool IsEven(int number)
         {
             float fNumber = (float)number;

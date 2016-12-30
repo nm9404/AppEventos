@@ -102,6 +102,12 @@ namespace Eventos
             //Task.Run(() => this.sleep(30000));
         }
 
+        //<summary>
+        //    This function checks if there's an internet connection Available
+        //</summary>
+        //<return>
+        //  Returns true if an internet connection is available, otherwise it returns false
+        //</return>
         public bool IsInternetConnectionAvailable()
         {
             ConnectivityManager conMngr = (ConnectivityManager)this.GetSystemService(Context.ConnectivityService);

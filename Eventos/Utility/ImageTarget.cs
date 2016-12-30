@@ -15,6 +15,10 @@ using Square.Picasso;
 
 namespace Eventos.Utility
 {
+    //<summary>
+    //    This overrides the interface ITarget, OnBitMapLoaded performs the purple-colored filter for all the background images in the app, and instance of this class is called on all background loaders with picasso
+    //</summary>
+
     public class ImageTarget : Java.Lang.Object, ITarget
     {
         public View view;

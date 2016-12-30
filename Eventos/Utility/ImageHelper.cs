@@ -18,6 +18,10 @@ namespace Eventos.Utility
     class ImageHelper
     {
 
+        //<summary>
+        //    This class provides methods to load an image from a given url, as they're not async the class is no longer used in the app
+        //</summary>
+
         public static Bitmap GetImageBitmapFromUrl(string url)
         {
             Bitmap imageBitmap = null;

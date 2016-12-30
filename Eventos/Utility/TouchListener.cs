@@ -14,6 +14,11 @@ using Eventos.Fragments;
 
 namespace Eventos.Utility
 {
+
+    //<summary>
+    //    This class provides methods to interact with the image gallery implementing the IOnTouchListener interface
+    //</summary>
+
     class TouchListener : Java.Lang.Object, View.IOnTouchListener
     {
         public View view;

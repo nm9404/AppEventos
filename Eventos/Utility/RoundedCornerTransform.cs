@@ -14,6 +14,10 @@ using Square.Picasso;
 
 namespace Eventos.Utility
 {
+    //<summary>
+    //This class overrides the ITransformation and is used for a Picasso transform, in this case, the function Transform creates the circular shape for a given bitmap.
+    //</summary>
+
     class RoundedCornerTransform : Java.Lang.Object, ITransformation
     {
         public string Key

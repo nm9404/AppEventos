@@ -100,6 +100,27 @@ namespace Eventos
 
             mLeftDrawer.ItemClick += OnSelectedItemDrawer;
 
+            CreateAndHideFragments();
+
+            //Task.Run(() => ExecuteCheckAsync());
+            //t.Wait();
+
+            //Action<object> actionOfTask1 = (object obj) => { CheckData(); };
+
+            //Task backgroundTask = new Task(actionOfTask1, "ready");
+            //backgroundTask.Start();
+            //backgroundTask.Wait();
+
+            currentFragment = mainMenuFragment;
+        }
+
+
+        //<summary>
+        //    This Function creates all the fragments for the app
+        //</summary>
+
+        public void CreateAndHideFragments()
+        {
             var transaction = SupportFragmentManager.BeginTransaction();
 
             transaction.Add(Resource.Id.fragmentContainer, galleryDetailFragment, "Gallery Detail");
@@ -130,19 +151,14 @@ namespace Eventos
 
             transaction.Commit();
 
-
-            //Task.Run(() => ExecuteCheckAsync());
-            //t.Wait();
-
-            //Action<object> actionOfTask1 = (object obj) => { CheckData(); };
-
-            //Task backgroundTask = new Task(actionOfTask1, "ready");
-            //backgroundTask.Start();
-            //backgroundTask.Wait();
-
-            currentFragment = mainMenuFragment;
         }
 
+        //<summary>
+        //    This Function hides the current fragment, pushes the stack and sets the new current fragment by showing it and adding it to the FragmentStack
+        //</summary>
+        //<param name = "fragment">
+        //This parameter is the new fragment to be added as the currentFragment
+        //</param>
         public void ShowFragment(SupportFragment fragment)
         {
             if (!fragment.IsVisible)
@@ -159,6 +175,12 @@ namespace Eventos
             }
         }
 
+        //<summary>
+        //    This Function hides the current fragment, pushes the stack and sets the new current fragment by showing it and adding it to the FragmentStack
+        //</summary>
+        //<param name = "fragment">
+        //This parameter is the new fragment to be added as the currentFragment
+        //</param>
         public void CreateActionDrawer()
         {
             SetSupportActionBar(mToolbar);
@@ -178,7 +200,9 @@ namespace Eventos
             mActionBarToggle.SyncState();
         }
 
-
+        //<summary>
+        //    This function instantiates the views on the file MainLayout.axml
+        //</summary>
         private void FindViews()
         {
             mToolbar = FindViewById<SupportToolbar>(Resource.Id.appToolbar);
@@ -187,6 +211,9 @@ namespace Eventos
             drawerImageView = FindViewById<ImageView>(Resource.Id.drawerImageView);
         }
 
+        //<summary>
+        //    This function uses picasso and the image target with its color transform in order to set the purple background for the side Menu
+        //</summary>
         private void SetListBackground()
         {
             ImageTarget imageTarget = new ImageTarget(mLeftDrawer);
@@ -215,6 +242,9 @@ namespace Eventos
             InstanceDataOnFragments();
         }
 
+        //<summary>
+        //    This function loads and instantiates each DataService instance on all of the fragments.
+        //</summary>
         public void InstanceDataOnFragments()
         {
             frequentQuestionsFragment.SetFrequentQuestionList(dataServiceInstance.GetEvent().FrequentQuestions);
@@ -248,6 +278,9 @@ namespace Eventos
             }
         }
 
+        //<summary>
+        //    This function was overriden in order to allow it to take control of the FragmentStack and the App BackStack in order to return to the last fragment by pressing the Back Button on the device
+        //</summary>
         public override void OnBackPressed()
         {
             if (SupportFragmentManager.BackStackEntryCount > 0)
@@ -261,6 +294,9 @@ namespace Eventos
             }
         }
 
+        //<summary>
+        //    This function takes control of the side Menu by showing the respective fragment on each case
+        //</summary>
         private void OnSelectedItemDrawer(object sender, ItemClickEventArgs e)
         {
             if (!fragmentInstantiated)
@@ -314,6 +350,9 @@ namespace Eventos
             //Toast.MakeText(this, e.Id.ToString(), ToastLength.Long).Show();
         }
 
+        //<summary>
+        //    This function launches the facebook app intent
+        //</summary>
         public void facebookIntent()
         {
             Android.Net.Uri uri = Android.Net.Uri.Parse("fb://page/153563447786");
