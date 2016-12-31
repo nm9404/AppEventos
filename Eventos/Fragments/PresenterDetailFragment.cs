@@ -41,6 +41,12 @@ namespace Eventos.Fragments
             // Create your fragment here
         }
 
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view PresenterDetailView.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -50,6 +56,9 @@ namespace Eventos.Fragments
             return view;
         }
 
+        //<summary>
+        //This function overrides OnActivityCreated finding each view for this fragment and calling the event handlers
+        //</summary>
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
@@ -58,12 +67,24 @@ namespace Eventos.Fragments
             HandleEvents();
         }
 
+        //<summary>
+        //This function instantiates all the required data for the fragment recieving the presenter's List and the DataServiceInstance
+        //</summary>
+        //<param name ="presentersList">
+        //List of presenters of the event
+        //</param>
+        //<param name ="dataServiceInstance">
+        //Instance of the dataService created from the SplashActivity with all the app's Data
+        //</param>
         public void instanceDataService(List<Presenter> presentersList, DataService dataServiceInstance)
         {
             this.presentersList = presentersList;
             this.dataServiceInstance = dataServiceInstance;
         }
 
+        //<summary>
+        //This function finds all the views from the file PresenterDetailView.axml
+        //</summary>
         public void FindViews()
         {
             presenterNameText = this.View.FindViewById<TextView>(Resource.Id.presenterDetailNameText);
@@ -74,6 +95,13 @@ namespace Eventos.Fragments
             imageView = this.View.FindViewById<ImageView>(Resource.Id.presenterImageDetailView1);
         }
 
+
+        //<summary>
+        //This function puts the respective Data into the image and the textViews
+        //</summary>
+        //<param name ="position">
+        //Index or position in the presentersList to gather data from
+        //</param>
         public void PopulateData(int position)
         {
             SetBackgrounds(position);
@@ -91,11 +119,26 @@ namespace Eventos.Fragments
             index = position;
         }
 
+        //<summary>
+        //Gets the position of the presenter on the list from its Id
+        //</summary>
+        //<param name="presenterId">
+        //Id of the presenter to look for on the list
+        //</param>
+        //<return>
+        //returns the Presenter index on the List
+        //</return>
         public int GetPresenterPositionFromId(int presenterId)
         {
             return presentersList.IndexOf(dataServiceInstance.GetPresenterById(presenterId));
         }
 
+        //<summary>
+        //Sets the background picture for each presenter using the index or position of the list
+        //</summary>
+        //<param name="position">
+        //Position or index of the presentersList
+        //</param>
         public void SetBackgrounds(int position)
         {
             ImageTarget target = new ImageTarget(mainLayout);
@@ -103,11 +146,17 @@ namespace Eventos.Fragments
             Picasso.With(this.Activity).Load(url).CenterCrop().Resize(800, 480).Into(target);
         }
 
+        //<summary>
+        //Sets the delegates of each event
+        //</summary>
         public void HandleEvents()
         {
             sharePresenterDetailButton.Click += shareImage;
         }
 
+        //<summary>
+        //Creates the imageBitmap from the picture and launches the shareIntent
+        //</summary>
         public void shareImage(object sender, EventArgs e)
         {
             //Conference conference = presentersList[index].Conferences[0];
@@ -134,6 +183,15 @@ namespace Eventos.Fragments
             Share("Información", info);
         }
 
+        //<summary>
+        //Launches the share intent for this fragment
+        //</summary>
+        //<param name="title">
+        //is the title of the message to share
+        //</param>
+        //<param name="contet">
+        //is the content of the message to share
+        //</param>
         public void Share(string title, string content)
         {
             if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(content))

@@ -35,12 +35,18 @@ namespace Eventos
         MainEvent mainEvent = new MainEvent();
         DataService dataServiceInstance = new DataService();
 
+        //Views
         private SupportToolbar mToolbar;
         private MActionBarToggle mActionBarToggle;
         private DrawerLayout mDrawerLayout;
         private ListView mLeftDrawer;
+        public AnimationDrawable loadingAnimation;
+        private ImageView drawerImageView;
 
+        //MenuElments
         private MenuElements menuElementsInstance = new MenuElements();
+
+        //FragmentStack
         private Stack<SupportFragment> fragmentStack = new Stack<SupportFragment>();
 
 
@@ -57,10 +63,7 @@ namespace Eventos
         public ContactFragment contactFragment;
         public SplashFragment splashFragment;
 
-        public AnimationDrawable loadingAnimation;
-
-
-        private ImageView drawerImageView;
+        
 
         //private MenuAdapter menuAdapter = new MenuAdapter(,menuElementsInstance.menuElements);
 
@@ -118,7 +121,6 @@ namespace Eventos
         //<summary>
         //    This Function creates all the fragments for the app
         //</summary>
-
         public void CreateAndHideFragments()
         {
             var transaction = SupportFragmentManager.BeginTransaction();
@@ -261,6 +263,9 @@ namespace Eventos
             mActionBarToggle.SyncState();
         }
 
+        //<summary>
+        //    This function closes the drawer when the home button is pressed or it opens the drawer if it's closed
+        //</summary>
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
@@ -295,8 +300,14 @@ namespace Eventos
         }
 
         //<summary>
-        //    This function takes control of the side Menu by showing the respective fragment on each case
+        //    This function takes control of the side Menu by showing the respective fragment on each case, the function may be used within a delegate
         //</summary>
+        //<param name="sender">
+        //sender is the view or object that's listening this event
+        //</param>
+        //<param name="e">
+        //"e" is the eventArgs called with the view
+        //</param>
         private void OnSelectedItemDrawer(object sender, ItemClickEventArgs e)
         {
             if (!fragmentInstantiated)

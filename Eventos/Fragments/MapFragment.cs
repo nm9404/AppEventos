@@ -24,8 +24,15 @@ namespace Eventos.Fragments
         private MapView mapView;
         private DataService dataServiceInstance;
         private Button shareButton;
-        private double lat;
-        private double lng;
+        private double lat; //Latitude
+        private double lng; //Longitude
+
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view PlaceFragment.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -37,6 +44,9 @@ namespace Eventos.Fragments
             return view;
         }
 
+        //<summary>
+        //This function overrides OnActivityCreated finding each view for this fragment and calling the event handlers
+        //</summary>
         public override void OnActivityCreated(Bundle p0)
         {
             base.OnActivityCreated(p0);
@@ -50,17 +60,29 @@ namespace Eventos.Fragments
             base.OnStart();
         }
 
+        //<summary>
+        //This function finds all the views from the file PlaceFragment.axml
+        //</summary>
         public void FindViews()
         {
             shareButton = this.View.FindViewById<Button>(Resource.Id.shareButtonPlace);
         }
 
+        //<summary>
+        //Instantiates the dataService and initializes the map
+        //</summary>
+        //<param name="dataServiceInstance">
+        //DataServiceInstance created from the SplashActivity
+        //</param>
         public void InstantiateDataAndInitializeMap(DataService dataServiceInstance)
         {
             this.dataServiceInstance = dataServiceInstance;
             InitializeMapAndHandlers();
         }
 
+        //<summary>
+        //Initializes the map and locates the EventPlace from the DataServiceInstance
+        //</summary>
         private void InitializeMapAndHandlers()
         {
             SetUpMapIfNeeded();
@@ -88,11 +110,23 @@ namespace Eventos.Fragments
             }
         }
 
+        //<summary>
+        //Sets the delegates of each event
+        //</summary>
         public void HandleEvents()
         {
             shareButton.Click += ShareMouseClickAction;
         }
 
+        //<summary>
+        //Creates and Launches the Share intent
+        //</summary>
+        //<param name="o">
+        //Is the object that lunaches the event, in this case the shareButton
+        //</param>
+        //<param name="e">
+        //Is the Argument required for this event to work
+        //</param>
         public void ShareMouseClickAction(object o, EventArgs e)
         {
             String uri = "http://maps.google.com/maps?saddr=" + lat + "," + lng;
@@ -105,8 +139,11 @@ namespace Eventos.Fragments
             shareIntent.PutExtra(Android.Content.Intent.ExtraText, uri);
 
             StartActivity(Intent.CreateChooser(shareIntent, "Compartir vía"));
-
         }
+
+
+        
+        //From here, all the overriden functions are able to control destruction, pause, Memory access and alternative Setup of the map if needed for each case
 
         public override void OnDestroyView()
         {

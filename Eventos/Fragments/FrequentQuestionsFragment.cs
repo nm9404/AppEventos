@@ -31,6 +31,12 @@ namespace Eventos.Fragments
             // Create your fragment here
         }
 
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view FrequenQuestionsFragmentView.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -40,6 +46,9 @@ namespace Eventos.Fragments
             return view;
         }
 
+        //<summary>
+        //This function overrides OnActivityCreated finding each view for this fragmeny
+        //</summary>
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
@@ -49,17 +58,29 @@ namespace Eventos.Fragments
             FindViews();
         }
 
+        //<summary>
+        //This function sets the list of frequent questions from the DataService
+        //</summary>
+        //<param name = "questionList">
+        //questionList containing every single question and answer for the event
+        //</param>
         public void SetFrequentQuestionList(List<FrequentQuestion> questionList)
         {
             frequentQuestionList = questionList;
         }
 
+        //<summary>
+        //This function sets the adapter for the Presenter's GridView
+        //</summary>
         public void PopulateMenu()
         {
             FrequentQuestionAdapter frequentQuestionAdapter = new FrequentQuestionAdapter(this.Activity, frequentQuestionList);
             questionList.Adapter = frequentQuestionAdapter;
         }
 
+        //<summary>
+        //This function finds all the views from the file FrequentQuestionsFragment.axml
+        //</summary>
         private void FindViews()
         {
             questionList = this.View.FindViewById<ListView>(Resource.Id.frequentQuestionListView);

@@ -50,6 +50,9 @@ namespace Eventos
             // Create your application here
         }
 
+        //<summary>
+        //    This function checks for the internet connection before attempting to start the MainActivity, if there's no connection it chhecks for the data file in chache, if it doesn't exist, the app will exit.
+        //</summary>
         public void CheckInternetConnection()
         {
             if (!IsInternetConnectionAvailable())
@@ -79,6 +82,9 @@ namespace Eventos
             }
         }
 
+        //<summary>
+        //    This function sets all the images for the splash screen, they are located in @Resources/Drawable folder
+        //</summary>
         public void SetBackgrounds()
         {
             ImageTarget imageTarget = new ImageTarget(relativeLayout);
@@ -115,6 +121,9 @@ namespace Eventos
             return networkInfo != null && networkInfo.IsConnected && networkInfo.IsAvailable;
         }
 
+        //<summary>
+        //    This function this function instantiates all the views for the file SplashView.axml
+        //</summary>
         public void FindViews()
         {
             splashImage = FindViewById<ImageView>(Resource.Id.eventLogoImageSplash);
@@ -122,6 +131,12 @@ namespace Eventos
             relativeLayout = FindViewById<RelativeLayout>(Resource.Id.splashLayout);
         }
 
+        //<summary>
+        //    This function waits a given time in mili-seconds and creates the JSon cache file in order to Start the MainActivity with the Data. 
+        //</summary>
+        //<param name ="miliseconds">
+        //  is the time in miliSeconds that the task may wait for data to load.
+        //</param>
         public async Task sleep(int miliSeconds)
         {
             await Task.Delay(miliSeconds);
