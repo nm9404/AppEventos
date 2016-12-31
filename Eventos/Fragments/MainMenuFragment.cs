@@ -35,16 +35,26 @@ namespace Eventos
         public DataService dataServiceInstance;
         public ImageView eventImage;
 
+        //<summary>
+        //Builds the fragment instantiating the dataServiceInstance
+        //</summary>
+        //<param name = "dataServiceInstance">
+        //Instance of Data Service coming from MainActivity
+        //</param>
         public MainMenuFragment (DataService dataServiceInstance)
         {
             this.dataServiceInstance = dataServiceInstance;
         }
 
+        //<summary>
+        //Default fragment construction...
+        //</summary>
         public MainMenuFragment()
         {
 
         }
 
+        
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -52,6 +62,12 @@ namespace Eventos
             // Create your fragment here
         }
 
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view MainMenuFragmentView.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -62,6 +78,9 @@ namespace Eventos
             return view;
         }
 
+        //<summary>
+        //This function overrides OnActivityCreated finding each view for this fragment, calling the event handlers and setting texts and Picture
+        //</summary>
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
@@ -71,6 +90,9 @@ namespace Eventos
             SetTextsAndPicture();
         }
 
+        //<summary>
+        //Sets the background picture for the mainFragment
+        //</summary>
         public void SetBackgrounds()
         {
             ImageTarget target = new ImageTarget(this.View.FindViewById<LinearLayout>(Resource.Id.mainMenuLayout));
@@ -78,11 +100,20 @@ namespace Eventos
             Picasso.With(this.Activity).Load(Resource.Drawable.bg).Placeholder(Resource.Drawable.bg).Error(Resource.Drawable.bg).CenterCrop().Resize(720, 1025).Into(target);
         }
 
+        //<summary>
+        //This function instantiates all the required data for the fragment recieving the dataService instance
+        //</summary>
+        //<param name ="dataServiceInstance">
+        //Instance of the dataService created from the SplashActivity with all the app's Data
+        //</param>
         public void InstantiateDataService(DataService dataServiceInstance)
         {
             this.dataServiceInstance = dataServiceInstance;
         }
 
+        //<summary>
+        //This function finds all the views from the file MainMenuFragment.axml
+        //</summary>
         public void FindViews()
         {
             placeButton = this.View.FindViewById<Button>(Resource.Id.placeButton);
@@ -101,9 +132,14 @@ namespace Eventos
             eventImage = this.View.FindViewById<ImageView>(Resource.Id.eventImage);
         }
 
+        //<summary>
+        //This function puts the respective Data into all the views for this fragment
+        //</summary>
         private void SetTextsAndPicture()
         {
             SetBackgrounds();
+
+            //Variables and text formatting
             List<String> hourData = new List<String>();
             MainEvent mainEvent = new MainEvent();
             mainEvent = dataServiceInstance.GetEvent();
@@ -122,6 +158,7 @@ namespace Eventos
                 hourData[1] = "0" + hourData[1];
             }
 
+            //From here all data is set...
             descriptionText.Text = mainEvent.EventInformation.EventDescription.ToString();
             hourText.Text = hourData[0].ToString() + " : " + hourData[1].ToString();
             dateText.Text = firstConference.Date.Day.ToString() + " de " + Conversions.ConvertNumberToMonth(firstConference.Date.Month) + " de " + firstConference.Date.Year.ToString();
@@ -130,6 +167,9 @@ namespace Eventos
             Picasso.With(this.Activity).Load(Resource.Drawable.logoEvento).Into(eventImage);
         }
 
+        //<summary>
+        //Sets the delegates of each event
+        //</summary>
         public void HandleEvents()
         {
             placeButton.Click += PlaceButtonEventClick;
@@ -140,6 +180,17 @@ namespace Eventos
             galleryButton.Click += GalleryButtonEventClick;
         }
 
+        //All event delegates for the 6 buttons in the view...
+
+        //<summary>
+        //This functions are the dellegates for the Click event on the 6 buttons, they call the context Activity and use its ShowFragment Function in order to switch from one to another fragment
+        //</summary>
+        //<param name = "sender">
+        //Is the object that listens to this event, in this case each button
+        //</param>
+        //<param name = "e">
+        //Is the type of argument that recieves the event Listener
+        //</param>
         public void PlaceButtonEventClick(object sender, EventArgs e)
         {
             MainActivity activity = (MainActivity)this.Activity;

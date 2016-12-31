@@ -30,6 +30,12 @@ namespace Eventos.Fragments
             // Create your fragment here
         }
 
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view CalendarFragmentView.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -39,6 +45,9 @@ namespace Eventos.Fragments
             return view;
         }
 
+        //<summary>
+        //This function overrides OnActivityCreated finding each view for this fragment and calling the event Handlers
+        //</summary>
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
@@ -46,12 +55,18 @@ namespace Eventos.Fragments
             HandleEvents();
         }
 
+        //<summary>
+        //This function finds all the views from the file ContactFragmentView.axml
+        //</summary>
         public void FindViews()
         {
             calendarListView = this.View.FindViewById<ListView>(Resource.Id.calendarListView);
             calendarShareButton = this.View.FindViewById<Button>(Resource.Id.shareButtonCalendar);
         }
 
+        //<summary>
+        //This function sets the adapter for the calendar and the Agenda of the event
+        //</summary>
         public void PopulateData()
         {
             List<int> dates = new List<int>();
@@ -60,11 +75,23 @@ namespace Eventos.Fragments
             calendarListView.Adapter = calendarAdapterA;
         }
 
+        //<summary>
+        //Sets the delegates of each event
+        //</summary>
         public void HandleEvents()
         {
             calendarShareButton.Click += ShareContent;
         }
 
+        //<summary>
+        //Creates the sharing intent of the URL and puts the text
+        //</summary>
+        //<param name ="sender">
+        //Is the object that calls the event, in this case a button
+        //</param>
+        //<param name ="e">
+        //EventArgs for the Click Event
+        //</param>
         public void ShareContent(object sender, EventArgs e)
         {
             string uri = "http://colombiamoda.inexmoda.org.co/";
@@ -77,6 +104,12 @@ namespace Eventos.Fragments
             StartActivity(Intent.CreateChooser(shareIntent, "Compartir vía"));
         }
 
+        //<summary>
+        //This function sets the list of presenters from the DataService
+        //</summary>
+        //<param name = "dataServiceInstance">
+        //this parameter is the DataServiceInstance created from the splashActivity with all the Data of the event and this is parsed from the MainActivity to instantiate the data for this fragment
+        //</param>
         public void InstantiateDataService(DataService dataServiceInstance)
         {
             this.dataServiceInstance = dataServiceInstance;

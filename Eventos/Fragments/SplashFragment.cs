@@ -24,6 +24,11 @@ namespace Eventos.Fragments
         public ImageView splashImage;
         public ImageView logoImage;
 
+        //<summary>
+        //This class controls the SplashFragment
+        //</summary>
+        
+       
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,6 +37,12 @@ namespace Eventos.Fragments
             // Create your fragment here
         }
 
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view SplashView.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment

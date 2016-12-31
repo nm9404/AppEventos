@@ -39,6 +39,12 @@ namespace Eventos.Fragments
             // Create your fragment here
         }
 
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view ContactFragmentView.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -48,6 +54,9 @@ namespace Eventos.Fragments
             return view;
         }
 
+        //<summary>
+        //This function overrides OnActivityCreated finding each view for this fragmeny
+        //</summary>
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
@@ -55,6 +64,9 @@ namespace Eventos.Fragments
             HandleEvents();
         }
 
+        //<summary>
+        //This function finds all the views from the file ContactFragmentView.axml
+        //</summary>
         private void FindViews()
         {
             eventNameText = this.View.FindViewById<TextView>(Resource.Id.eventTitleTextContact);
@@ -70,6 +82,9 @@ namespace Eventos.Fragments
             instagramButton = this.View.FindViewById<Button>(Resource.Id.contactInstagramButton);
         }
 
+        //<summary>
+        //Sets the delegates of each event
+        //</summary>
         private void HandleEvents()
         {
             facebookButton.Click += FacebookIntent;
@@ -77,6 +92,17 @@ namespace Eventos.Fragments
             instagramButton.Click += InstagramIntent;
         }
 
+        //SocialNetworks intents, the only different thing from one another is the URI.
+
+        //<summary>
+        //Launches the social network intent, this function may be used within a delegate
+        //</summary>
+        //<param name = "sender">
+        //Is the object that Listens to the event, in this case a button
+        //</param>
+        //<param name = "e">
+        //EventArgs for the ClickEvent
+        //</param>
         private void FacebookIntent(object sender, EventArgs e)
         {
             Android.Net.Uri uri = Android.Net.Uri.Parse("fb://page/153563447786");
@@ -98,11 +124,20 @@ namespace Eventos.Fragments
             StartActivity(intent);
         }
 
+        //<summary>
+        //This function instantiates all the required data for the fragment recieving the dataService instance
+        //</summary>
+        //<param name ="dataServiceInstance">
+        //Instance of the dataService created from the SplashActivity with all the app's Data
+        //</param>
         public void InstantiateDataService(DataService dataServiceInstance)
         {
             this.dataServiceInstance = dataServiceInstance;
         }
 
+        //<summary>
+        //Sets the background picture for the mainFragment
+        //</summary>
         public void SetBackgrounds()
         {
             ImageTarget target = new ImageTarget(mainLayout);
@@ -110,6 +145,9 @@ namespace Eventos.Fragments
             Picasso.With(this.Activity).Load(url).CenterCrop().Resize(720, 1025).Into(target);
         }
 
+        //<summary>
+        //This function sets all the texts in the TextViews of the fragment's view
+        //</summary>
         public void PopulateData()
         {
             SetBackgrounds();

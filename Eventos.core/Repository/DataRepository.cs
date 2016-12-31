@@ -58,6 +58,7 @@ namespace Eventos.core.Repository
             }
         }
 
+
         public Presenter GetPresenterById(int personId)
         {
             IEnumerable<Presenter> persons =

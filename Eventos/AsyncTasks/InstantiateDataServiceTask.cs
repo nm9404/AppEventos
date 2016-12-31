@@ -14,6 +14,10 @@ using Eventos.core.DataService;
 
 namespace Eventos.AsyncTasks
 {
+    //<summary>
+    //The purpose of this class was to instantiate dataService in an Async Task, this class is no longer used on the application
+    //</summary>
+
     class InstantiateDataServiceTask
     {
         private List<SupportFragment> fragmentsList;

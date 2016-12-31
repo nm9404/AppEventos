@@ -36,7 +36,12 @@ namespace Eventos.Fragments
             // Create your fragment here
         }
 
-
+        //<summary>
+        //This function overrides OnCreateView in order to inflate the view ImageDetailView.axml on the fragment
+        //</summary>
+        //<return>
+        //returns the inflated view of this fragment
+        //</return>
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Use this to return your custom view for this Fragment
@@ -46,6 +51,9 @@ namespace Eventos.Fragments
             return view;
         }
 
+        //<summary>
+        //This function overrides OnActivityCreated finding each view for this fragment and calling the event handlers
+        //</summary>
         public override void OnActivityCreated(Bundle savedInstanceState)
         {
             base.OnActivityCreated(savedInstanceState);
@@ -55,11 +63,20 @@ namespace Eventos.Fragments
             HandleEvents();
         }
 
+        //<summary>
+        //This function instantiates all the required data for the fragment recieving the presenter's List and the DataServiceInstance
+        //</summary>
+        //<param name ="imageList">
+        //List of the images of the gallery
+        //</param>
         public void instanceDataService(List<MImage> imageList)
         {
             this.imageList = imageList;
         }
 
+        //<summary>
+        //This function finds all the views from the file ImageDetailView.axml
+        //</summary>
         public void FindViews()
         {
             imageDetailText = this.View.FindViewById<TextView>(Resource.Id.imageDetailText);
@@ -67,11 +84,23 @@ namespace Eventos.Fragments
             photoImageView = this.View.FindViewById<ImageView>(Resource.Id.imageDetailedView);
         }
 
+        //<summary>
+        //Sets the delegates of each event
+        //</summary>
         public void HandleEvents()
         {
             shareImageButton.Click += ShareImageMouseClickButton;
         }
 
+        //<summary>
+        //Launches the share intent for this fragment
+        //</summary>
+        //<param name="title">
+        //is the title of the message to share
+        //</param>
+        //<param name="contet">
+        //is the content of the message to share
+        //</param>
         public void Share(string title, string content)
         {
             if (string.IsNullOrEmpty(title) || string.IsNullOrEmpty(content))
@@ -99,12 +128,20 @@ namespace Eventos.Fragments
             StartActivity(Intent.CreateChooser(sharingIntent, title));
         }
 
-
+        //<summary>
+        //Creates the imageBitmap from the picture and launches the shareIntent
+        //</summary>
         public void ShareImageMouseClickButton(object o, EventArgs e)
         {
             Share("Fotografía", imageList[position].Description.ToString());
         }
 
+        //<summary>
+        //This function puts the respective Data into the image and the textViews
+        //</summary>
+        //<param name ="position">
+        //Index or position in the imagesList to gather data from
+        //</param>
         public void PopulateData(int position)
         {
             TouchListener touchListener = new TouchListener(photoImageView, this);
