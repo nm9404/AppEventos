@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Eventos.core.DataService
 {
+    //<summary>
+    //This class has all the callbacks for all the methods on the dataRepository class, they serve as query methods for all the data for any event
+    //</summary>
+
     public class DataService
     {
         private DataRepository dataRepository = new DataRepository();

@@ -14,18 +14,23 @@ namespace Eventos.core.Repository
         //All Event Data
 
         private MainEvent mainEvent = new MainEvent();
-        string url = "https://drive.google.com/uc?export=download&id=0BygDDSNmqMx7cGVzMDhOUWZralE";
+        string url = "https://drive.google.com/uc?export=download&id=0BygDDSNmqMx7cGVzMDhOUWZralE"; //This URL is the JSON file's URL...
 
         //Query Methods
 
-       public DataRepository()
+        //<summary>
+        //Builds the respository
+        //</summary>
+        public DataRepository()
         {
-            
             //JSonStrings strings = new JSonStrings();
             //string responseJsonString = strings.JSonString;
             //MainEvent = JsonConvert.DeserializeObject<MainEvent>(responseJsonString);
         }
 
+        //<summary>
+        //Sets in an Async Task the event data from the JSON's url
+        //</summary>
         public void setEventOnline()
         {
             Task.Run(() => this.LoadDataAsync(url).Wait());
@@ -37,6 +42,9 @@ namespace Eventos.core.Repository
             this.mainEvent = mainEvent;
         }
 
+        //<summary>
+        //Task for setting the data on an Async Task
+        //</summary>
         private async Task LoadDataAsync(string uri)
         {
             JSonStrings strings = new JSonStrings();
@@ -58,7 +66,9 @@ namespace Eventos.core.Repository
             }
         }
 
-
+        //<summary>
+        //Returns an element of type Presenter by using its Id
+        //</summary>
         public Presenter GetPresenterById(int personId)
         {
             IEnumerable<Presenter> persons =
@@ -72,6 +82,9 @@ namespace Eventos.core.Repository
             return persons.FirstOrDefault<Presenter>();
         }
 
+        //<summary>
+        //Returns an element of type Place by using its Id
+        //</summary>
         public Place GetPlaceById(int placeId)
         {
             List<Place> AllPlaces = GetAllPlaces();
@@ -84,6 +97,9 @@ namespace Eventos.core.Repository
             return placeById.FirstOrDefault<Place>();
         }
 
+        //<summary>
+        //Returns a List containing all the elements of type Place in the data
+        //</summary>
         public List<Place> GetAllPlaces()
         {
             List<Place> PlacesList = new List<Place>();
@@ -98,12 +114,18 @@ namespace Eventos.core.Repository
             return PlacesList;
         }
 
+        //<summary>
+        //Returns a List containing all the previous work from a given presenter querying from its Id
+        //</summary>
         public List<Work> GetAllPreviousWorkByPresenterId(int presenterId)
         {
             Presenter presenter = GetPresenterById(presenterId);
             return presenter.PreviousWorks;
         }
 
+        //<summary>
+        //Returns a List containing all the works (previous works and conference works) from a given presenter querying from its Id
+        //</summary>
         public List<Work> GetAllWorksByPresenterId(int presenterId)
         {
             List<Work> allWorks = new List<Work>();
@@ -121,6 +143,9 @@ namespace Eventos.core.Repository
             return allConferencesWorkType.Concat<Work>(allWorks).ToList<Work>();
         }
 
+        //<summary>
+        //Returns a List containing all the Conferences contained in the data file
+        //</summary>
         public List<Conference> GetAllConferences()
         {
             IEnumerable<Conference> allConferences =
@@ -130,6 +155,9 @@ namespace Eventos.core.Repository
             return allConferences.ToList<Conference>();
         }
 
+        //<summary>
+        //Returns a List containing all the Presenters contained in the data file
+        //</summary>
         public List<Presenter> GetAllPresenters()
         {
             IEnumerable<Presenter> allPresenters =
@@ -139,6 +167,9 @@ namespace Eventos.core.Repository
             return allPresenters.Distinct<Presenter>().ToList<Presenter>();
         }
 
+        //<summary>
+        //Returns a List containing all the Conferences from a given presenter Id
+        //</summary>
         public List<Conference> GetConferenceByPresenterId(int presenterId)
         {
             IEnumerable<Conference> allConferences =
@@ -149,11 +180,17 @@ namespace Eventos.core.Repository
             return allConferences.ToList<Conference>();
         }
 
+        //<summary>
+        //Returns an object of type Place for a given conference by using its id as the input
+        //</summary>
         public Place GetPlaceByConferenceId(int conferenceId)
         {
             return GetAllConferences().Where(i => i.ConferenceId == conferenceId).FirstOrDefault<Conference>().ConferencePlace;
         }
 
+        //<summary>
+        //Returns an object of type Place for a given conference by using its id as the input
+        //</summary>
         public List<Conference> GetConferencesByDay(DateF day)
         {
             IEnumerable<Conference> conferencesByDay =
@@ -165,6 +202,9 @@ namespace Eventos.core.Repository
             return conferencesByDay.ToList<Conference>();
         }
 
+        //<summary>
+        //Returns an object of type Place for a given conference by using its id as the input
+        //</summary>
         public List<Work> GetAllWorks()
         {
             IEnumerable<Work> allPreviousWorks =
@@ -181,6 +221,9 @@ namespace Eventos.core.Repository
             return allPreviousWorks.Concat(allConferenceWorks).ToList<Work>();
         }
 
+        //<summary>
+        //Returns an object of type Place for a given conference by using its id as the input
+        //</summary>
         public Conference GetConferenceByWorkId(int workId)
         {
             IEnumerable<Conference> selectedConference =
@@ -191,16 +234,25 @@ namespace Eventos.core.Repository
             return selectedConference.FirstOrDefault<Conference>();
         }
 
+        //<summary>
+        //Returns an object of type Work for a given work by using its id as the input
+        //</summary>
         public Work GetWorkById(int workId)
         {
             return GetAllWorks().Where(i => i.WorkId == workId).FirstOrDefault<Work>();
         }
 
+        //<summary>
+        //Returns the Event
+        //</summary>
         public MainEvent GetEvent()
         {
             return mainEvent;
         }
 
+        //<summary>
+        //Returns a List of type Presenter querying by the Conference Id
+        //</summary>
         public List<Presenter> GetPresentersByConferenceId(int conferenceId)
         {
             Conference conference = GetAllConferences().Where(i => i.ConferenceId == conferenceId).FirstOrDefault<Conference>();
