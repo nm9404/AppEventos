@@ -19,10 +19,15 @@ namespace Eventos.Adapters
 {
     class PresenterWorkDetailAdapter : BaseAdapter<Work>
     {
+        //This class implements the interface BaseAdapter<Work>, BaseAdapter<Work> where xx can be any other type of data
+
         public List<Work> items = new List<Work>();
         public Activity context;
         public DataService dataServiceInstance = new DataService();
 
+        //<summary>
+        //Returns the number of items of the list
+        //</summary>
         public override int Count
         {
             get
@@ -31,6 +36,16 @@ namespace Eventos.Adapters
             }
         }
 
+
+        //<summary>
+        //Returns the item at a given position
+        //</summary>
+        //<param name = "position">
+        //the position on the list for the item
+        //</param>
+        //<return>
+        //An item of the list at its given position
+        //</return>
         public override Work this[int position]
         {
             get
@@ -39,6 +54,15 @@ namespace Eventos.Adapters
             }
         }
 
+        //<summary>
+        //Builds the Adapter
+        //</summary>
+        //<param name = "items">
+        //List of elements for the Adapter in this case a list of type Work
+        //</param>
+        //<param name = "context">
+        //Activity containing the fragment
+        //</param>
         public PresenterWorkDetailAdapter(Activity context, List<Work> items, DataService dataServiceInstance)
         {
             this.context = context;
@@ -46,11 +70,35 @@ namespace Eventos.Adapters
             this.dataServiceInstance = dataServiceInstance;
         }
 
+        //<summary>
+        //Returns the position of each element of the Adapter
+        //</summary>
+        //<param name = "position">
+        //position on the list for each item
+        //</param>
+        //<return>
+        //returns the given position
+        //</return>
         public override long GetItemId(int position)
         {
             return position;
         }
 
+        //<summary>
+        //Sets and inflates the row view for each list or grid, then it returns the row view with all the data instantiated
+        //</summary>
+        //<param name = "position">
+        //position on the list for each item
+        //</param>
+        //<param name = "convertView">
+        //View that will inflate the row view
+        //</param>
+        //<param name = "parent">
+        //parent of the convertView
+        //</param>
+        //<return>
+        //returns the inflated and instantiated Row-View
+        //</return>
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
 
