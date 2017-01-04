@@ -11,6 +11,9 @@ namespace Eventos.core.DataService
     //<summary>
     //This class has all the callbacks for all the methods on the dataRepository class, they serve as query methods for all the data for any event
     //</summary>
+    //<alsoSee>
+    //Refer to dataRepository for more information...
+    //</alsoSee>
 
     public class DataService
     {
