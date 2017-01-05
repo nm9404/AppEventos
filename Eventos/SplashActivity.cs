@@ -22,6 +22,7 @@ using Eventos.Utility;
 using Android.Net;
 using Android.Graphics;
 using System.IO;
+using Eventos.core;
 
 namespace Eventos
 {
@@ -42,39 +43,85 @@ namespace Eventos
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             SetContentView(Resource.Layout.SplashView);
             mainEvent = new MainEvent();
-            dataServiceInstance = new DataService();
-            dataServiceInstance.SetEventOnline();
+
+            initData();
             FindViews();
             SetBackgrounds();
-            CheckInternetConnection();
+            //CheckInternetConnection();
             // Create your application here
         }
+
+        private void initData()
+        {
+            if (IsInternetConnectionAvailable())
+            {
+                initDataOnline();
+            }
+            else
+            {
+                LoadCacheFileOrDefault();
+            }
+        }
+
+        private async void initDataOnline()
+        {
+            dataServiceInstance = new DataService();
+            var r = await dataServiceInstance.SetEventOnline();
+            if (r)
+            {
+                RunOnUiThread(() =>
+                {
+                    data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
+                    SaveDataToJsonFile();
+                    StartMainActivity();
+                });
+            }
+            else
+            {
+                RunOnUiThread(() =>
+                {
+                    LoadCacheFileOrDefault();
+                });
+            }
+        }
+
+
 
         //<summary>
         //    This function checks for the internet connection before attempting to start the MainActivity, if there's no connection it chhecks for the data file in chache, if it doesn't exist, the app will exit.
         //</summary>
-        public void CheckInternetConnection()
+        public void LoadCacheFileOrDefault()
         {
-            if (!IsInternetConnectionAvailable())
+            try
+            {
+                var document = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+                var filename = System.IO.Path.Combine(document, "data.json");
+                String text = File.ReadAllText(filename);
+                if (text != null)
+                {
+                    StartMainActivity();
+                }
+            }
+            catch (Exception e)
             {
                 try
                 {
-                    var document = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
-                    var filename = System.IO.Path.Combine(document, "data.json");
-                    String text = File.ReadAllText(filename);
-                    if (text != null)
-                    {
-                        StartMainActivity();
-                    }
+                    JSonStrings jsonStrings = new JSonStrings();
+                    data = jsonStrings.JSonString;
+                    SaveDataToJsonFile();
+                    StartMainActivity();
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
                     IAlert.Builder alert = new IAlert.Builder(this);
                     alert.SetTitle("No hay conexión a internet");
                     alert.SetMessage("Los datos no pudieron ser descargados, comprueba tu conexión a internet");
-                    alert.SetPositiveButton("Ok", (senderAlert, args) => {
-                        Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
-                        System.Environment.Exit(0);
+                    alert.SetPositiveButton("Ok", (senderAlert, args) =>
+                    {
+                        Toast.MakeText(this, "Reintentando Cargar Datos...", ToastLength.Short).Show();
+                        initData();
+                        //Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
+                        //System.Environment.Exit(0);
                     });
                     Dialog dialog = alert.Create();
                     dialog.Show();
@@ -96,14 +143,14 @@ namespace Eventos
             Picasso.With(this).Load(Resource.Drawable.logo_dynamik_splash).Fit().CenterCrop().Into(logoImage);
             Picasso.With(this).Load(Resource.Drawable.splash_bg).Resize(size.X, size.Y).CenterCrop().Into(imageTarget);
 
-            AnimationListener animationListener = new AnimationListener(this);
+            //AnimationListener animationListener = new AnimationListener(this);
 
             Android.Views.Animations.Animation fade = AnimationUtils.LoadAnimation(this, Resource.Animation.animationSplah);
-            fade.SetAnimationListener(animationListener);
+            //fade.SetAnimationListener(animationListener);
             logoImage.StartAnimation(fade);
 
 
-            
+
             //splashImage.StartAnimation(fade);
             //Task.Run(() => this.sleep(30000));
         }
@@ -141,7 +188,7 @@ namespace Eventos
         {
             await Task.Delay(miliSeconds);
 
-            if (dataServiceInstance.GetEvent().Conferences!=null)
+            if (dataServiceInstance.GetEvent().Conferences != null)
             {
                 data = JsonConvert.SerializeObject(dataServiceInstance.GetEvent());
                 SaveDataToJsonFile();
@@ -167,8 +214,6 @@ namespace Eventos
                     System.Environment.Exit(0);
                 }
             }
-
-           
         }
 
         public void SaveDataToJsonFile()
@@ -184,12 +229,14 @@ namespace Eventos
             IAlert.Builder alert = new IAlert.Builder(this);
             alert.SetTitle("Datos No cargados Aun");
             alert.SetMessage("Los datos no han sido cargados aun, ¿desea volver a intentarlo?");
-            alert.SetPositiveButton("Si", (senderAlert, args) => {
+            alert.SetPositiveButton("Si", (senderAlert, args) =>
+            {
                 Toast.MakeText(this, "Espere 10 segundos", ToastLength.Short).Show();
                 Task.Run(() => this.sleep(10000));
             });
 
-            alert.SetNegativeButton("No", (senderAlert, args) => {
+            alert.SetNegativeButton("No", (senderAlert, args) =>
+            {
                 Toast.MakeText(this, "Cerrando App...", ToastLength.Short).Show();
                 Android.OS.Process.KillProcess(Android.OS.Process.MyPid());
                 System.Environment.Exit(0);
