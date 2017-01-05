@@ -31,9 +31,9 @@ namespace Eventos.core.Repository
         //<summary>
         //Sets in an Async Task the event data from the JSON's url
         //</summary>
-        public void setEventOnline()
+        public async Task<bool> setEventOnline()
         {
-            Task.Run(() => this.LoadDataAsync(url).Wait());
+            return await this.LoadDataAsync(url);
         }
 
 
@@ -48,7 +48,7 @@ namespace Eventos.core.Repository
         //<param name = "uri">
         //recieves the URL that performs a direct download of the JSON datafile
         //</param>
-        private async Task LoadDataAsync(string uri)
+        private async Task<bool> LoadDataAsync( string uri)
         {
             JSonStrings strings = new JSonStrings();
             string responseJsonString = null;
@@ -57,14 +57,16 @@ namespace Eventos.core.Repository
             {
                 try
                 {
+                    await Task.Delay(3000);
                     Task<HttpResponseMessage> getResponse = httpClient.GetAsync(uri);
                     HttpResponseMessage response = await getResponse;
                     responseJsonString = await response.Content.ReadAsStringAsync();
                     mainEvent = JsonConvert.DeserializeObject<MainEvent>(responseJsonString);
+                    return true;
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                    return false;
                 }
             }
         }
@@ -219,6 +221,7 @@ namespace Eventos.core.Repository
                 from presenter in conference.Presenters
                 where presenter.PresenterId == presenterId
                 select conference;
+        
             return allConferences.ToList<Conference>();
         }
 

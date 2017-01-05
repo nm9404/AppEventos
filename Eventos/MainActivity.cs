@@ -24,6 +24,7 @@ using Newtonsoft.Json;
 using Square.Picasso;
 using Android.Graphics.Drawables;
 using System.IO;
+using Android.Net;
 
 namespace Eventos
 {
@@ -322,38 +323,46 @@ namespace Eventos
                 case 0:
                     ShowFragment(mainMenuFragment);
                     SupportActionBar.SetTitle(Resource.String.titleMain);
+                    CheckOnlineMessage();
                     break;
                 case 1:
                     ShowFragment(mapFragment);
                     SupportActionBar.SetTitle(Resource.String.titlePlace);
+                    CheckOnlineMessage();
                     break;
                 case 2:
                     ShowFragment(calendarFragment);
                     calendarFragment.PopulateData();
                     SupportActionBar.SetTitle(Resource.String.titleCalendar);
+                    CheckOnlineMessage();
                     break;
                 case 3:
                     ShowFragment(presentersFragment);
                     presentersFragment.PopulateMenu();
                     SupportActionBar.SetTitle(Resource.String.titlePresenters);
+                    CheckOnlineMessage();
                     break;
                 case 4:
                     ShowFragment(galleryFragment);
                     galleryFragment.PopulateMenu();
                     SupportActionBar.SetTitle(Resource.String.titleGaleria);
+                    CheckOnlineMessage();
                     break;
                 case 5:
                     ShowFragment(frequentQuestionsFragment);
                     frequentQuestionsFragment.PopulateMenu();
                     SupportActionBar.SetTitle(Resource.String.titleFrequentQuestions);
+                    CheckOnlineMessage();
                     break;
                 case 6:
                     ShowFragment(contactFragment);
                     contactFragment.PopulateData();
                     SupportActionBar.SetTitle(Resource.String.titleContact);
+                    CheckOnlineMessage();
                     break;
                 case 7:
                     facebookIntent();
+                    CheckOnlineMessage();
                     break;
                 default:
                     break;
@@ -374,6 +383,22 @@ namespace Eventos
         public DataService GetDataServiceInstance()
         {
             return dataServiceInstance;
+        }
+
+        public bool IsInternetConnectionAvailable()
+        {
+            ConnectivityManager conMngr = (ConnectivityManager)this.GetSystemService(Context.ConnectivityService);
+            var networkInfo = conMngr.ActiveNetworkInfo;
+            return networkInfo != null && networkInfo.IsConnected && networkInfo.IsAvailable;
+
+        }
+
+        public void CheckOnlineMessage()
+        {
+            if (!IsInternetConnectionAvailable())
+            {
+                Toast.MakeText(this, "No hemos podido descargar los datos e imágenes, conéctate a internet", ToastLength.Short).Show();
+            }
         }
     }
 }

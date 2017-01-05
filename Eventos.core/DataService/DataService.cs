@@ -24,9 +24,9 @@ namespace Eventos.core.DataService
             return dataRepository.GetPresenterById(personId);
         }
 
-        public void SetEventOnline()
+        public async Task<bool>  SetEventOnline()
         {
-            dataRepository.setEventOnline();
+         return  await dataRepository.setEventOnline();
         }
 
         public void SetEvent(MainEvent mainEvent)

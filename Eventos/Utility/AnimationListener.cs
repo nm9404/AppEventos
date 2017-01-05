@@ -41,28 +41,28 @@ namespace Eventos.Utility
 
         public void OnAnimationEnd(Animation animation)
         {
-            context.CheckInternetConnection();
-            if (context.dataServiceInstance.GetEvent().Conferences != null)
-            {
-                context.data = JsonConvert.SerializeObject(context.dataServiceInstance.GetEvent());
-                context.SaveDataToJsonFile();
-            }
-            else
-            {
-                context.data = "";
-            }
+            //context.CheckInternetConnection();
+            //if (context.dataServiceInstance.GetEvent().Conferences != null)
+            //{
+            //    context.data = JsonConvert.SerializeObject(context.dataServiceInstance.GetEvent());
+            //    context.SaveDataToJsonFile();
+            //}
+            //else
+            //{
+            //    context.data = "";
+            //}
 
-            if (context.data == "{}" || context.data==null || context.data=="")
-            {
-                if (context.IsInternetConnectionAvailable())
-                {
-                    context.BuildAlertDialog();
-                }
-            }
-            else
-            {
-                context.StartMainActivity();
-            }
+            //if (context.data == "{}" || context.data==null || context.data=="")
+            //{
+            //    if (context.IsInternetConnectionAvailable())
+            //    {
+            //        context.BuildAlertDialog();
+            //    }
+            //}
+            //else
+            //{
+            //    context.StartMainActivity();
+            //}
         }
 
         public void OnAnimationRepeat(Animation animation)
