@@ -334,7 +334,7 @@ namespace Eventos
                     ShowFragment(calendarFragment);
                     calendarFragment.PopulateData();
                     SupportActionBar.SetTitle(Resource.String.titleCalendar);
-                    CheckOnlineMessage();
+                    //CheckOnlineMessage();
                     break;
                 case 3:
                     ShowFragment(presentersFragment);
@@ -352,7 +352,7 @@ namespace Eventos
                     ShowFragment(frequentQuestionsFragment);
                     frequentQuestionsFragment.PopulateMenu();
                     SupportActionBar.SetTitle(Resource.String.titleFrequentQuestions);
-                    CheckOnlineMessage();
+                    //CheckOnlineMessage();
                     break;
                 case 6:
                     ShowFragment(contactFragment);

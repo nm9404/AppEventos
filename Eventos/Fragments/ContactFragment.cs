@@ -141,8 +141,8 @@ namespace Eventos.Fragments
         public void SetBackgrounds()
         {
             ImageTarget target = new ImageTarget(mainLayout);
-            string url = "http://testappeventos.webcindario.com/Imagenes/" + dataServiceInstance.GetEvent().Place.Picture.ImagePath + ".jpg";
-            Picasso.With(this.Activity).Load(url).CenterCrop().Resize(720, 1025).Into(target);
+            //string url = "http://testappeventos.webcindario.com/Imagenes/" + dataServiceInstance.GetEvent().Place.Picture.ImagePath + ".jpg";
+            Picasso.With(this.Activity).Load(Resource.Drawable.placeImage).CenterCrop().Resize(720, 1025).Into(target);
         }
 
         //<summary>

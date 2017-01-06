@@ -197,6 +197,7 @@ namespace Eventos
             activity.InstanceDataOnFragments();
             activity.ShowFragment(activity.mapFragment);
             activity.SupportActionBar.SetTitle(Resource.String.titlePlace);
+            activity.CheckOnlineMessage();
         }
 
         public void FaqButtonEventClick(object sender, EventArgs e)
@@ -206,6 +207,7 @@ namespace Eventos
             activity.frequentQuestionsFragment.PopulateMenu();
             activity.ShowFragment(activity.frequentQuestionsFragment);
             activity.SupportActionBar.SetTitle(Resource.String.titleFrequentQuestions);
+            //activity.CheckOnlineMessage();
         }
 
         public void PresentersButtonEventClick(object sender, EventArgs e)
@@ -215,6 +217,7 @@ namespace Eventos
             activity.presentersFragment.PopulateMenu();
             activity.ShowFragment(activity.presentersFragment);
             activity.SupportActionBar.SetTitle(Resource.String.titlePresenters);
+            activity.CheckOnlineMessage();
         }
 
         public void AgendaButtonEventClick(object sender, EventArgs e)
@@ -224,6 +227,7 @@ namespace Eventos
             activity.calendarFragment.PopulateData();
             activity.ShowFragment(activity.calendarFragment);
             activity.SupportActionBar.SetTitle(Resource.String.titleCalendar);
+            //activity.CheckOnlineMessage();
         }
 
         public void ContactButtonEventClick(object sender, EventArgs e)
@@ -233,6 +237,7 @@ namespace Eventos
             activity.contactFragment.PopulateData();
             activity.ShowFragment(activity.contactFragment);
             activity.SupportActionBar.SetTitle(Resource.String.titleContact);
+            activity.CheckOnlineMessage();
         }
 
         public void GalleryButtonEventClick(object sender, EventArgs e)
@@ -242,6 +247,7 @@ namespace Eventos
             activity.galleryFragment.PopulateMenu();
             activity.ShowFragment(activity.galleryFragment);
             activity.SupportActionBar.SetTitle(Resource.String.titleGaleria);
+            activity.CheckOnlineMessage();
         }
     }
 }
