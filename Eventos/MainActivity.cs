@@ -397,7 +397,7 @@ namespace Eventos
         {
             if (!IsInternetConnectionAvailable())
             {
-                Toast.MakeText(this, "No hemos podido descargar los datos e imágenes, conéctate a internet", ToastLength.Short).Show();
+                Toast.MakeText(this, "No estás conectado, Verifica tu conexión a internet", ToastLength.Short).Show();
             }
         }
     }
