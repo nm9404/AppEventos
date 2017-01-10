@@ -14,6 +14,8 @@ using Android.Graphics;
 using static Android.Graphics.PorterDuff;
 using Eventos.core.DataService;
 using Square.Picasso;
+using Android.Support.V4.Graphics.Drawable;
+using Android.Graphics.Drawables;
 
 namespace Eventos.Adapters
 {
@@ -115,10 +117,11 @@ namespace Eventos.Adapters
 
                 var drawableImg = context.Resources.GetDrawable(context.Resources.GetIdentifier(item.iconPath, "drawable", context.PackageName));
                 var color = Color.ParseColor("#FFFFFF");
-                
-                drawableImg.SetColorFilter(color, Mode.SrcAtop);
 
-                convertView.FindViewById<ImageView>(Resource.Id.menuIcon).SetImageDrawable(drawableImg);
+                Drawable drawableCompat = DrawableCompat.Wrap(drawableImg);
+                DrawableCompat.SetTint(drawableCompat, Color.White);
+
+                convertView.FindViewById<ImageView>(Resource.Id.menuIcon).SetImageDrawable(drawableCompat);
                 convertView.FindViewById<TextView>(Resource.Id.textMenu).Text = item.menuText;
 
                 return convertView;

@@ -25,7 +25,7 @@ namespace Eventos.Utility
             //ImageView falseImageView = new ImageView(context);
             //falseImageView.SetBackgroundResource(resourceId);
             //AnimationDrawable animation = (AnimationDrawable)falseImageView.Background;
-            AnimationDrawable animation = (AnimationDrawable)context.GetDrawable(resourceId);
+            AnimationDrawable animation = (AnimationDrawable)context.Resources.GetDrawable(resourceId);
             animation.Start();
             return animation;
         }

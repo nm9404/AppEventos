@@ -619,7 +619,6 @@ D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\MvvmCross.Binding.dll
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\MvvmCross.Localization.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\MvvmCross.Platform.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Newtonsoft.Json.xml
-D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.dll
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.pdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\android\bin\dynamikcreative.eventos.apk
@@ -868,6 +867,7 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\pl
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Debug\Eventos.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\res\drawable-nodpi\placeimage.jpg
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Eventos.dll.mdb
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Debug\Eventos.csprojResolveAssemblyReference.cache
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Java.Interop.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Mono.Android.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Debug\Mono.Android.Export.dll.mdb

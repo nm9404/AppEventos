@@ -541,6 +541,7 @@ E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\Syst
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\System.Xml.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\android\assets\System.Xml.Linq.dll.mdb
 E:\Dynamic\Aplicaciones Móviles\Eventos\Eventos\obj\Release\Eventos.dll.mdb
+D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\obj\Release\res\drawable-nodpi\placeimage.jpg
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Eventos.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Java.Interop.dll.mdb
 D:\Nicolás\Aplicaciones Moviles\Eventos\Eventos\bin\Release\Mono.Android.dll.mdb
